@@ -6,7 +6,7 @@
 <p align="center">
     <a href="#sobre"> Sobre </a> -
     <a href="#tecnologias"> Tecnologias </a> -
-    <a href="#utilizacao"> Tecnologias </a> -
+    <a href="#utilização"> Utilização </a> -
     <a href="#autores"> Autores </a>
 </p>
 
