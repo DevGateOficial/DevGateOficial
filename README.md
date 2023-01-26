@@ -5,8 +5,8 @@
 
 <p align="center">
     <a href="#sobre"> Sobre </a> -
-    <a href="#features"> Features </a> -
     <a href="#tecnologias"> Tecnologias </a> -
+    <a href="#utilizacao"> Tecnologias </a> -
     <a href="#autores"> Autores </a>
 </p>
 
@@ -20,13 +20,7 @@
 
 ### Sobre
 ---
-Projeto em desenvolvimento no curso Técnico em Informática do IFPR. A Devgate é uma plataforma de ensino de informática que utiliza de cursos e projetos como ferramentas de ensino.
-
-<br> <br>
-
-<h3 align="center">
-    <img alt="Readme" title="Readme" src="Devgate.png">
-</h3>
+Projeto desenvolvido no curso Técnico em Informática do Instituto Federal do Paraná. A Devgate é uma plataforma de ensino de informática, que permite a criação de cursos por professores, que serão disponibilizados para que possam ser assistidos por estudantes.
 
 <br> <br>
 
@@ -39,19 +33,20 @@ Projeto em desenvolvimento no curso Técnico em Informática do IFPR. A Devgate 
 **Para rodar o projeto é necessário algumas ferramentas**
 <ul>
     <li> Ter algum editor de código, como o VisualStudio </li>
-    <li> Ter instalado o Xampp em sua máquina, assim como oo servidores do Apache e MySQL </li>
+    <li> Ter instalado um servidor APACHACE em sua máquina, como o XAMPP ou WAMPP </li>
+    <li> O diterório do Projeto deve ser alocado na pasta responsável por exibição no seu servidor APACHE. no caso do XAMPP seria na pasta WWW </li>
 </ul>
 
+### Utilização
 
-## Features
+## Para utilizar o projeto, é necessario ter conhecimento dos usuários pré-cadastrados no sistema. 
+Segue a lista de usuários cadastrados no sistema, assim como as suas funções no sistema:
 
-- [x] Cadastro de usuário
-- [x] Login de usuário
-- [x] Criação de cursos
-- [ ] Criação de aulas
-- [ ] Criação de atividades
-- [ ] ...
-
+<ul>
+    <li>Administrador -> Login: MarcelaDosGatos / Senha: 12345678A </li>
+    <li>Administrador -> Login: MarcelaDosGatos / Senha: 12345678A </li>
+    <li>Administrador -> Login: MarcelaDosGatos / Senha: 12345678A </li>
+</ul>
 
 ## Tecnologias  
 
@@ -61,7 +56,9 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
  - [PHP](https://www.php.net/)
  - [JavaScript](https://www.javascript.com/)
  - [MySQL](https://www.mysql.com/)
- - [Sccs]
+ - [Sccs](https://sass-lang.com/)
+ - [HTML](https://www.w3schools.com/html/)
+ - [CSS](https://www.w3schools.com/Css/)
 
 ## Autores
 ---
