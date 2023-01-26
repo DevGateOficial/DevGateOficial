@@ -38,8 +38,8 @@ Projeto desenvolvido no curso Técnico em Informática do Instituto Federal do P
 
 ### Utilização
 
-## Para utilizar o projeto, é necessario ter conhecimento dos usuários pré-cadastrados no sistema. 
-Segue a lista de usuários cadastrados no sistema, assim como as suas funções no sistema:
+*Para utilizar o projeto, é necessario ter conhecimento dos usuários pré-cadastrados no sistema. 
+Segue a lista de usuários cadastrados no sistema, assim como as suas funções no sistema:*
 
 <ul>
     <li>Administrador -> Login: MarcelaDosGatos / Senha: 12345678A </li>
