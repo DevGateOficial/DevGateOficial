@@ -8,7 +8,7 @@ $(document).ready(function() {
   
       // Make an AJAX request to get the server information
       $.ajax({
-        url: 'http://localhost/Devgate_rebuild/admin-edit-email-info/index',
+        url: 'http://localhost/DevGateOficial/admin-edit-email-info/index',
         type: 'POST',
         data: {
           server_id: serverId

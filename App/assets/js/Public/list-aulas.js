@@ -1,9 +1,9 @@
 console.log('list-aula.js');
 
-let url = 'http://localhost/Devgate_rebuild/aula-assistida/index/'
-let url_viewAula = 'http://localhost/Devgate_rebuild/view-aula/viewAulaAJAX/'
-let url_listAtividades = 'http://localhost/Devgate_rebuild/list-atividades/listAtividadesAJAX/';
-let url_files = 'http://localhost/Devgate_rebuild/app/assets/data/atividades/'
+let url = 'http://localhost/DevGateOficial/aula-assistida/index/'
+let url_viewAula = 'http://localhost/DevGateOficial/view-aula/viewAulaAJAX/'
+let url_listAtividades = 'http://localhost/DevGateOficial/list-atividades/listAtividadesAJAX/';
+let url_files = 'http://localhost/DevGateOficial/app/assets/data/atividades/'
 
 function checkAula(idAula) {
     console.log(url + idAula);

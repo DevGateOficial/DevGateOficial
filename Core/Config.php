@@ -20,19 +20,19 @@ abstract class Config
     protected function config(): void
     {
         // URL padrão do sistema
-        define('URL', 'http://localhost/Devgate_rebuild/');
+        define('URL', 'http://localhost/DevGateOficial/');
 
         // URL para a área administrativa do sistema
-        define('URLADM', 'http://localhost/Devgate_rebuild/admin-');
+        define('URLADM', 'http://localhost/DevGateOficial/admin-');
 
         //URL para a utilização de assets
-        define('URLSRC', 'http://localhost/Devgate_rebuild/app/');
+        define('URLSRC', 'http://localhost/DevGateOficial/app/');
 
         //URL para as imagems de curso 
-        define('URL_curso', 'http://localhost/Devgate_rebuild/app/assets/data/cursos/');
+        define('URL_curso', 'http://localhost/DevGateOficial/app/assets/data/cursos/');
 
         //URL para as imagems de atividade
-        define('URL_atividade', 'http://localhost/Devgate_rebuild/app/assets/data/atividades/');
+        define('URL_atividade', 'http://localhost/DevGateOficial/app/assets/data/atividades/');
 
         define('CONTROLLER', 'Login');
         define('METODO', 'index');
@@ -47,6 +47,6 @@ abstract class Config
         define('PORT', 3306);
 
         //Credencias de contato
-        define('EMAILADM', 'devgate_oficial@gmail.com');
+        define('EMAILADM', 'DevGateOficial@gmail.com');
     } 
 }

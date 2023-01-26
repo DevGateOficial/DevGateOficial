@@ -10,7 +10,7 @@ curso.forEach(curso => {
     modal.style.display = "block"
 
     // AJAX call
-    fetch('http://localhost/Devgate_rebuild/view-curso/viewCursoAJAX/' + idCurso)
+    fetch('http://localhost/DevGateOficial/view-curso/viewCursoAJAX/' + idCurso)
       .then(response => {
         if (!response.ok) {
           throw new Error(response.statusText)
@@ -28,7 +28,7 @@ curso.forEach(curso => {
         console.log(data);
 
         const imgCurso = document.getElementById('img-curso');
-        imgCurso.src = "http://localhost/Devgate_rebuild/app/assets/data/cursos/" + data[0].idCurso + "/" + data[0].imagem;
+        imgCurso.src = "http://localhost/DevGateOficial/app/assets/data/cursos/" + data[0].idCurso + "/" + data[0].imagem;
 
         const nomeCurso = document.getElementById('modal-nomeCurso');
         nomeCurso.innerHTML = data[0].nomeCurso;
@@ -66,7 +66,7 @@ window.addEventListener('click', e => {
 })
 
 function registerCurso(){
-  var url = "http://localhost/Devgate_rebuild/register-curso/index/" + idCurso_data;
+  var url = "http://localhost/DevGateOficial/register-curso/index/" + idCurso_data;
   window.location.href = url;
 }
 
