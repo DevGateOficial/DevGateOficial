@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Popins", sans-serif;
+  font-size: 2rem;
+  color: #e0e0e0;
+  background-color: #141b2d;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow-x: hidden;
+  justify-content: center;
+}
+
+.erro-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.erro-wrap img {
+  width: 50%;
+  max-width: 38.4rem;
+}
+.erro-wrap .error-msn {
+  max-width: 58.4rem;
+  text-align: center;
+  cursor: pointer;
+  margin: 1rem;
+  color: red;
+}
+.erro-wrap .btns-wrap {
+  display: flex;
+  width: 80%;
+  max-width: 38.4rem;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.erro-wrap .btns-wrap p {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  background-color: rgb(19, 131, 200);
+  border-radius: 0.9rem;
+}
+.erro-wrap .btns-wrap p:hover {
+  background-color: #0033ff;
+  cursor: pointer;
+}/*# sourceMappingURL=erro.css.map */

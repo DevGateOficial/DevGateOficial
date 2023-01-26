@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+body {
+  background-image: radial-gradient(circle 610px at 5.2% 51.6%, rgb(5, 8, 114) 0%, rgb(7, 3, 53) 97.5%);
+}
+body main {
+  margin: 2.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+body main .last-class {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  background-color: rgba(70, 83, 98, 0.6235294118);
+  margin-bottom: 1.4rem;
+  padding: 2rem;
+  align-items: center;
+  text-align: center;
+  border: 0.3rem solid rgb(234, 245, 255);
+  border-radius: 0.9rem;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+body main .last-class .curso-logo {
+  position: relative;
+}
+body main .last-class .curso-logo img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 8.3rem;
+  height: 8.3rem;
+}
+body main .last-class .curso-logo .play-btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+body main .last-class .title {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+}
+body main .last-class:hover ~ .play-btn {
+  display: flex;
+}
+body main .last-course {
+  position: relative;
+  background-color: rgba(68, 110, 136, 0.7);
+  border-radius: 0.9rem;
+  border: 0.3rem solid rgb(234, 245, 255);
+  width: 33.5rem;
+  height: 26.6rem;
+  margin: 0 0.5rem 1.6rem 0.5rem;
+}
+body main .last-course img {
+  width: auto;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+body main .avisos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: rgba(68, 110, 136, 0.7);
+  margin: 0 0.5rem;
+  width: 33.5rem;
+  height: 26.6rem;
+  border-radius: 0.9rem;
+  border: 0.3rem solid rgb(234, 245, 255);
+  justify-content: center;
+  padding: 2.5rem;
+}
+body main .avisos .title {
+  font-weight: 600;
+  font-size: 2.8rem;
+}
+body main .avisos .desc {
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  body main {
+    max-width: 109rem;
+    margin: 5rem auto;
+  }
+  body main .last-class {
+    margin-bottom: 1.4rem;
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    border: 0.3rem solid rgb(234, 245, 255);
+    border-radius: 0.9rem;
+    box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  }
+  body main .last-class .curso-logo {
+    position: relative;
+  }
+  body main .last-class .curso-logo img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 8.3rem;
+    height: 8.3rem;
+  }
+  body main .last-class .curso-logo .play-btn {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  body main .last-class .title {
+    margin-top: 1.5rem;
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+  }
+  body main .last-class:hover ~ .play-btn {
+    display: flex;
+  }
+  body main .last-course {
+    position: relative;
+    margin: 0 0 0 0px;
+    background-color: rgba(68, 110, 136, 0.7);
+    border-radius: 0.9rem;
+    border: 0.3rem solid rgb(234, 245, 255);
+    width: 52.9rem;
+    height: 26.6rem;
+    margin: 0 0.5rem 1.6rem 0.5rem;
+  }
+  body main .last-course img {
+    width: auto;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  body main .avisos {
+    width: 52.9rem;
+    border-radius: 0.9rem;
+    border: 0.3rem solid rgb(234, 245, 255);
+    justify-content: center;
+    padding: 2.5rem;
+  }
+  body main .avisos .title {
+    font-weight: 600;
+    font-size: 2.8rem;
+  }
+  body main .avisos .desc {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+}/*# sourceMappingURL=home-logado.css.map */

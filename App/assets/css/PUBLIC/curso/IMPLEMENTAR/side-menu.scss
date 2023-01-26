@@ -1,0 +1,130 @@
+@import '../old/variable.scss';
+
+
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 35%;
+  height: 100%;
+  background: $vivid-blue;
+  z-index: 2;
+  transition: all .6s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, $vivid-blue, $dark-blue);
+    z-index: -1;
+  }
+  .side-menu-content{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h3{
+      font-size: 2rem;
+    }
+    .email{
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    & .close-side-menu{
+      padding: 0 1rem;
+      position: absolute;  
+      top: 2rem;
+      left: 2rem;
+      color: #aaaaaa;
+      float: left;
+      font-size: 2.8rem;
+      font-weight: bold;
+      transition: all 0.5s left;
+      
+      &:hover,
+      &:focus {
+        color: $white;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    .img-wrap{
+      display: flex;
+      width: 100%;
+      padding: 3rem 0 2rem 0;
+
+      img{
+        margin: auto;
+        border-radius: 100%;
+        width: 15rem;
+        height: 15rem;
+        object-fit: cover;
+      }
+    }
+    .side-menu--btn{
+      display: flex;
+      gap: .8rem;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1.3rem;
+      margin: 1rem;
+      border: 3px solid $white;
+      border-radius: .9rem;
+      padding: .5rem;
+
+      &:hover{
+        color: $background;
+        background-color: $white;
+        font-weight: 700;
+        border: 3px solid $background;
+        transition: all .3s ease;
+
+      }
+    }
+  }
+  .outside-menu--btn{
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 1rem;
+    margin: 3rem;
+    &:hover{
+      color: $white;
+      background-color: $dark-blue;
+      font-weight: 700;
+      border-radius: .9rem;
+
+      transition: all .3s ease;
+
+    }
+  }
+}
+
+.side-menu-content {
+  padding: 2rem;
+}
+
+.show-side-menu {
+  right: 0;
+}
+
+// .close-side-menu {
+//   position: absolute;
+//   top: 20px;
+//   left: 20px;
+//   color: gray;
+//   font-size: 30px;
+//   cursor: pointer;
+// }

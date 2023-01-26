@@ -1,0 +1,37 @@
+# Documentação: 
+
+# Ativa o módulo Rewrite, que faz a reescrita de URL.
+RewriteEngine On
+
+# RewriteConde: Define uma condição para uma regra
+# REQUEST_FILENAME é o caminho completo do diretório que atende ao request original,
+# tomando por base o filesystem da máquina, e não relativo à hospedagem
+# RewriteConde %{REQUEST_FILENAME} !-d Informa que será criado uma condição a ser aplicado ao nome
+# do diretório requisitado. A exclamação indica negação e o -d pede para verificar a existencia de um diretório
+# físico, Ex: CONDIÇÃO = SE ARQUIVO_REQUISITADO NÃO EXISTE COMO DIRETÓRIO FISICAMENTE
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# RewriteConde %{REQUEST_FILENAME} !-f Informa que será criado uma condição a ser aplicado ao nome
+# do diretório requisitado. A exclamação indica negação e o -f pede para verificar a existencia de um arquivo
+# físico, Ex: CONDIÇÃO = SE ARQUIVO_REQUISITADO NÃO EXISTE COMO ARQUIVO FISICAMENTE
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# RewriteConde %{REQUEST_FILENAME} !-l Informa que será criado uma condição a ser aplicado ao nome
+# do diretório requisitado. A exclamação indica negação e o -l pede para verificar a existencia de um link
+# simbólico.
+RewriteCond %{REQUEST_FILENAME} !-l 
+
+#RewriteRule: Faz a reescrita da URL
+# Circunflexo indica inicio e o cifrão indica o fim
+# (.+) pege todo o conteúdo da url
+# index.php?params=$1 Indica para substituir a requisição, redirecionando o fluxo para
+# o index.php e colocando-a interamente como um parâmetro.
+# Exemplo: index.php?url=cursos/index
+# QSA significa que se houver um string de consulta passada como URL original,
+# ela será anexada à reescrita
+# Exemplo: cursos?situação=1 será reescrita como index.php?url=cursos&p=situacao
+# O sinalizados [l] faz mod_rewrite com que o processamento do conjunto de regras seja interrompido
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+# Não permite que o usuario acesse os arquivos do projeto
+Options -Indexes

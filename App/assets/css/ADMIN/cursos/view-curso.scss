@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+@import '../../variable.scss';
+
+.titulo {
+  padding-top: 1%;
+  padding-left: 3%;
+  width: 100%;
+  text-align: left;
+}
+
+div::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.main-criar-aula {
+  margin: auto;
+}
+
+.curso-shower {
+  background-color: $background;
+  padding: 1.5rem;
+
+  img {
+    padding: 1rem 0;
+    margin: auto;
+    width: 22rem;
+    height: 22rem;
+    object-fit: cover;
+  }
+
+  .titulo-curso {
+    font-size: 2rem;
+    margin: 1rem 0 .5rem 0;
+  }
+
+  .subtitulo-curso {
+    font-size: 1.8rem;
+    color: $font;
+  }
+
+  .btns-aula {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    gap: 1rem;
+
+    span {
+      border: 2px solid $white;
+      border-radius: .9rem;
+      padding: .5rem;
+    }
+
+    span:hover {
+      border: 3px solid $white;
+      border-radius: .9rem;
+      padding: .5rem;
+    }
+
+    .btn-aula-p {
+      border: 2px solid $white;
+      border-radius: .9rem;
+      padding: .5rem 1rem;
+    }
+
+  }
+}
+
+.aulas-wrapper {
+  margin: 2.3rem 0;
+  display: flex;
+  gap: 1rem;
+
+  .aula {
+    width: min(102rem, 100%);
+    padding: 1.5rem;
+    background-color: $background;
+    cursor: pointer;
+
+    .titulo-curso {
+      font-size: 2rem;
+      margin: 1rem 0 .5rem 0;
+    }
+
+    .subtitulo-curso {
+      font-size: 1.8rem;
+      color: $font;
+    }
+
+    .num-atv {
+      font-size: 1.8rem;
+
+      margin-top: 1rem;
+    }
+  }
+}
+
+
+@media screen and (min-width: 950px) {}
+
+@media screen and (min-width: 577px) {
+  .curso-shower {
+    background-color: $adm-secundary ;
+    display: flex;
+    max-width: 100%;
+    gap: 2rem;
+
+    img {
+      margin: 0;
+    }
+
+    .txt-wrap {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+  }
+}
+
+
+
+// MODAL CSS
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

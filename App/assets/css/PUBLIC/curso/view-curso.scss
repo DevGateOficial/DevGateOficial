@@ -1,0 +1,299 @@
+@import '../../variable.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+:root {
+   font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+  font-family:Poppins, sans-serif;
+}
+.main-view-aula{
+  background-color: $dark-blue;
+  height: 100%;
+  margin: auto;
+}
+
+a{
+  text-decoration: none;
+}
+a:active{
+  text-decoration: none;
+}
+a:visited{
+  text-decoration: none;
+}
+
+// .video-wrap{
+//   // width: auto;
+// }
+.btn-atividade{
+  margin: 2rem 0;
+  padding: .8rem;
+  display: flex;
+  gap: .5rem;
+  border-radius: .9rem;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  border: 3px solid $white;
+  font-size: 1.4rem;
+
+    &:hover{
+      color: $white;
+      background-color: $background;
+      font-weight: 700;
+      border: 3px solid $background;
+      transition: all .3s ease;
+
+    }
+  
+}
+
+.content{
+  margin-top: 1rem;
+  width: 100%;
+  margin: auto;
+  background-color: $dark-blue;
+
+  .video-wrap{
+    padding-top: 1rem;
+    // width: min(108rem, 100%);
+    width: min(100%, 100%);
+    height: auto;
+    margin: auto;
+    padding-left:2rem
+  }
+  .text-content{
+    max-width: 70rem ;
+    padding: 1rem .5rem 2.3rem .5rem;
+
+    .titulo-aula{
+    width: min(75rem, 95%);
+
+    }
+    .desc-aula{
+    width: min(75rem, 95%);
+    font-size: 1.6rem;
+
+    }
+    margin: auto;
+  }
+  .titulo-aula{
+    font-size: 2.2rem;
+  }
+
+}
+
+.class-list{
+  border-radius: .9rem;
+  width: 100%;
+  margin: auto;
+  max-width: 45rem;
+  // color: $dark;
+  background-color: $background;
+}
+
+
+.video-playlist {
+  .title {
+    padding: .5rem;
+    font-size: 1.3rem;
+  }
+  
+  & {
+    width: 100%;
+    height: 30rem;
+  }
+
+  .main-video {
+    & {
+      width: 100%;
+      height: 30rem;
+    }
+    .title {
+      margin-top: 1rem;
+    }
+  }
+  
+  .title {
+    padding-left: 1rem;
+  }
+  
+  > p {
+    padding: 1rem;
+    color: var(--secondary);
+  }
+  
+  .videos {
+    height: 80%;
+    overflow-y: auto;
+    
+    &::-webkit-scrollbar {
+      width: .4rem;
+      border-radius: .4rem;
+      background-color: #0005;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      border-radius: .4rem;
+      background-color: #fff;
+    }
+    
+    .video {
+      position: relative;
+      width: 100%;
+      height: 4rem;
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      padding: 0 1rem;
+      margin-top: .1rem;
+      cursor: pointer;
+      
+      border-radius: .5rem;
+      
+      &:hover {
+        background-color: #0003;
+      }
+      
+      &.active {
+        background-color: #0003;
+      }
+    }
+  }
+
+  .main-video video {
+    width: 100%;
+    border-radius: .5rem;
+  }
+  
+  .video img {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 1.5rem;
+    height: 1.5rem;
+    
+    filter: invert(100%);
+    
+    &.active {
+      filter: invert(100%) sepia(100%) saturate(2000%) hue-rotate(360deg);
+    }
+  }
+  
+  .video p {
+    margin-left: 2.5rem;
+  }
+  
+  .video h3 {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    font: 100 1.3rem sans-serif;
+    padding: 0 .5rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .container {
+      grid-template-columns: 1fr;
+  }
+}
+  
+@media (min-width: 768px) {
+  .main-view-aula{
+    display: grid;
+    grid-template-columns: 66% 33%;
+    width: 100%;
+    // justify-content: space-around;
+    max-width: 1800px;
+    .video-playlist{
+      height: 90%;
+      .title{
+        padding: 1.5rem;
+        font-size: 1.8rem;
+      }
+    }
+    .content{
+      height: 100%;
+      position: relative;
+      top: 0;
+      background-color: $dark-blue;
+      .video-wrap{
+        padding: 0;
+        padding-left: 4%;
+        height: 50.2rem;
+      }
+      .text-content{
+        align-items: left;
+        margin: auto 2rem;
+        text-align: left;
+      }
+    }
+
+
+    .class-list{
+      height: 100%;
+      margin: 0;
+
+      .videos{
+      height: 100%;
+
+      }
+    }
+  }
+}
+
+
+
+
+// CHECK BOX
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Create custom checkbox using pseudo-elements */
+input[type="checkbox"].custom-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #ccc;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked.custom-checkbox + label::before {
+  content: "";
+  font-size: 2rem;
+  text-align: center;
+  transition: all 300ms ease;
+  transform: rotate(45deg);
+  border-radius: 100%;
+  background: $light-blue;
+}
+
+
+input[type="checkbox"].checked {
+  font-size: 2rem;
+  text-align: center;
+  transform: rotate(45deg);
+  border-radius: 100%;
+  background: $light-blue;
+}

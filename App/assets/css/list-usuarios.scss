@@ -1,0 +1,217 @@
+main.container-userList {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.titulo {
+    padding-top: 1%;
+    padding-left: 3%;
+    width: 100%;
+    text-align: left;
+}
+
+.titulo p {
+    margin-left: .45%;
+}
+
+.list {
+    margin-left: 3%;
+    margin-top: .5%;
+    width: 100%;
+}
+
+.line {
+    width: 90%;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F2A40;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.line:hover {
+    box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user .detalhes {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.nome {
+    font-size: 2.2rem;
+    color: #e0e0e0;
+    width: 250px;
+    text-align: left;
+}
+
+.username {
+    margin-top: 0.1rem;
+    font-size: 1.4rem;
+    color: #e0e0e0;
+    text-align: left;
+}
+
+p {
+    font-size: 1.6rem;
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user .detalhes {
+    margin-left: 2rem;
+    text-transform: capitalize;
+}
+
+.user .email {
+    text-transform: capitalize;
+}
+
+.email p {
+    font-size: 1.6rem;
+    text-align: center;
+    width: 200px;
+}
+
+
+.situacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.situacao span {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: limegreen;
+}
+
+.situacao p {
+    margin-left: 0.5rem;
+    text-align: center;
+}
+
+.situacao .inactive {
+    background-color: red;
+}
+
+.situacao .emailConf{
+    background-color: blue;
+}
+
+.situacao .upgradeConf{
+    background-color: yellow;
+}
+
+.visualizar {
+    margin-right: 1%;
+}
+
+.visualizar .btn {
+    display: inline-block;
+    background-color: #3e4396;
+    color: #e0e0e0;
+    border-radius: 0.2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pesquisa {
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 3%;
+    text-align: left;
+    padding: 1rem;
+    background-color: #1F2A40;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+}
+
+.searchTerm {
+    width: 90%;
+    border: none;
+    padding: 0.8rem 1rem;
+    border-radius: 0.3rem;
+    margin-right: 0.5rem;
+    font-size: 1.6rem;
+    color: rgba(162, 162, 162);
+    background-color: #1F2A40;
+}
+
+.searchButton {
+    width: auto;
+    display: inline-block;
+    float: right;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: #1F2A40;
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.searchButton:hover {
+    background-color: rgba(14, 131, 214);
+}
+
+
+@media screen and (max-width: 950px) {
+    .line {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+
+    .profile {
+        margin-left: 1%;
+        margin-top: 1%;
+        padding-left: 0%;
+    }
+
+    .detalhes {
+        padding-left: 0%;
+    }
+
+    .visualizar {
+        margin-bottom: 2%;
+    }
+
+    .situacao {
+        margin-left: 10%;
+    }
+}

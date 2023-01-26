@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: Poppins, sans-serif;
+  font-size: 2rem;
+  color: rgb(234, 245, 255);
+  background-color: rgb(59, 61, 71);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow-x: hidden;
+  justify-content: center;
+}
+
+a {
+  color: rgb(234, 245, 255);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 0.8rem;
+}
+
+h5 {
+  font-size: 0.77rem;
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+.text-muted {
+  color: #e3e3e3;
+}
+
+p {
+  color: #677483;
+}
+
+b {
+  color: #0033ff;
+}
+
+.primary {
+  color: rgb(13, 8, 72);
+}
+
+.sucess {
+  color: #41f1b6;
+}
+
+.warning {
+  color: #ffbb55;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.container {
+  display: grid;
+  width: 96%;
+  gap: 1.8rem;
+  grid-template-columns: 22.4rem auto;
+}
+.container .container-adm {
+  height: 100vh;
+  overflow-y: scroll;
+  padding-bottom: 2rem;
+}
+.container .container-adm h1 {
+  font-size: 3rem;
+  color: rgb(14, 131, 214);
+}
+.container .container-adm p {
+  color: rgb(234, 245, 255);
+}
+
+aside {
+  position: -webkit-sticky;
+  position: sticky;
+  height: 100vh;
+  background-color: #181a1e;
+}
+aside .top {
+  background-color: #181a1e;
+  color: rgb(234, 245, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+  gap: 1rem;
+}
+aside .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-left: 1rem;
+}
+aside .logo img {
+  width: 3rem;
+  height: inherit;
+}
+aside .close {
+  display: none;
+}
+aside .sidebar {
+  background: #181a1e;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 86vh;
+  top: 3rem;
+}
+aside .sidebar a {
+  display: flex;
+  color: #e3e3e3;
+  margin-left: 2rem;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+  height: 3.7rem;
+}
+aside .sidebar a span {
+  font-size: 1.8rem;
+  transition: all 300ms ease;
+}
+aside .sidebar a:last-child {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+}
+aside .sidebar a.active {
+  background: rgba(0, 0, 0, 0.4);
+  color: #a3bdcc;
+  margin-left: 0;
+}
+aside .sidebar a.active::before {
+  content: "";
+  width: 6px;
+  height: 100%;
+  background: #a3bdcc;
+}
+aside .sidebar a.active span {
+  color: #a3bdcc;
+  margin-left: calc(1rem - 3px);
+}
+aside .sidebar a:hover {
+  color: #a3bdcc;
+}
+aside .sidebar a:hover span {
+  margin-left: 1rem;
+}
+aside h3 {
+  font-weight: 500;
+}
+
+@media (max-width: 950px) {
+  .container {
+    width: 96%;
+    grid-template-columns: 6.4rem auto;
+  }
+  .container aside {
+    width: 100%;
+  }
+  .container aside .top {
+    justify-content: center;
+  }
+  .container aside .logo {
+    margin: auto;
+  }
+  .container aside h2 {
+    display: none;
+  }
+  .container aside h3 {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .not-in-display {
+    display: none;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-self: auto;
+    width: 100%;
+    grid-template-columns: 0 0;
+    margin: auto;
+  }
+  .container aside {
+    width: 25%;
+    position: fixed;
+    left: 0;
+    background: #181a1e;
+    width: 18rem;
+    z-index: 50;
+    box-shadow: 1rem 3rem 4rem rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    padding-right: 1.8rem;
+    display: none;
+    transition: all 300ms ease;
+  }
+  .container aside .top {
+    justify-content: normal;
+  }
+  .container aside .top .close {
+    display: flex;
+    align-items: center;
+  }
+  .container aside .logo {
+    margin: 0 0.5rem;
+  }
+  .container aside h2 {
+    display: block;
+  }
+  .mobile-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #181a1e;
+    height: 6vh;
+  }
+  .mobile-nav .wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 96%;
+  }
+  .mobile-nav .wrapper span {
+    color: rgb(234, 245, 255);
+  }
+  .mobile-nav .wrapper .logo {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-left: 1rem;
+  }
+  .mobile-nav .wrapper .logo img {
+    width: 3rem;
+    height: inherit;
+  }
+  .mobile-nav .wrapper .logo-wrap {
+    display: flex;
+    flex-direction: row;
+    color: rgb(234, 245, 255);
+  }
+  aside {
+    position: fixed;
+    left: 0;
+    background: #181a1e;
+    width: 18rem;
+    z-index: 0;
+    box-shadow: 1rem 3rem 4rem rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    padding-right: 1.8rem;
+    display: none;
+    transition: all 300ms ease;
+  }
+  aside .logo {
+    margin-left: 1rem;
+  }
+  aside h2 {
+    display: inline;
+  }
+  aside .sidebar h3 {
+    display: inline;
+  }
+  aside .sidebar a {
+    width: 100%;
+    height: 3.4rem;
+  }
+  aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 5rem;
+  }
+  aside .close {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .criar-curso {
+    margin: auto;
+    width: 96%;
+    padding: 1rem 1rem 1rem 1.5rem;
+  }
+  .criar-curso p {
+    color: rgb(234, 245, 255);
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  margin: auto 0;
+}
+main table {
+  background: rgb(234, 245, 255);
+  border-radius: 0.9rem;
+  padding: 1.8rem;
+  text-align: center;
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.4);
+  transition: all 300ms ease;
+  height: auto;
+  width: 96%;
+  color: #0033ff;
+  margin: 1rem auto auto auto;
+}
+main table tbody {
+  text-align: center;
+}
+main table tbody tr:hover {
+  border-radius: 0.9rem;
+  background-color: #e3e3e3;
+}
+main table tbody .td-sideways {
+  min-height: 5rem;
+  margin-left: 1rem;
+  gap: 0.8rem;
+}
+main table tbody tr .options a {
+  color: #a3bdcc;
+}
+main table tbody tr .options a:hover {
+  color: #0033ff;
+}
+
+.search {
+  width: 96%;
+  position: relative;
+  display: flex;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #0033ff;
+  border-right: none;
+  padding: 5px;
+  height: 3.6rem;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus {
+  color: #a9d2bf;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 3px solid #0033ff;
+  background: #0033ff;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 9px 9px 0;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.cadastro-curso .submit-btn {
+  display: block;
+  width: min(75rem, 96%);
+  height: 5rem;
+  margin: 2.5rem auto;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: rgb(234, 245, 255);
+  background-color: rgb(19, 131, 200);
+  border-radius: 0.9rem;
+}
+.cadastro-curso .text-editor {
+  font-size: 2rem;
+  max-width: min(75rem, 96%);
+  margin: auto;
+}
+.cadastro-curso .text-editor p {
+  font-size: 1.5rem;
+  color: #a3bdcc;
+  margin-bottom: 2rem;
+}
+.cadastro-curso .text-editor .txt-title {
+  font-size: 2rem;
+  color: rgb(234, 245, 255);
+  margin: 2rem 0 0 0;
+}
+.cadastro-curso .lb-title {
+  display: flex;
+  flex-direction: column;
+  max-width: min(75rem, 96%);
+  margin: auto;
+  padding-bottom: 1.8rem;
+  font-size: 2rem;
+}
+.cadastro-curso .lb-title input[type=text] {
+  color: rgb(234, 245, 255);
+  min-height: 2.5rem;
+  background-color: #0033ff;
+  border-radius: 0.9rem;
+  padding-left: 1rem;
+}/*# sourceMappingURL=NEW-dashboard.css.map */

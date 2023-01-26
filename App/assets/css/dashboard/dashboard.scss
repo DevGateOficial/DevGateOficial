@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+@import '../variable.scss';
+
+$card-border-radius: 1rem;
+$border-radius-1: 0.4rem;
+$border-radius-2: 0.8rem;
+$border-radius-3: 1.2rem;
+$card-padding: 1.8rem;
+$padding: 1.2rem;
+$box-shadow: 0 2rem 2rem $light;
+
+* {
+  margin: 0;
+  padding: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Popins", sans-serif;
+  font-size: 2rem;
+  color: $adm-fontColor;
+  background-color: $adm-background;
+  user-select: none;
+  overflow-x: hidden;
+  justify-content: center;
+}
+
+a {
+  color: $white;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: .8rem;
+}
+
+h5 {
+  font-size: .77rem;
+}
+
+small {
+  font-size: .75rem;
+}
+
+
+.text-muted {
+  color: $info-dark;
+}
+
+p {
+  font-size: 2rem;
+}
+
+b {
+  color: $dark;
+}
+
+.primary {
+  color: $primary;
+}
+
+.sucess {
+  color: $sucess;
+}
+
+.warning {
+  color: $warning;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.text-editor{
+  max-width: 102rem;
+}
+
+//Página inteira, sem a sidebar
+.container {
+  display: grid;
+  width: 96%;
+  gap: 1.8rem;
+  grid-template-columns: 22.4rem auto;
+
+  .container-adm {
+    height: 100vh;
+    overflow-y: scroll;
+    padding-bottom: 2rem;
+
+    //Barra de scroll - deixar ela invisível
+    &::-webkit-scrollbar {
+      width: 0.2em;
+      background-color: $adm-background;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $adm-background;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+
+  }
+
+  //Área da side bar
+
+  //Páginas da área ADMIN
+
+}
+
+aside {
+  position: sticky;
+  height: 100vh;
+  color: $adm-fontColor;
+  background-color: $adm-secundary;
+  z-index: 1;
+
+  //Topo da side bar
+  .top {
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+    gap: 1rem;
+
+    h2 {
+      color: $adm-fontColor;
+    }
+
+    //Logo com a Imagem e Nome do Site
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-left: 1rem;
+
+      //Imagem Logo
+      img {
+        width: 3rem;
+        height: inherit;
+      }
+    }
+  }
+
+  .close {
+    display: none;
+  }
+
+  //Menu Desktop
+  .sidebar {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 86vh;
+    top: 3rem;
+    color: $adm-fontColor;
+
+    h2 {
+      color: $adm-fontColor;
+    }
+
+    //Links do Menu
+    a {
+      display: flex;
+      color: $adm-fontColor;
+      margin-left: 2rem;
+      gap: 1rem;
+      align-items: center;
+      position: relative;
+      height: 3.7rem;
+
+      span {
+        font-size: 1.8rem;
+        transition: all 400ms ease;
+      }
+
+      &:last-child {
+        position: absolute;
+        bottom: 2rem;
+        width: 100%;
+      }
+
+      &.active {
+        background: $light;
+        color: $font;
+        margin-left: 0;
+
+        &::before {
+          content: '';
+          width: 6px;
+          height: 100%;
+          background: $font ;
+        }
+
+        span {
+          color: $font;
+          margin-left: calc(1rem - 3px);
+        }
+
+      }
+
+      &:hover {
+        color: $font;
+
+        span {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  h3 {
+    font-weight: 500;
+  }
+
+}
+
+main {
+  // background-color: $dark;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  margin: auto 0;
+
+  table {
+    padding: .5rem;
+    border-collapse: collapse;
+    background: $white;
+    border-radius: .9rem;
+    padding: $card-padding;
+    text-align: center;
+    box-shadow: $box-shadow;
+    transition: all 300ms ease;
+    height: auto;
+    width: 96%;
+
+    color: $dark;
+    margin: 1rem auto auto auto;
+    overflow-x: scroll;
+    //  thead{
+    //   // display: none;
+    //  }
+
+    tbody {
+      text-align: center;
+
+      tr:hover {
+        border-radius: .9rem;
+        background-color: $info-dark;
+      }
+
+      .td-sideways {
+        min-height: 5rem;
+        margin-left: 1rem;
+        gap: .8rem;
+      }
+
+      tr {
+
+        .options {
+          a {
+            color: $font;
+
+            &:hover {
+              color: $dark;
+
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+
+}
+
+
+//Tela a menos de 950px
+@media (max-width: 950px) {
+  .container {
+    width: 96%;
+    grid-template-columns: 6.4rem auto;
+
+    .container-adm {
+      width: 90%;
+      margin-left: 10%;
+    }
+
+    //Área da side bar
+    aside {
+      width: 100%;
+
+      .top {
+        justify-content: center;
+      }
+
+      .logo {
+        margin: auto;
+      }
+
+      h2 {
+        display: none;
+      }
+
+      h3 {
+        display: none;
+      }
+    }
+  }
+}
+
+//Tela a menos de 650
+@media (max-width: 650px) {
+
+  .not-in-display {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-self: auto;
+    width: 100%;
+    grid-template-columns: 0 0;
+    margin: auto;
+
+    .container-adm {
+      margin-left: 0%;
+      margin-right: 0%;
+      width: 100%;
+    }
+
+    aside {
+      width: 25%;
+      position: fixed;
+      left: 0;
+      background: $background;
+      width: 18rem;
+      z-index: 50;
+      box-shadow: 1rem 3rem 4rem $light;
+      height: 100vh;
+      padding-right: $card-padding;
+      display: none;
+      transition: all 300ms ease;
+
+      h2 {
+        display: block;
+      }
+
+      .top {
+        justify-content: normal;
+
+        .close {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .logo {
+        margin: 0 .5rem;
+      }
+
+      h2 {
+        display: block;
+      }
+    }
+  }
+
+
+  .mobile-nav {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: $background;
+    // margin-bottom: 6vh;
+    height: 6vh;
+
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 96%;
+
+      span {
+        color: $white;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+        margin-left: 1rem;
+
+        img {
+          width: 3rem;
+          height: inherit;
+        }
+      }
+
+      .logo-wrap {
+        display: flex;
+        flex-direction: row;
+        color: $white;
+      }
+
+    }
+  }
+
+  aside {
+
+    .logo {
+      margin-left: 1rem;
+    }
+
+    h2 {
+      display: inline;
+    }
+
+    .sidebar {
+      h3 {
+        display: inline;
+      }
+
+      a {
+        width: 100%;
+        height: 3.4rem;
+
+        &:last-child {
+          position: absolute;
+          bottom: 5rem;
+        }
+
+      }
+    }
+
+    .close {
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+
+  .container-adm {
+    margin: auto;
+    width: 96%;
+    padding: 1rem 1rem 1rem 1.5rem;
+
+  }
+
+  main {
+    // background-color: $dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin: auto 0;
+    font-size: 1rem;
+
+    .table-holder {
+      max-width: min(75rem, 96%);
+      margin: auto;
+    }
+
+    table {
+      background: $white;
+      border-radius: .9rem;
+      padding: $card-padding;
+      text-align: center;
+      box-shadow: $box-shadow;
+      transition: all 300ms ease;
+      height: auto;
+      width: 96%;
+      color: $dark;
+      margin: 1rem auto auto auto;
+      //  thead{
+      //   // display: none;
+      //  }
+
+      tbody {
+        text-align: center;
+
+        tr {
+          .options {
+            margin: auto 0;
+            text-align: center;
+
+            a {
+              color: $font;
+
+              &:hover {
+                color: $dark;
+
+              }
+            }
+
+          }
+        }
+      }
+
+    }
+
+  }
+
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 25px;
+    background-color: $adm-secundary;
+    box-sizing: border-box;
+    border: 1px solid $light;
+    border-radius: 5px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+  }
+
+  .card:first-child {
+    border-left: 7px solid $light-blue;
+  }
+
+  .card:nth-child(2) {
+    border-left: 7px solid #0d00ff;
+  }
+
+  .card:nth-child(3) {
+    border-left: 7px solid #006d86;
+  }
+
+  .card:nth-child(4) {
+    border-left: 7px solid #840007;
+  }
+
+  .card>span {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .card-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-inner>p {
+    font-size: 18px;
+  }
+
+  .card-inner>span {
+    font-size: 35px;
+  }
+}

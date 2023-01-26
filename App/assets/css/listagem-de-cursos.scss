@@ -1,0 +1,303 @@
+@import './variable.scss';
+
+
+body::-webkit-scrollbar {
+  width: 0.2em;
+  background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+
+.main-list-curso {
+  display: flex;
+  padding: auto;
+  margin: auto;
+
+  width: 90%;
+
+  .spacer {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .cursos-wrapper {
+    margin: 10px;
+    width: 100%;
+    display: contents;
+
+  }
+
+  .curso {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    background-color: $background;
+    color: $white;
+    width: 30rem;
+    height: 30rem;
+    text-align: left;
+    cursor: pointer;
+    overflow: hidden;
+
+    h2 {
+      padding: 0 1rem;
+      max-height: 2rem;
+      max-width: 100%;
+      margin: .5rem 0;
+      font-size: 1.6rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .sub-titulo-list {
+      max-height: 1.5rem;
+      color: $font;
+      max-width: 100%;
+
+      padding: 0 1rem;
+      font-size: 1.2rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .obj-list {
+      max-width: 100%;
+      height: 5rem;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      padding: 0 1rem;
+      margin-top: .8rem;
+      white-space: normal;
+    }
+
+    .visit-btn {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      height: 10%;
+      margin-top: auto;
+      margin-bottom: 1rem;
+      justify-content: center;
+
+      a {
+        background-color: red;
+        border-radius: .9rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        width: 90%;
+      }
+    }
+
+    img {
+      height: 15rem;
+      object-fit: cover;
+    }
+  }
+
+  .mine {
+    background-color: #162137;
+  }
+}
+
+
+
+.search {
+  width: 96%;
+  display: flex;
+  box-shadow: 0 .5rem .5rem $light;
+}
+
+input[type="text"] {
+
+  background-color: $dark;
+
+}
+
+input[type="text"]::placeholder {
+
+  color: $white;
+
+}
+
+.searchTerm {
+  width: 100%;
+
+
+  border: 3px solid $dark;
+  border-right: none;
+  padding: 5px;
+  height: 3.6rem;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus {
+  color: #a9d2bf;
+}
+
+.searchButton {
+
+  width: 40px;
+  height: 36px;
+  border: 3px solid $dark;
+
+  background: $dark;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 9px 9px 0;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+
+
+.modal {
+  // GET DISPLAY BACK TO NONE
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 10rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+
+  .modal-content {
+    background-color: $background;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: fit-content;
+    overflow-y: auto;
+    /* Add a scrollbar for the y-axis */
+    padding: 2rem;
+
+    img {
+      width: min(30vw, 320px);
+      height: inherit;
+    }
+
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-height: 100%;
+      /* Set the maximum height for the modal body */
+      overflow-y: auto;
+      /* Add a scrollbar for the y-axis */
+
+      .modal-txt {
+        text-align: left;
+        width: 100%;
+        height: fit-content;
+        word-wrap: break-word;
+
+        #modal-nomeCurso {
+          font-size: 2.4rem;
+        }
+
+        #modal-subtituloCurso {
+          color: $font;
+          font-size: 1.6rem;
+          margin-bottom: 2rem;
+        }
+
+        #modal-descricao {
+          margin-top: 2rem;
+          font-size: 1.8rem;
+        }
+
+        #modal-objetivos {
+          margin-top: 2rem;
+          font-size: 1.8rem;
+        }
+
+        #modal-requisitos {
+          margin-top: 2rem;
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+
+  }
+
+  .sub-titulo-list {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: $font;
+  }
+
+  .obj-list {
+    font-size: 1.6rem;
+  }
+
+  .visit-btn {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 2.2rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+
+    a {
+      background-color: red;
+      border-radius: .9rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      width: 90%;
+    }
+  }
+
+  & .close-button {
+    position: absolute;
+    color: $white;
+    right: 2rem;
+    top: .7rem;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+      color: $font;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .modal {
+    .modal-content {
+      max-width: 109rem;
+    }
+  }
+
+}

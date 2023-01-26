@@ -1,0 +1,29 @@
+{
+    "description": "Devgate - Plataforma de Curso de Informática",
+
+    "authors": [
+        {
+            "name": "Daniel Chielle"
+        },
+
+        {
+            "name": "Felipe da Silva Gonçalves"
+        },
+
+        {
+            "name": "Gabriel Eduardo Brambilla"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core",
+            "Public\\": "app/public",
+            "Admin\\": "app/admin"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.7",
+        "npm-asset/trumbowyg": "2.18.0"
+    }
+}

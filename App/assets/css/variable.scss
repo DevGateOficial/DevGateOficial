@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+
+// OLD DARK-BLUE   $dark-blue: rgba(1, 25, 54, 1);
+$adm-area-gray:  rgb(59, 61, 71);
+$vivid-blue: rgba(5,8,114,1);
+$dark-blue: rgb(13, 8, 72);
+$bg-dark-blue:rgba(7,3,53,1);
+$primary:  $dark-blue;
+$sucess: #41f1b6;
+$warning: #ffbb55;
+$white:rgba(234, 245, 255, 1);
+$info-dark: #e3e3e3;
+$info-light: #dce1eb;
+$dark: #0033ff;
+$light: rgba(0,0,0, 0.4);
+$primary-variant: #111e88;
+$dark-variant: #677483;
+$font: #a3bdcc;
+$background: #181a1e;
+
+$blue: #446E88;
+$light-blue: rgb(19, 131, 200);
+$gray-blue: #4653629f;
+$new-black: #1F1D1D;
+$last-course:rgba(68, 110, 136, 0.7);
+$footer-black: #322F2F;
+
+$backgroun-first: #052040;
+
+$box-shadow: 0 2rem 2rem $light;
+
+// $backgorund-dark: #181a1e;
+// $white: #202528;
+// $dark: #edeffd;
+// $dark-variant: #a3bdcc;
+// $light: rgba(0,0,0, 0.4);
+// $boxshadow: 0 2rem 3rem $light;
+
+
+
+//Váriaveis Área ADM 
+
+//Cores principais
+$adm-background: #141b2d;
+$adm-secundary: #1F2A40;
+$adm-fontColor: #e0e0e0;
+$adm-fontColor-desc: #868686;
+$adm-button: #3e4396;
+$adm-button-hover: #3e4396;
+
+//Situações do usuário - List Users
+$adm-sit-active: #27B927;
+$adm-sit-inactive: #e80404;
+$adm-sit-upgrade: #006d86;
+$adm-sit-confEmail: #fefe54;

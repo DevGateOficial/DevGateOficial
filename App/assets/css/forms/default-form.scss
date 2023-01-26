@@ -1,0 +1,166 @@
+
+@import '../variable.scss';
+
+:root{
+  font-size: 62.5%;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: rgba($color: #1154d8, $alpha: 1.0);
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  color: $white;
+  width: 100%;
+  height: 100vh;
+}
+
+main{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .page-text{
+    text-align: center;
+    margin: 0 3.5rem;
+
+    h2{
+      font-weight: 800;
+      font-size: 5.5rem;
+      line-height: 6.7rem;
+    }
+    p{
+      max-width: 41.8rem;
+      font-weight: 400;
+      font-size: 2.2rem;
+      line-height: 2.7rem;
+    }
+  }
+
+  .gn-form{
+    gap: 2rem;
+    margin: 3rem;
+    padding: 2.5rem;
+    border: $white solid 3px;
+    border-radius: 9px;
+    form{
+      span{
+        font-size: 1.2rem;
+      }
+      .submit-btn{
+        color: $white;
+        font-size: 1.6rem;
+        height: 3.9rem;
+        width: 100%;
+        object-fit: fill;
+        background: $light-blue;
+        border: 0;
+        border-radius: 8px;
+        margin-top: 1.5rem;
+        
+        &:hover{
+          background-color:$white;
+        }
+      }
+      input{
+        height: 3.9rem;
+        border-radius: 9px;
+        padding-left: 1rem;
+        display: block;
+
+        + input {
+          margin-top: 0.5rem;
+
+        } 
+
+        // &:nth-child(n){
+        //   margin-bottom: 0.5rem;
+        // }
+        // &:nth-last-child(1){
+        //   margin-bottom: 0rem;
+        // }
+        &::placeholder{
+          font-size: 1rem;
+          display: flex;
+          justify-content: space-around;
+        }
+      }
+    
+      a{
+        color: $white;
+        text-decoration: none;
+        text-align: left;
+        margin-left: 3px;
+
+        &:hover{
+          color: $light-blue;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px){
+  body{
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main{
+    flex-direction: row;
+    justify-content: space-evenly;
+    .page-text {
+      text-align: left;
+      margin: 17.1rem 0  24.8rem 0;
+      h2{
+        font-size: 7rem;
+        line-height: 7.3rem;
+      }
+      p {
+        max-width: 34rem;
+        margin-top: 7.5rem;
+        font-size: 4rem;
+        line-height: 4.8rem;
+      }
+    }
+    .gn-form{
+      width: 30rem;
+      form{
+        span{
+          font-size: 2rem;
+        }
+        .submit-btn{
+          font-size: 3rem;
+          line-height: 3.6rem;  
+          height: 7rem;
+          width: 100%;
+          object-fit: fill;
+          background: $light-blue;
+          margin-top: 3.2rem;
+        }
+        input{
+          height: 7rem;
+          width: 100%;
+          width: 95%;
+          &::placeholder{
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-around;
+          }
+          + input{
+            margin-top: 1rem;
+          }
+        }
+
+      }
+    }
+  }
+}

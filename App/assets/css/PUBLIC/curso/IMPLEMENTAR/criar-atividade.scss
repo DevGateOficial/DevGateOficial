@@ -1,0 +1,31 @@
+@import '../old/variable.scss';
+
+
+.select-box{
+  select{
+    position: relative;
+    color: $white;
+    width: fit-content;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    background-color: $adm-secundary;
+    margin: 1rem 0;
+    padding: 1rem 1rem;
+    border-radius: .4rem;
+  }
+  i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: $adm-secundary;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+  }
+}
+
+  
+

@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: radial-gradient(circle 610px at 5.2% 51.6%, rgb(5, 8, 114) 0%, rgb(7, 3, 53) 97.5%);
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  color: rgb(234, 245, 255);
+  width: 100%;
+  height: 100vh;
+}
+
+a:-webkit-any-link {
+  color: rgb(234, 245, 255);
+}
+
+nav {
+  height: 7.5rem;
+  width: 100%;
+  background-color: rgb(13, 8, 72);
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: auto;
+  margin-left: 2rem;
+}
+.logo-container .img-logo {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 4rem;
+  height: inherit;
+  margin-right: 1rem;
+}
+.logo-container .logo {
+  font-size: 2.7rem;
+}
+
+a:visited {
+  color: rgb(234, 245, 255);
+}
+
+a:hover {
+  color: rgb(19, 131, 200);
+}
+
+.nav-list {
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  height: 0vh;
+  top: 7.5rem;
+  background: rgb(13, 8, 72);
+  float: right;
+  text-align: center;
+  transition: all 0.5s;
+}
+.nav-list li {
+  display: none;
+  line-height: 3rem;
+  margin: 5rem 0;
+}
+.nav-list li a {
+  color: rgb(234, 245, 255);
+  font-size: 2rem;
+  transition: all 2s;
+}
+
+.login-btn {
+  display: none;
+}
+
+.login-mobile {
+  display: flex;
+}
+.login-mobile a {
+  color: rgb(234, 245, 255);
+  border: 2px solid rgb(234, 245, 255);
+  border-radius: 9px;
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+.login-mobile img {
+  width: 2.7rem;
+  height: 2.7rem;
+  transform: translateY(20%);
+}
+
+.hamburger-btn {
+  display: block;
+  font-size: 3rem;
+  color: white;
+  float: right;
+  line-height: 7.5rem;
+  margin-right: 4rem;
+  cursor: pointer;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ .nav-list {
+  height: 100vh;
+}
+
+#check:checked ~ .nav-list li {
+  display: block;
+}
+
+#check:checked ~ section.content {
+  display: none;
+}
+
+#check:checked ~ main {
+  display: none;
+}
+
+.desktop-list {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  nav .logo-container {
+    margin: 0 0 0 6rem;
+  }
+  nav .logo-container .img-logo {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 4rem;
+    height: inherit;
+    margin-right: 1rem;
+  }
+  nav .logo {
+    font-size: 3.6rem;
+  }
+  nav #check + .hamburger-btn {
+    display: none;
+  }
+  nav .desktop-list {
+    text-decoration: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size: 1.6rem;
+  }
+  nav .desktop-list li + li {
+    border-left: 3px solid rgb(234, 245, 255);
+    border-radius: 0.3rem;
+    padding: 0 0 0 2rem;
+  }
+  nav .desktop-list .right-border {
+    border-left: 0px solid rgb(234, 245, 255);
+    border-right: 3px solid rgb(234, 245, 255);
+    border-radius: 0.3rem;
+    padding: 0 2rem 0 0rem;
+  }
+  nav .desktop-list .adms-btn {
+    cursor: pointer;
+    display: flex;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    border: 3px solid rgb(234, 245, 255);
+    border-radius: 0.9rem;
+  }
+  nav .desktop-list .adms-btn .adm-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+  nav .desktop-list li a {
+    color: rgb(234, 245, 255);
+    font-size: 2rem;
+  }
+  nav .login-btn {
+    display: flex;
+    margin-right: 3rem;
+  }
+  nav .login-btn a {
+    color: rgb(234, 245, 255);
+    font-size: 1.6rem;
+  }
+  nav .login-btn img {
+    transform: translateY(50%);
+  }
+  nav .mobile {
+    display: none;
+  }
+}
+@media (min-width: 950px) {
+  nav .login-btn {
+    padding-right: 1rem;
+  }
+}/*# sourceMappingURL=nav_bar.css.map */

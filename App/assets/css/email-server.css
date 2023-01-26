@@ -1,0 +1,36 @@
+main.container-serverList {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.titulo-email {
+  padding-top: 1%;
+  padding-left: 3%;
+  width: 100%;
+  text-align: left;
+}
+
+.list-email {
+  margin-left: 3%;
+  margin-top: 0.5%;
+  width: 100%;
+}
+
+.line-email {
+  width: 90%;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1F2A40;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.line-email:hover {
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
+}/*# sourceMappingURL=email-server.css.map */
