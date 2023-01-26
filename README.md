@@ -36,7 +36,9 @@ Projeto desenvolvido no curso Técnico em Informática do Instituto Federal do P
     <li> O diterório do Projeto deve ser alocado na pasta responsável por exibição no seu servidor APACHE. no caso do XAMPP seria na pasta WWW </li>
 </ul>
 
-### Utilização
+<br>
+
+## Utilização
 
 *Para utilizar o projeto, é necessario ter conhecimento dos usuários pré-cadastrados no sistema. 
 Segue a lista de usuários cadastrados no sistema, assim como as suas funções no sistema:*
@@ -46,6 +48,8 @@ Segue a lista de usuários cadastrados no sistema, assim como as suas funções 
     <li>Professor -> Login: Cantu / Senha: 12345678A </li>
     <li>Aluno -> Login: Gabriel / Senha: 12345678A </li>
 </ul>
+
+<br>
 
 ## Tecnologias  
 
