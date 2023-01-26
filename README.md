@@ -43,8 +43,8 @@ Segue a lista de usuários cadastrados no sistema, assim como as suas funções 
 
 <ul>
     <li>Administrador -> Login: MarcelaDosGatos / Senha: 12345678A </li>
-    <li>Administrador -> Login: MarcelaDosGatos / Senha: 12345678A </li>
-    <li>Administrador -> Login: MarcelaDosGatos / Senha: 12345678A </li>
+    <li>Professor -> Login: Cantu / Senha: 12345678A </li>
+    <li>Aluno -> Login: Gabriel / Senha: 12345678A </li>
 </ul>
 
 ## Tecnologias  
