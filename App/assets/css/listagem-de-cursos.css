@@ -148,32 +148,31 @@ input[type=text]::placeholder {
 }
 
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 10rem;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-  overflow-y: auto;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 .modal .modal-content {
   background-color: #181a1e;
+  /* Add a scrollbar for the y-axis */
+  padding: 2rem;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  overflow-y: auto;
-  /* Add a scrollbar for the y-axis */
-  padding: 2rem;
+  max-width: 82rem;
+  height: 80%;
+  overflow-y: auto; /* Add a scrollbar for the y-axis */
+  margin: 0;
+  padding: 0;
 }
 .modal .modal-content img {
   width: min(30vw, 320px);
@@ -183,10 +182,9 @@ input[type=text]::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-height: 100%;
-  /* Set the maximum height for the modal body */
-  overflow-y: auto;
-  /* Add a scrollbar for the y-axis */
+  padding: 1rem 5rem;
+  max-height: 100%; /* Set the maximum height for the modal body */
+  overflow-y: auto; /* Add a scrollbar for the y-axis */
 }
 .modal .modal-content .modal-body .modal-txt {
   text-align: left;

@@ -40,6 +40,7 @@ if (!defined('D3V3G4T3')) {
     <script type="text/javascript" src="<?= URLSRC; ?>assets/js/Admin/cadastroAula-modal.js" defer></script>
     <script type="text/javascript" src="<?= URLSRC; ?>assets/js/Admin/cadastroAtividade-modal.js" defer></script>
     <script type="text/javascript" src="<?= URLSRC; ?>assets/js/Admin/solicitacoes.js" defer></script>
+    <script type="text/javascript" src="<?= URLSRC; ?>assets/js/Admin/cadastro-curso.js" defer></script>
 
     <!-- LINK FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

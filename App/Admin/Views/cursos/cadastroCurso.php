@@ -101,7 +101,13 @@ if (isset($_SESSION['msg'])) {
                 <br>
                 <div id="file-drop-area">
                     <h2> Clique para selecionar o arquivo</h2>
-                    <input type="file" name="imagem" id="file-input" required="required" multiple>
+                    <input type="file" name="imagem" id="file-input" required="required" accept="image/*" multiple>
+
+                    <div class="file-info">
+                        <span class="material-symbols-outlined" id="file-icon" style="display: none;">photo</span>
+                        <p id="file-label"></p>
+                    </div>
+
                 </div>
             </label>
 
@@ -109,6 +115,7 @@ if (isset($_SESSION['msg'])) {
 
             <!-- submit button -->
             <input class="submit-btn" type="submit" value="Registrar Curso" name="Cadastrar">
+
         </form>
 
     </div>

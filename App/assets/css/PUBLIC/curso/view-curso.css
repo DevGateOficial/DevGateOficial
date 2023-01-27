@@ -33,14 +33,19 @@ a:visited {
   text-decoration: none;
 }
 
+.atv-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
 .btn-atividade {
   margin: 2rem 0;
   padding: 0.8rem;
   display: flex;
-  gap: 0.5rem;
+  gap: 2%;
   border-radius: 0.9rem;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   text-align: left;
   border: 3px solid rgb(234, 245, 255);
   font-size: 1.4rem;
@@ -69,6 +74,7 @@ a:visited {
 .content .text-content {
   max-width: 70rem;
   padding: 1rem 0.5rem 2.3rem 0.5rem;
+  text-align: left;
   margin: auto;
 }
 .content .text-content .titulo-aula {
@@ -199,7 +205,7 @@ a:visited {
   .main-view-aula .content .video-wrap {
     padding: 0;
     padding-left: 4%;
-    height: 50.2rem;
+    height: 100vh;
   }
   .main-view-aula .content .text-content {
     align-items: left;
