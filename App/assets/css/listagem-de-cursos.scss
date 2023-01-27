@@ -46,6 +46,18 @@ body::-webkit-scrollbar-thumb {
     text-align: left;
     cursor: pointer;
     overflow: hidden;
+    transition: all 300ms ease;
+
+    &:hover{
+    margin: 1rem;
+    color: $white;
+    width: 32rem;
+    height: 32rem;
+    text-align: left;
+    cursor: pointer;
+    overflow: hidden;
+
+    }
 
     h2 {
       padding: 0 1rem;

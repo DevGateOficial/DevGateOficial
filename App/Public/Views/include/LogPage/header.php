@@ -38,4 +38,3 @@ if (!defined('D3V3G4T3')) {
 </head>
 
 <body>
-    <header>

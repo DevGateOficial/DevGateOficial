@@ -40,6 +40,16 @@ body::-webkit-scrollbar-thumb {
   text-align: left;
   cursor: pointer;
   overflow: hidden;
+  transition: all 300ms ease;
+}
+.main-list-curso .curso:hover {
+  margin: 1rem;
+  color: rgb(234, 245, 255);
+  width: 32rem;
+  height: 32rem;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
 }
 .main-list-curso .curso h2 {
   padding: 0 1rem;
