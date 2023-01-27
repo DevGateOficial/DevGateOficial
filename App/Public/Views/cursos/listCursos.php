@@ -60,11 +60,11 @@ if (isset($this->data['form'])) {
                     <p id="modal-objetivos"></p>
                     <p id="modal-requisitos"></p>
                 </div>
+                <div class="registrar">
+                    <span class='visit-btn' onclick="registerCurso()"><a> Registrar-se no Curso </a></span>
+                </div>
             </div>
 
-            <div class="registrar">
-                <span class='visit-btn' onclick="registerCurso()"><a> Registrar-se no Curso </a></span>
-            </div>
         </div>
     </div>
 

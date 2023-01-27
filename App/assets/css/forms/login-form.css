@@ -18,6 +18,10 @@ body {
   height: 100vh;
 }
 
+.pass-wrap {
+  margin: auto;
+}
+
 main {
   position: relative;
   top: 50%;
@@ -120,11 +124,12 @@ main .login-form form a:hover {
   main .texto h2 {
     font-size: 7rem;
     line-height: 7.3rem;
+    padding-bottom: 2rem;
   }
   main .texto p {
     max-width: 34rem;
-    margin-top: 7.5rem;
-    line-height: 4.8rem;
+    margin-top: 5.5rem;
+    line-height: 3rem;
   }
   main .login-form {
     width: 30rem;
@@ -165,5 +170,8 @@ main .login-form form a:hover {
   }
   main .login-form form input:nth-child(n) {
     margin-bottom: 1rem;
+  }
+  main .pass-wrap {
+    margin: auto;
   }
 }/*# sourceMappingURL=login-form.css.map */

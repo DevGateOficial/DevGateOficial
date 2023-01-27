@@ -101,6 +101,13 @@ body::-webkit-scrollbar-thumb {
         padding: 1rem;
         width: 90%;
       }
+      a:hover {
+        color: $white;
+        font-weight: 700;
+        cursor: pointer;
+        background-color: rgb(230, 36, 43);
+
+      }
     }
 
     img {
@@ -257,6 +264,10 @@ input[type="text"]::placeholder {
     font-size: 1.6rem;
   }
 
+  .registrar{
+    width: 100%;
+
+  }
   .visit-btn {
     display: flex;
     align-items: center;
@@ -274,7 +285,14 @@ input[type="text"]::placeholder {
       display: flex;
       justify-content: center;
       padding: 1rem;
-      width: 90%;
+      width: 100%;
+    }
+    a:hover {
+      color: $white;
+      font-weight: 700;
+      cursor: pointer;
+      background-color: rgb(230, 36, 43);
+
     }
   }
 

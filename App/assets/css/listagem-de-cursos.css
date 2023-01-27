@@ -89,6 +89,12 @@ body::-webkit-scrollbar-thumb {
   padding: 1rem;
   width: 90%;
 }
+.main-list-curso .curso .visit-btn a:hover {
+  color: rgb(234, 245, 255);
+  font-weight: 700;
+  cursor: pointer;
+  background-color: rgb(230, 36, 43);
+}
 .main-list-curso .curso img {
   height: 15rem;
   -o-object-fit: cover;
@@ -222,6 +228,9 @@ input[type=text]::placeholder {
 .modal .obj-list {
   font-size: 1.6rem;
 }
+.modal .registrar {
+  width: 100%;
+}
 .modal .visit-btn {
   display: flex;
   align-items: center;
@@ -239,7 +248,13 @@ input[type=text]::placeholder {
   display: flex;
   justify-content: center;
   padding: 1rem;
-  width: 90%;
+  width: 100%;
+}
+.modal .visit-btn a:hover {
+  color: rgb(234, 245, 255);
+  font-weight: 700;
+  cursor: pointer;
+  background-color: rgb(230, 36, 43);
 }
 .modal .close-button {
   position: absolute;

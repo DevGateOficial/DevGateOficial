@@ -9,7 +9,7 @@ if (isset($this->data['form'])) {
     <div class="texto">
         <h2>Recuperar senha</h2>
 
-        <div class="login-form">
+        <div class="login-form pass-wrap">
             <form method="POST" action="">
                 <?php
                 $email = "";
