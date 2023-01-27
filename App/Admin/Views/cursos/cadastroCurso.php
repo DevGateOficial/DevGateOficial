@@ -105,7 +105,7 @@ if (isset($_SESSION['msg'])) {
 
                     <div class="file-info">
                         <span class="material-symbols-outlined" id="file-icon" style="display: none;">photo</span>
-                        <p id="file-label"></p>
+                        <p id="file-label" style="color: #41f1b6;"></p>
                     </div>
 
                 </div>

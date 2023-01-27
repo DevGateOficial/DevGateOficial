@@ -19,6 +19,11 @@ main.main-list-curso{
   text-align: left;
   cursor: pointer;
   overflow: hidden;
+  transition: all 300ms ease;
+}
+.main-list-curso .curso:hover{
+  height: 25rem;
+  width: 25rem;
 }
 
 .main-list-curso .curso h2 {

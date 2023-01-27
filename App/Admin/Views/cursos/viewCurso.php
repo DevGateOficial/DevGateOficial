@@ -29,12 +29,27 @@ if (!empty($this->data['viewCurso'])) {
             </p>
 
             <div class="btns-aula">
-                <a href="<?= URLADM?>delete-curso/index/<?=$idCurso?> ">Excluir</a>
-                <span class="material-symbols-sharp" onclick="editarCurso(<?= $idCurso ?>)"> edit_document </span>
-                <p class="btn-criar-aula btn-aula-p">Criar Aula</p>
+
+
+                <div class="btn-aula" title="Editar curso" onclick="editarCurso(<?= $idCurso ?>)">
+                    <span class="material-symbols-sharp"> edit_document </span>
+                    <p>
+                        Editar
+                    </p>
+                </div>
+
+                <div class="btn-aula btn-criar-aula btn-aula-p" title="Criar Aula">
+                    <span class="material-symbols-sharp"> add_circle </span>
+                    <p>Criar Aula</p>
+                </div>
+
+                <a href="<?= URLADM ?>delete-curso/index/<?= $idCurso ?> ">
+                    <div class="btn-aula-excluir" title="Excluir curso">
+                        <span class="material-symbols-sharp"> delete </span>
+                    </div>
+                </a>
             </div>
         </div>
-        <div class="btn-criar-aula"></div>
     </div>
 
     <!-- MODAL DE CRIAÇÂO DE AULA -->
@@ -83,7 +98,7 @@ if (!empty($this->data['viewCurso'])) {
         <div class="aulas-wrapper">
             <?php foreach ($this->data['listAulas'] as $aula) : ?>
 
-                
+
                 <div class="aula" onclick="viewAula( <?= $aula['idAula'] ?>)">
                     <p class="titulo-curso">
                         <?= $aula['nomeAula']; ?>
@@ -91,7 +106,15 @@ if (!empty($this->data['viewCurso'])) {
                     <p class="subtitulo-curso">
                         <?= $aula['descricao']; ?>
                     </p>
-                    <a href="<?= URLADM ?>delete-aula/index/<?=$aula['idAula']?>">Excluir</a>
+
+                    <div class="btn-atv">
+                        <a title="Excluir aula" href="<?= URLADM ?>delete-aula/index/<?= $aula['idAula'] ?>">
+                            <span class="material-symbols-sharp"> delete </span>
+                        </a>
+
+                    </div>
+
+
                 </div>
             <?php endforeach; ?>
         </div>

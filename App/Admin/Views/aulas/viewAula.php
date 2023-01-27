@@ -16,12 +16,12 @@ if (isset($this->data['viewAula'])) {
             <p class="subtitulo-curso"><?= $aulaInfo['descricao'] ?>
             <p>
             <div class="btns-aula">
-                <span class="material-symbols-sharp"> edit_document </span>
-
-                <p class="btn-criar-aula btn-aula-p">Criar Atividades</p>
+                <div class="btn-aula btn-criar-aula btn-aula-p" title="Criar Atividades">
+                    <span class="material-symbols-sharp"> add_circle </span>
+                    <p class="btn-criar-aula btn-aula-p">Criar Atividades</p>
+                </div>
             </div>
         </div>
-        <div class="btn-criar-aula"></div>
     </div>
 
     <?php if (isset($this->data['listAtividades'])) { ?>
@@ -36,7 +36,12 @@ if (isset($this->data['viewAula'])) {
                         <?= $atividade['descricao']; ?>
                     </p>
 
-                    <a href="<?= URLADM ?>delete-atividade/index/<?=$atividade['idAtividade'] ?>">Excluir</a>
+                    <div class="btn-atv">
+                        <a title="Excluir atividade" href="<?= URLADM ?>delete-atividade/index/<?= $atividade['idAtividade'] ?>">
+                            <span class="material-symbols-sharp"> delete </span>
+                        </a>
+
+                    </div>
                 </div>
 
             <?php endforeach; ?>
@@ -123,7 +128,7 @@ if (isset($this->data['viewAula'])) {
                                 $url = $valueForm['url'];
                             }
                             ?>
-                    
+
 
                             <div class="inputBox" id="input-1" style="display: none;">
                                 <p class="descricao"></p>
