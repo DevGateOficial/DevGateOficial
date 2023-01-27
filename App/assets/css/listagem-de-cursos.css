@@ -199,6 +199,16 @@ input[type=text]::placeholder {
   height: -moz-fit-content;
   height: fit-content;
   word-wrap: break-word;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.modal .modal-content .modal-body .modal-txt .titulo-atv {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.modal .modal-content .modal-body .modal-txt .desc-atv {
+  font-size: 1.6rem;
+  padding-bottom: 2rem;
 }
 .modal .modal-content .modal-body .modal-txt #modal-nomeCurso {
   font-size: 2.4rem;

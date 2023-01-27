@@ -203,6 +203,7 @@ a:hover {
   }
   nav .login-btn img {
     transform: translateY(50%);
+    cursor: pointer;
   }
   nav .mobile {
     display: none;

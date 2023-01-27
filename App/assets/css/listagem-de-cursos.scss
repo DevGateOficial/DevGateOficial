@@ -223,7 +223,19 @@ input[type="text"]::placeholder {
         width: 100%;
         height: fit-content;
         word-wrap: break-word;
+        display: flex;
+        flex-direction: column-reverse;
+        
+        .titulo-atv{
+          margin-top: 1rem;
+          font-size: 2rem;
 
+        }
+        .desc-atv{
+          font-size: 1.6rem;
+          padding-bottom: 2rem;
+
+        }
         #modal-nomeCurso {
           font-size: 2.4rem;
         }

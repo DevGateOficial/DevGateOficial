@@ -13,6 +13,7 @@
 
 body {
   font-family: Poppins, sans-serif;
+  background: rgb(13, 8, 72);
 }
 
 .main-view-aula {
@@ -47,15 +48,18 @@ a:visited {
   align-items: center;
   justify-content: left;
   text-align: left;
-  border: 3px solid rgb(234, 245, 255);
+  border: 2px solid rgb(234, 245, 255);
   font-size: 1.4rem;
+  transition: all 300ms ease;
 }
 .btn-atividade:hover {
   color: rgb(234, 245, 255);
-  background-color: #181a1e;
+  background-color: #0033ff;
   font-weight: 700;
-  border: 3px solid #181a1e;
+  border: 3px solid #0033ff;
   transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 1.5rem;
 }
 
 .content {
