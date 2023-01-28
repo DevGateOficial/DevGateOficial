@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+.titulo {
+  padding-top: 1%;
+  padding-left: 3%;
+  width: 100%;
+  text-align: left;
+}
+
+.titulo-form {
+  font-size: 3rem;
+  margin: 2rem 0;
+}
+
+div::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.main-criar-aula {
+  margin: auto;
+}
+
+.curso-shower {
+  background-color: #181a1e;
+  padding: 1.5rem;
+}
+.curso-shower img {
+  padding: 1rem 0;
+  margin: auto;
+  width: 22rem;
+  height: 22rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.curso-shower .titulo-curso {
+  font-size: 2rem;
+  margin: 1rem 0 0.5rem 0;
+}
+.curso-shower .subtitulo-curso {
+  font-size: 1.8rem;
+  color: #a3bdcc;
+}
+.curso-shower .btns-aula {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.curso-shower .btns-aula .btn-aula {
+  display: flex;
+  border-radius: 0.9rem;
+  padding: 0.5rem;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 300ms ease;
+}
+.curso-shower .btns-aula .btn-aula a {
+  display: flex;
+  align-items: center;
+}
+.curso-shower .btns-aula .btn-aula:hover {
+  transition: all 300ms ease;
+  background-color: rgb(19, 131, 200);
+  border-radius: 0.9rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.curso-shower .btns-aula .btn-aula-excluir {
+  display: flex;
+  border-radius: 0.9rem;
+  padding: 0.5rem;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 300ms ease;
+}
+.curso-shower .btns-aula .btn-aula-excluir a {
+  display: flex;
+  align-items: center;
+}
+.curso-shower .btns-aula .btn-aula-excluir:hover {
+  transition: all 300ms ease;
+  background-color: rgb(230, 36, 43);
+  border-radius: 0.9rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-atv {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  width: auto;
+  border-radius: 0.9rem;
+}
+.btn-atv a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.btn-atv span {
+  border-radius: 0.3rem;
+  transition: all 300ms ease;
+}
+.btn-atv span:hover {
+  transition: all 300ms ease;
+  background-color: rgb(230, 36, 43);
+  border-radius: 0.9rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.aulas-wrapper {
+  margin: 2.3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.aulas-wrapper .aula {
+  width: min(102rem, 100%);
+  padding: 1.5rem;
+  background-color: #181a1e;
+  cursor: pointer;
+}
+.aulas-wrapper .aula .titulo-curso {
+  font-size: 2rem;
+  margin: 1rem 0 0.5rem 0;
+}
+.aulas-wrapper .aula .subtitulo-curso {
+  font-size: 1.8rem;
+  color: #a3bdcc;
+}
+.aulas-wrapper .aula .num-atv {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 577px) {
+  .curso-shower {
+    background-color: #1F2A40;
+    display: flex;
+    max-width: 102rem;
+    gap: 2rem;
+  }
+  .curso-shower img {
+    margin: 0;
+  }
+  .curso-shower .txt-wrap {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.inputBox {
+  position: relative;
+  margin-bottom: 5%;
+}
+.inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #e0e0e0;
+  font-size: 1em;
+  letter-spacing: 0.05;
+  z-index: 10;
+}
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  font-size: 2.2rem;
+  color: #e0e0e0;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: #e0e0e0;
+  transform: translateX(-10px) translateY(-34px);
+  font-size: 0.75em;
+}
+.inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #1F2A40;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i {
+  height: 44px;
+}
+
+.txt-title {
+  font-size: 2.2rem;
+  color: #e0e0e0;
+  margin-bottom: 1%;
+}
+
+.descricao {
+  font-size: 1.6rem;
+  color: #a3bdcc;
+}
+
+.submit-btn {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  color: #e0e0e0;
+  border-radius: 0.9rem;
+  padding: 2rem;
+  width: 100%;
+  background-color: #111e88;
+  transition: all 400ms ease;
+}
+
+.submit-btn:hover {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  color: #e0e0e0;
+  border-radius: 0.9rem;
+  padding: 2rem;
+  width: 100%;
+  background-color: #0033ff;
+  cursor: pointer;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content-conf {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow-y: auto; /* Add a scrollbar for the y-axis */
+  background: #141b2d;
+  margin: 0;
+  padding: 0;
+  transition: all 500ms ease;
+}
+
+.btns-curso-conf {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 6%;
+  margin: 1rem 0 2rem 0;
+  font-weight: 600;
+  font-size: 1.7rem;
+  transition: all 500ms ease;
+}
+.btns-curso-conf .btn-aula-excluir {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  border-radius: 0.9rem;
+  background-color: rgb(230, 36, 43);
+  padding: 1rem;
+  align-items: center;
+  transition: all 500ms ease;
+  width: 7.2rem;
+}
+.btns-curso-conf .btn-aula-excluir span {
+  transition: all 500ms ease;
+}
+.btns-curso-conf .btn-aula-excluir:hover {
+  width: 8.1rem;
+  background-color: rgb(126, 29, 29);
+}
+.btns-curso-conf .btn-aula-excluir:hover span {
+  transition: all 500ms ease;
+  padding: 1rem;
+}
+.btns-curso-conf .btn-aula-excluir:hover p {
+  display: none;
+}
+.btns-curso-conf .undo-conf {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 0.9rem;
+  background-color: rgb(19, 131, 200);
+  padding: 1rem;
+  align-items: center;
+  transition: all 500ms ease;
+  width: 7.2rem;
+}
+.btns-curso-conf .undo-conf span {
+  transition: all 500ms ease;
+}
+.btns-curso-conf .undo-conf p {
+  transition: all 500ms ease;
+}
+.btns-curso-conf .undo-conf:hover {
+  width: 8.1rem;
+  background-color: #0033ff;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+.btns-curso-conf .undo-conf:hover span {
+  transition: all 500ms ease;
+  padding: 1rem;
+}
+.btns-curso-conf .undo-conf:hover p {
+  display: none;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 82rem;
+  height: 80%;
+  overflow-y: auto; /* Add a scrollbar for the y-axis */
+  background: #141b2d;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 5rem;
+  max-height: 100%; /* Set the maximum height for the modal body */
+  overflow-y: auto; /* Add a scrollbar for the y-axis */
+  transition: all 500ms ease;
+}
+.modal-body .close-btn {
+  position: absolute;
+  top: 0.7rem;
+  right: 2rem;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: rgb(234, 245, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 650px) {
+  .modal-body {
+    padding: 2rem;
+  }
+}
+#file-drop-area {
+  width: 100%;
+  height: 10rem;
+  border: 2px dashed #ccc;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#file-drop-area.drag-over {
+  border-color: #555;
+}
+
+#file-input {
+  display: none;
+}
+
+label[for=file-input] {
+  cursor: pointer;
+}/*# sourceMappingURL=criar_aula.css.map */

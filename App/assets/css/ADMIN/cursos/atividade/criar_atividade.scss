@@ -1,0 +1,94 @@
+@import '../../../variable.scss';
+
+.select-box{
+  select{
+    position: relative;
+    color: $white;
+    width: fit-content;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    background-color: $adm-secundary;
+    margin: 1rem 0;
+    padding: 1rem 1rem;
+    border-radius: .4rem;
+  }
+  i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: $adm-secundary;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+  }
+}
+
+.atividades-wrapper{
+  margin: 2.3rem 0;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  width: min(102rem, 100%);
+  justify-items: center;
+  justify-content: space-between;
+  .atividade{
+    width: 100%;
+    padding:1.5rem;
+    background-color: $background;
+    cursor: pointer;
+    
+    .titulo-atv{
+      font-size: 2rem;
+      margin: 1rem 0 .5rem 0;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .subtitulo-atv{
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 1.8rem;
+      color: $font;
+    }
+    
+  }
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+  .atividades-wrapper{
+    margin: 2.3rem 0;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .curso-shower{
+    background-color: $adm-secundary ;
+    display: flex;
+    max-width: 102rem;
+    gap: 2rem;
+    img{
+      margin: 0;
+    }
+    .txt-wrap{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+  }
+}
+
+  
+

@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+body::-webkit-scrollbar {
+  width: 0.2em;
+  background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+
+.main-list-curso {
+  display: flex;
+  padding: auto;
+  margin: auto;
+  width: 90%;
+}
+.main-list-curso .spacer {
+  width: 100%;
+}
+.main-list-curso h2 {
+  font-size: 2rem;
+  margin: 2rem 0 1rem 0;
+}
+.main-list-curso .cursos-wrapper {
+  margin: 10px;
+  width: 100%;
+  display: contents;
+}
+.main-list-curso .curso {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  background-color: #181a1e;
+  color: rgb(234, 245, 255);
+  width: 30rem;
+  height: 30rem;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 300ms ease;
+}
+.main-list-curso .curso:hover {
+  margin: 1rem;
+  color: rgb(234, 245, 255);
+  width: 32rem;
+  height: 32rem;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+}
+.main-list-curso .curso h2 {
+  padding: 0 1rem;
+  max-height: 2rem;
+  max-width: 100%;
+  margin: 0.5rem 0;
+  font-size: 1.6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main-list-curso .curso .sub-titulo-list {
+  max-height: 1.5rem;
+  color: #a3bdcc;
+  max-width: 100%;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main-list-curso .curso .obj-list {
+  max-width: 100%;
+  height: 5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 1rem;
+  margin-top: 0.8rem;
+  white-space: normal;
+}
+.main-list-curso .curso .visit-btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 10%;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+.main-list-curso .curso .visit-btn a {
+  background-color: red;
+  border-radius: 0.9rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  width: 90%;
+}
+.main-list-curso .curso .visit-btn a:hover {
+  color: rgb(234, 245, 255);
+  font-weight: 700;
+  cursor: pointer;
+  background-color: rgb(230, 36, 43);
+}
+.main-list-curso .curso img {
+  height: 15rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-list-curso .mine {
+  background-color: #162137;
+}
+
+.search {
+  width: 96%;
+  display: flex;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+input[type=text] {
+  background-color: #0033ff;
+}
+
+input[type=text]::-moz-placeholder {
+  color: rgb(234, 245, 255);
+}
+
+input[type=text]:-ms-input-placeholder {
+  color: rgb(234, 245, 255);
+}
+
+input[type=text]::placeholder {
+  color: rgb(234, 245, 255);
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #0033ff;
+  border-right: none;
+  padding: 5px;
+  height: 3.6rem;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus {
+  color: #a9d2bf;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 3px solid #0033ff;
+  background: #0033ff;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 9px 9px 0;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.modal .modal-content {
+  background-color: #181a1e;
+  /* Add a scrollbar for the y-axis */
+  padding: 2rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 82rem;
+  height: 80%;
+  overflow-y: auto; /* Add a scrollbar for the y-axis */
+  margin: 0;
+  padding: 0;
+}
+.modal .modal-content img {
+  width: min(30vw, 320px);
+  height: inherit;
+}
+.modal .modal-content .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 5rem;
+  max-height: 100%; /* Set the maximum height for the modal body */
+  overflow-y: auto; /* Add a scrollbar for the y-axis */
+}
+.modal .modal-content .modal-body .modal-txt {
+  text-align: left;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.modal .modal-content .modal-body .modal-txt .titulo-atv {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.modal .modal-content .modal-body .modal-txt .desc-atv {
+  font-size: 1.6rem;
+  padding-bottom: 2rem;
+}
+.modal .modal-content .modal-body .modal-txt #modal-nomeCurso {
+  font-size: 2.4rem;
+}
+.modal .modal-content .modal-body .modal-txt #modal-subtituloCurso {
+  color: #a3bdcc;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+.modal .modal-content .modal-body .modal-txt #modal-descricao {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+.modal .modal-content .modal-body .modal-txt #modal-objetivos {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+.modal .modal-content .modal-body .modal-txt #modal-requisitos {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+.modal .sub-titulo-list {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #a3bdcc;
+}
+.modal .obj-list {
+  font-size: 1.6rem;
+}
+.modal .registrar {
+  width: 100%;
+}
+.modal .visit-btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 2.2rem;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+.modal .visit-btn a {
+  background-color: red;
+  border-radius: 0.9rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+}
+.modal .visit-btn a:hover {
+  color: rgb(234, 245, 255);
+  font-weight: 700;
+  cursor: pointer;
+  background-color: rgb(230, 36, 43);
+}
+.modal .close-button {
+  position: absolute;
+  color: rgb(234, 245, 255);
+  right: 2rem;
+  top: 0.7rem;
+  float: left;
+  font-size: 28px;
+  font-weight: bold;
+}
+.modal .close-button:hover, .modal .close-button:focus {
+  color: #a3bdcc;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .modal .modal-content {
+    max-width: 109rem;
+  }
+}/*# sourceMappingURL=listagem_de_cursos.css.map */
