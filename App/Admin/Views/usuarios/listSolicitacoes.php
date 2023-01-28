@@ -40,7 +40,7 @@
             <div class="line">
                 <div class="user">
                     <div class="profile">
-                        <img src="<?= URLSRC; ?>assets/img/profileImgs/<?=$usuario['imagem']?>" alt="" />
+                        <img src="<?= URLSRC; ?>assets/data/usuarios/<?= $usuario['imagem'] ?>" alt="" />
                     </div>
 
                     <div class="detalhes">
