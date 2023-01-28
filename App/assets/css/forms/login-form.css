@@ -72,7 +72,8 @@ main .login-form form .btn {
   margin-top: 1.5rem;
 }
 main .login-form form .btn:hover {
-  background-color: rgb(234, 245, 255);
+  background-color: #0033ff;
+  cursor: pointer;
 }
 main .login-form form input {
   height: 3.9rem;

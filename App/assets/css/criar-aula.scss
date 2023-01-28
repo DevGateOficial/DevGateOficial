@@ -271,6 +271,89 @@ div::-webkit-scrollbar {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
+.modal-content-conf{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  height: fit-content;
+  overflow-y: auto; /* Add a scrollbar for the y-axis */
+  background: $adm-background;
+  margin: 0;
+  padding: 0; 
+  transition: all 500ms ease;
+}
+.btns-curso-conf{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 6%;
+  margin: 1rem 0 2rem 0;
+  font-weight: 600;
+  font-size: 1.7rem;
+  transition: all 500ms ease;
+
+  .btn-aula-excluir{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    border-radius: .9rem;
+    background-color: $red;
+    padding: 1rem;
+    align-items: center;
+    transition: all 500ms ease;
+    width: 7.2rem;
+    span{
+      transition: all 500ms ease;
+    }
+    &:hover{
+      width: 8.1rem;
+      background-color: rgb(126, 29, 29);
+      span{
+        transition: all 500ms ease;
+        padding: 1rem;
+      }
+      p{
+        display: none;
+      }
+    }
+  }
+
+  .undo-conf{
+    display: flex;
+    justify-content: center;
+    gap: .6rem;
+    border-radius: .9rem;
+    background-color: $light-blue;
+    padding: 1rem;
+    align-items: center;
+    transition: all 500ms ease;
+    width: 7.2rem;
+
+    span{
+      transition: all 500ms ease;
+    }
+    p{
+      transition: all 500ms ease;
+
+    }
+    &:hover{
+      width: 8.1rem;
+      background-color: $dark;
+      cursor: pointer;
+      transition: all 500ms ease;
+      span{
+        transition: all 500ms ease;
+        padding: 1rem;
+      }
+      p{
+        display: none;
+      }
+    }
+  }
+}
 
 
 .modal-content {
@@ -285,7 +368,6 @@ div::-webkit-scrollbar {
   background: $adm-background;
   margin: 0;
   padding: 0; 
-  border: 0px solid #888;
 }
 
 .modal-body {
@@ -296,6 +378,8 @@ div::-webkit-scrollbar {
   
   max-height: 100%; /* Set the maximum height for the modal body */
   overflow-y: auto; /* Add a scrollbar for the y-axis */
+  transition: all 500ms ease;
+
   .close-btn {
     position: absolute;
     top: .7rem;

@@ -1,8 +1,23 @@
 const btn = document.querySelector('.btn-criar-aula')
 const modal = document.getElementById('modal')
+const btnDeletPop = document.querySelector('.btn-aula-excluir')
+const modalConf = document.getElementById('modal-confirmacao')
 
 // Select the close button
-const closeBtnAula = document.querySelector('.close-btn')
+const closeBtnModal = document.querySelector('.close-btn')
+// console.log(closeBtnModal)
+const closeBtnAula = document.querySelector('.close-btn1')
+// console.log(closeBtnAula)
+
+const closeBtnConf = document.querySelector('.close-btn2')
+// console.log(closeBtnConf) NULL NULL NULL
+
+const undo = document.querySelector('.undo-conf')
+
+closeBtnModal.addEventListener('click', function () {
+  // Hide the modal
+  modal.style.display = 'none'
+})
 
 // Add a click event listener to the button
 btn.addEventListener('click', function () {
@@ -10,7 +25,23 @@ btn.addEventListener('click', function () {
   modal.style.display = 'block'
 })
 
+btnDeletPop.addEventListener('click', function () {
+  // Show the modal
+  modalConf.style.display = 'block'
+})
+
 // Add a click event listener to the close button
+
+// Add a click event listener to the close button
+closeBtnConf.addEventListener('click', function () {
+  // Hide the modal
+  modalConf.style.display = 'none'
+})
+undo.addEventListener('click', function () {
+  // Hide the modal
+  modalConf.style.display = 'none'
+})
+
 closeBtnAula.addEventListener('click', function () {
   // Hide the modal
   modal.style.display = 'none'

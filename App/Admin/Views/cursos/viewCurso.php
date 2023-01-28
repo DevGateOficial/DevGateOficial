@@ -43,11 +43,37 @@ if (!empty($this->data['viewCurso'])) {
                     <p>Criar Aula</p>
                 </div>
 
-                <a href="<?= URLADM ?>delete-curso/index/<?= $idCurso ?> ">
-                    <div class="btn-aula-excluir" title="Excluir curso">
-                        <span class="material-symbols-sharp"> delete </span>
+                <div class="btn-aula-excluir" title="Excluir curso">
+                    <span class="material-symbols-sharp"> delete </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE COMFIRMAÇÂO -->
+    <div id="modal-confirmacao" class="modal ">
+        <div class="modal-content-conf">
+            <div class="modal-body">
+
+                <span class="close-btn2 close-btn">&times;</span>
+                <h2 class="titulo-form">Deseja excluir este curso?</h2>
+
+                <div class="btns-curso-conf">
+                    <a href="<?= URLADM ?>delete-curso/index/<?= $idCurso ?> ">
+                        <div class="btn-aula-excluir" title="Excluir curso">
+                            <span class="material-symbols-sharp"> delete </span>
+                            <p>Sim</p>
+                        </div>
+                    </a>
+
+                    <div class="undo-conf close-btn2 " title="Voltar">
+                        <span class="material-symbols-sharp"> undo </span>
+                        <p>Não</p>
                     </div>
-                </a>
+                </div>
+
+
             </div>
         </div>
     </div>
@@ -57,7 +83,7 @@ if (!empty($this->data['viewCurso'])) {
         <div class="modal-content">
             <div class="modal-body">
 
-                <span class="close-btn">&times;</span>
+                <span class="close-btn1 close-btn">&times;</span>
                 <h2 class="titulo-form">Aula</h2>
 
                 <!-- Formulário de cadastro -->

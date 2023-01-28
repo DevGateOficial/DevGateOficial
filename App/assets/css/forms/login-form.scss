@@ -71,7 +71,8 @@ main{
         margin-top: 1.5rem;
         
         &:hover{
-          background-color:$white;
+          background-color:$dark;
+          cursor: pointer;
         }
       }
       input{
