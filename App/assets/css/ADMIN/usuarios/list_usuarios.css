@@ -36,6 +36,11 @@ main.container-userList {
   transition: all 0.3s;
 }
 
+.solicitacao-line {
+  display: grid;
+  grid-template-columns: 40% 25% 20% 15%;
+}
+
 .line:hover {
   box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
 }
@@ -177,7 +182,6 @@ a {
 
 .searchButton {
   width: auto;
-  display: inline-block;
   float: right;
   width: 3rem;
   height: 3rem;
@@ -193,7 +197,41 @@ a {
   background-color: rgb(14, 131, 214);
 }
 
-@media screen and (max-width: 950px) {
+.modal .solicitacao-modal {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1.5rem 0;
+}
+
+.user-info-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.user-info-wrap .txt-title {
+  font-weight: 800;
+  font-size: 2.3rem;
+}
+.user-info-wrap .info-title {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.user-info-wrap .info-sub-title {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .situacao-solicitacao {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1055px) {
   .line {
     display: flex;
     flex-wrap: wrap;
@@ -237,9 +275,9 @@ a {
     width: -moz-fit-content;
     width: fit-content;
   }
-  .situacao {
+  .situacao-solicitacao {
     width: 50%;
     justify-content: left;
-    margin-left: 1rem;
+    margin-left: 0rem;
   }
 }/*# sourceMappingURL=list_usuarios.css.map */

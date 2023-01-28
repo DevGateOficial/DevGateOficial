@@ -62,7 +62,7 @@ if (!empty($this->data['viewCurso'])) {
                 <div class="btns-curso-conf">
                     <a href="<?= URLADM ?>delete-curso/index/<?= $idCurso ?> ">
                         <div class="btn-aula-excluir" title="Excluir curso">
-                            <span class="material-symbols-sharp"> delete </span>
+                            <span class="material-symbols-sharp"> delete_forever </span>
                             <p>Sim</p>
                         </div>
                     </a>

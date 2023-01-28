@@ -37,6 +37,11 @@ main.container-userList {
     transition: all 0.3s;
 }
 
+.solicitacao-line{
+    display: grid;
+    grid-template-columns: 40% 25%  20% 15%;
+}
+
 .line:hover {
     box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
 }
@@ -178,7 +183,6 @@ a {
 
 .searchButton {
     width: auto;
-    display: inline-block;
     float: right;
     width: 3rem;
     height: 3rem;
@@ -195,7 +199,41 @@ a {
 }
 
 
-@media screen and (max-width: 950px) {
+
+.modal{
+    .solicitacao-modal{
+        width: fit-content;
+        height: fit-content;
+        padding: 1.5rem 0;
+    }
+}
+
+.user-info-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    .txt-title{
+        font-weight: 800;
+        font-size: 2.3rem;
+    }
+    .info-title{
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    .info-sub-title{
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .situacao-solicitacao{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1055px) {
     .line {
         display:flex;
         flex-wrap: wrap;
@@ -239,11 +277,12 @@ a {
 
         }
     }
-    .situacao{
+    .situacao-solicitacao{
         width: 50%;
         justify-content: left;
-        margin-left: 1rem;
+        margin-left: 0rem;
         
 
     }
 }
+
