@@ -12,7 +12,7 @@ if (!empty($this->data['viewCurso'])) {
 <div class="main-criar-aula">
 
     <div class="titulo">
-        <h1>Criação de Aulas</h1>
+        <h1>Visualização de Curso</h1>
         <p></p>
     </div>
 
@@ -84,7 +84,7 @@ if (!empty($this->data['viewCurso'])) {
             <div class="modal-body">
 
                 <span class="close-btn1 close-btn">&times;</span>
-                <h2 class="titulo-form">Aula</h2>
+                <h2 class="titulo-form">Criação de Aula</h2>
 
                 <!-- Formulário de cadastro -->
                 <form method="POST" action="<?= URLADM ?>cadastro-aula/index/<?= $idCurso ?>">

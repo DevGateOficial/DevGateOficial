@@ -6,7 +6,7 @@ if (isset($this->data['viewAula'])) {
 
 <div class="main-criar-aula">
     <div class="titulo">
-        <h1>Criação de Atividades</h1>
+        <h1>Visualização Aula</h1>
         <p></p>
     </div>
 
@@ -53,12 +53,12 @@ if (isset($this->data['viewAula'])) {
         unset($_SESSION['msg']);
     } ?>
 
-    <!-- MODAL DE CRIAÇÂO DE AULA -->
+    <!-- MODAL DE CRIAÇÂO DE ATIVIDADE -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <div class="modal-body">
                 <span class="close-btn">&times;</span>
-                <h2 class="titulo-form">Atividade</h2>
+                <h2 class="titulo-form">Criação de Atividade</h2>
                 <div class="cadastro-curso">
 
                     <div class="gn-form">

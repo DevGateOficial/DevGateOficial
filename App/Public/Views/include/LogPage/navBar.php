@@ -14,9 +14,9 @@
             <li><a href="<?= URL ?>meus-cursos">Meus Cursos</a></li>
             <?php
             if ($_SESSION['user_tipoUsuario'] == "aluno" && $_SESSION['user_adms_user_sits'] != 4) {
-                echo "<a href=" . URL . "upgrade-usuario class='side-menu--btn'><span class='material-symbols-sharp' id='menu-btn'> add_circle </span>Parceria</a>";
+                echo "<li><a class='a-center' href=" . URL . "upgrade-usuario class='side-menu--btn'><span class='material-symbols-sharp' id='menu-btn'> add_circle </span>Parceria</a></li>";
             } else if ($_SESSION['user_tipoUsuario'] == "administrador") {
-                echo "<li><a href=" . URL . "acesso-adm class='side-menu--btn'><span class='material-symbols-sharp' id='menu-btn'> settings</span>Área Administrativa</a></li>";
+                echo "<li><a class='a-center' href=" . URL . "acesso-adm class='side-menu--btn'><span class='material-symbols-sharp' id='menu-btn'> settings</span>Área Administrativa</a></li>";
             }
             ?>
             <li class="login-mobile">
@@ -66,6 +66,5 @@
             Logout</a>
     </div>
 
-    </nav>
-    </nav>
+
 </header>

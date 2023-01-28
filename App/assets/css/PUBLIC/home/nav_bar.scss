@@ -88,9 +88,17 @@ a:visited{
     
     a{
       color: $white;
-
       font-size: 2rem;
       transition: all 2s;
+
+     
+    }
+    .a-center{
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      gap: .5rem;
     }
   }
 }

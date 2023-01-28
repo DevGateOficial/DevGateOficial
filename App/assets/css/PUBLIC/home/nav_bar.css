@@ -80,6 +80,13 @@ a:hover {
   font-size: 2rem;
   transition: all 2s;
 }
+.nav-list li .a-center {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
 
 .login-btn {
   display: none;
