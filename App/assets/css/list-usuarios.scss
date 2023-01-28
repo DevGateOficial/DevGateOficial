@@ -25,7 +25,9 @@ main.container-userList {
 .line {
     width: 90%;
     margin-bottom: 2rem;
-    display: flex;
+
+    display: grid;
+    grid-template-columns: 40% 25% 25% 10%;
     justify-content: space-between;
     align-items: center;
     background-color: #1F2A40;
@@ -53,7 +55,6 @@ main.container-userList {
 .nome {
     font-size: 2.2rem;
     color: #e0e0e0;
-    width: 250px;
     text-align: left;
 }
 
@@ -72,8 +73,8 @@ p {
 
 .user {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: .3rem;
 }
 
 .profile img {
@@ -81,6 +82,7 @@ p {
     height: 6rem;
     border-radius: 50%;
     object-fit: cover;
+    margin-left: 1rem;
 }
 
 .user .detalhes {
@@ -103,7 +105,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20%;
+    width: 100%;
 }
 
 .situacao span {
@@ -132,7 +134,9 @@ p {
 }
 
 .visualizar {
-    margin-right: 1%;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;;
 }
 
 .visualizar .btn {
@@ -193,8 +197,12 @@ a {
 
 @media screen and (max-width: 950px) {
     .line {
-        display: inline-flex;
+        display:flex;
         flex-wrap: wrap;
+    }
+    
+    .user{
+        width: 100%;
     }
 
     .profile {
@@ -208,10 +216,34 @@ a {
     }
 
     .visualizar {
-        margin-bottom: 2%;
+        margin-bottom: 1%;
+        width: fit-content;
     }
+    .email{
+        margin: 1rem 0 .5rem 0;
 
+    }
     .situacao {
-        margin-left: 10%;
+        width: fit-content;
+        margin: 1rem 0 .5rem 0;
+    }
+}
+@media screen and (max-width: 428px) {
+    .email{
+        display: flex;
+        justify-content: left;
+        width: 100%;
+        p{
+            margin-left: 1rem;
+            width: fit-content;
+
+        }
+    }
+    .situacao{
+        width: 50%;
+        justify-content: left;
+        margin-left: 1rem;
+        
+
     }
 }
