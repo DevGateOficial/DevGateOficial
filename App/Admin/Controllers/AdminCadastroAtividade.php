@@ -51,9 +51,9 @@ class AdminCadastroAtividade
         if (!empty($this->dataForm['CadastrarAtividade'])) {
             unset($this->dataForm['CadastrarAtividade']);
 
-            if($this->dataForm['tipoAtividade'] != 'videoAula'){
+            if ($this->dataForm['tipoAtividade'] != 'videoAula') {
                 $this->dataForm['url'] = $_FILES['url'] ? $_FILES['url'] : $this->dataForm['url'];
-            } 
+            }
 
             $createAtividade = new \Admin\Models\AdminCadastroAtividade();
             $createAtividade->create($this->dataForm);
@@ -61,7 +61,6 @@ class AdminCadastroAtividade
             var_dump($createAtividade->getResult());
 
             if ($createAtividade->getResult()) {
-                echo "CONTROLLER - FOI CERTO AMIGXS";
                 $urlRedirect = URLADM . "view-aula/index/" . $this->dataForm['idAula'];
                 header("Location: $urlRedirect");
             } else {
@@ -72,5 +71,19 @@ class AdminCadastroAtividade
             $urlRedirect = URLADM . "list-aulas/index";
             header("Location: $urlRedirect");
         }
+    }
+
+    // documentar
+
+    public function verifyUrl($url): void
+    {
+        $pattern = '/^(https?:\/\/)?(www\.)?(youtube\.com\/watch\?v=\w+|youtu\.be\/\w+)$/';
+
+        if (preg_match($pattern, $url) == 1) {
+            echo json_encode(array("status" => true));
+        } else {
+            echo json_encode(array("status" => false));
+        }
+        exit;
     }
 }

@@ -78,23 +78,6 @@ class AdminCadastroAula
         $valEmptyField->valField($this->data);
 
         if ($valEmptyField->getResult()) {
-            $this->validateInput();
-        } else {
-            $this->result = false;
-        }
-    }
-
-    /**
-     * Instancia os Models responsáveis em verificar o nomeCurso e idResponsável do curso a ser cadastrado.
-     *
-     * @return void
-     */
-    private function validateInput(): void
-    {
-        $validadeCurso = new \Admin\Models\helper\AdminValCurso();
-        $validadeCurso->validadeCurso($this->data['nomeAula']);
-
-        if ($validadeCurso->getResult()) {
             $this->add();
         } else {
             $this->result = false;
@@ -116,7 +99,6 @@ class AdminCadastroAula
         $this->resultBd = $cadastroAula->getResult();
 
         if ($cadastroAula->getResult()) {
-            echo "daniel foi criado";
             $_SESSION['msg'] = "<p style='color: #f00;'>Aula cadastrado com sucesso!</p>";
             $this->result = true;
         } else {

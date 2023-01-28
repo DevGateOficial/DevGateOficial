@@ -35,8 +35,8 @@ class AdminCadastroAula
             if ($viewCurso->getResult()) {
                 $this->data['form'] = $viewCurso->getResultBd();
             } else {
-                $urlRedirect = URL . "admin-list-cursos/index";
-                // header("Location: $urlRedirect");
+                $urlRedirect = URLADM . "list-cursos/index";
+                header("Location: $urlRedirect");
             }
         } else {
             $this->createAula();
@@ -54,24 +54,22 @@ class AdminCadastroAula
         if (!empty($this->dataForm['CadastrarAula'])) {
             unset($this->dataForm['CadastrarAula']);
 
-            var_dump($this->dataForm);
-
             $this->id = $this->dataForm['idCurso'];
 
             $createAula = new \Admin\Models\AdminCadastroAula();
             $createAula->create($this->dataForm);
 
             if ($createAula->getResult()) {
-                $urlRedirect = URL . "admin-view-curso/index/" . $this->id;
+                $urlRedirect = URLADM . "view-curso/index/" . $this->id;
                 header("Location: $urlRedirect");
             } else {
-                $urlRedirect = URL . "admin-list-cursos/index";
-                // header("Location: $urlRedirect");
+                $urlRedirect = URLADM . "list-cursos/index";
+                header("Location: $urlRedirect");
             }
         } else {
             $_SESSION['msg'] = "<p style='color: red'>Erro: Curso não encontrado!</p>";
-            $urlRedirect = URL . "admin-list-cursos/index";
-            // header("Location: $urlRedirect");
+            $urlRedirect = URLADM . "list-cursos/index";
+            header("Location: $urlRedirect");
         }
     }
 }

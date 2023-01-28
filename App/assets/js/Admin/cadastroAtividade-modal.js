@@ -19,3 +19,23 @@ document.getElementById("tipoAtividade").addEventListener("change", function () 
       break;
   }
 });
+
+
+
+const controller = 'http://localhost/DevGateOficial/admin-cadastro-atividade/verifyUrl/';
+const url_atividade = document.querySelector('.url_atividade');
+const valor = encodeURIComponent(url_atividade.value);
+
+url_atividade.addEventListener('input', function() {
+  
+
+console.log(encodeURIComponent(url_atividade.value))
+
+  // fetch(controller + encodeURIComponent(url_atividade.value))
+  // .then(response => response.json())
+  // .then(data => {
+  //   console.log(data)
+  // })
+});
+
+

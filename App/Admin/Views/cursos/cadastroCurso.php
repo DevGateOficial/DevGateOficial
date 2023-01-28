@@ -52,8 +52,8 @@ if (isset($_SESSION['msg'])) {
                     $descricao = $valueForm['descricao'];
                 }
                 ?>
-                <textarea placeholder="Descrição" name="descricao" id="editor" value="<?php echo $descricao ?>" required="required" maxlength="512"></textarea>
-                <br>
+               <textarea placeholder="Descrição" name="descricao" id="editor" value="<?php echo $descricao ?>" required="required" onkeyup="limitText(this, 10)"></textarea>
+
             </div>
 
             <div class="text-editor">

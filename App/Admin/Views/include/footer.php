@@ -13,7 +13,9 @@ if (!defined('D3V3G4T3')) {
 <script src="<?= URLSRC; ?>assets/dist/trumbowyg.min.js"></script>
 <script src="<?= URLSRC; ?>assets/dist/plugins/history/trumbowyg.history.min.js"></script>
 <script src="<?= URLSRC; ?>assets/dist/plugins/cleanpaste/trumbowyg.cleanpaste.min.js"></script>
+<script src="<?= URLSRC; ?>assets/dist/plugins/limit/trumbowyg.limit.min.js"></script>
 <script src="<?= URLSRC; ?>assets/js/text_editor.js"></script>
+
 
 </div>
 </body>

@@ -129,13 +129,11 @@ if (isset($this->data['viewAula'])) {
                             }
                             ?>
 
-
                             <div class="inputBox" id="input-1" style="display: none;">
                                 <p class="descricao"></p>
-                                <input type="text" id="campo-input" name="url" value="<?php echo $url ?>" />
+                                <input type="text" id="campo-input" name="url" class="url_atividade" value="<?php echo $url ?>" />
                                 <i></i>
                             </div>
-
 
                             <?php
                             $idAula = "";
@@ -147,8 +145,6 @@ if (isset($this->data['viewAula'])) {
 
                             <input class="submit-btn" type="submit" name="CadastrarAtividade" value="Cadastro Atividade" />
                         </form>
-
-
 
                     </div>
                 </div>
