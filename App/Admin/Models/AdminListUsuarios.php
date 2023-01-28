@@ -30,7 +30,7 @@ class AdminListUsuarios
     public function viewUsuarios(): void
     {
         $listUsers = new \Admin\Models\helper\crud\AdminRead();
-        $listUsers->fullRead("SELECT idUsuario, nomeCompleto, nomeUsuario, email, adms_user_sits FROM usuario WHERE idUsuario !=:idUsuario", "idUsuario={$_SESSION['user_idUsuario']}");
+        $listUsers->fullRead("SELECT idUsuario, nomeCompleto, nomeUsuario, email, imagem, adms_user_sits FROM usuario WHERE idUsuario !=:idUsuario", "idUsuario={$_SESSION['user_idUsuario']}");
 
         $this->resultBd = $listUsers->getResult();
 
