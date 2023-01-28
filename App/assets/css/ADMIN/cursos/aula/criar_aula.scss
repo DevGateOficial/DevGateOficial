@@ -147,28 +147,7 @@ div::-webkit-scrollbar {
 
 
 
-@media screen and (min-width: 950px) {
 
-}
-
-@media screen and (min-width: 577px) {
-  .curso-shower{
-    background-color: $adm-secundary ;
-    display: flex;
-    max-width: 102rem;
-    gap: 2rem;
-    img{
-      margin: 0;
-    }
-    .txt-wrap{
-      display: flex;
-      width: 100%;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-  }
-}
 
 // MODAL FORM
 .inputBox {
@@ -401,11 +380,6 @@ div::-webkit-scrollbar {
 }
 
 
-@media screen and (max-width: 650px) {
-  .modal-body {
-    padding: 2rem;
-  }
-}
 
 
 #file-drop-area {
@@ -430,4 +404,39 @@ div::-webkit-scrollbar {
 
 label[for="file-input"] {
   cursor: pointer;
+}
+
+
+@media screen and (min-width: 950px) {
+
+}
+
+
+@media screen and (max-width: 650px) {
+  .modal-body {
+    padding: 2rem;
+  }
+  .inputBox span{
+    font-size: 1.8rem;
+  }
+}
+
+
+@media screen and (min-width: 577px) {
+  .curso-shower{
+    background-color: $adm-secundary ;
+    display: flex;
+    max-width: 102rem;
+    gap: 2rem;
+    img{
+      margin: 0;
+    }
+    .txt-wrap{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+  }
 }
