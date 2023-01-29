@@ -7,7 +7,8 @@ if (isset($this->data['form'])) {
 <main>
     <div class="texto">
         <h2>DevGate</h2>
-        <p>Entre nesse portal e aprenda a programar</p>
+        <p>Sic Dev creatus est <br><span>"Assim o dev foi criado"</span></p>
+
     </div>
     <div class="login-form">
 
