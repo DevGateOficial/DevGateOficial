@@ -138,7 +138,7 @@ class CarregarPg
             "AdminListCursos", "AdminListAulas", "AdminListAtividades",
             "AdminViewCurso", "AdminViewAula", "AdminViewAtividade",
             "AdminDeleteCurso", "AdminDeleteAula", "AdminDeleteAtividade",
-            "AdminEditCurso", "AdminEditAula","AdminEditImageCurso","AdminUpgradeUsuario"
+            "AdminEditCurso", "AdminEditAula", "AdminEditAtividade", "AdminEditImageCurso","AdminUpgradeUsuario"
         ];
 
 

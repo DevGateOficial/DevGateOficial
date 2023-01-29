@@ -70,8 +70,6 @@ class AdminEditAula
 
     private function edit(): void
     {
-        var_dump($this->data);
-
         $updateCurso = new \Admin\Models\helper\crud\AdminUpdate();
         $updateCurso->executeUpdate("aula", $this->data, "WHERE idAula=:idAula", "idAula={$this->data['idAula']}");
 
