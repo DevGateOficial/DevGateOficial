@@ -98,18 +98,18 @@ if (!empty($this->data['viewCurso'])) {
                         <p class="descricao">
                             Descrição de como sera desenvolvida as atividades. Assim
                             como sobre a dinamica das mesmas
-                        <p>
-                            <br>
-                            <?php
-                            $descricao = "";
-                            if (isset($valueForm['descricao'])) {
-                                $descricao = $valueForm['descricao'];
-                            }
-                            ?>
-                            <textarea placeholder="Descrição" name="descricao" id="editor" value="" required="required" maxlength="512"></textarea>
-                            <br>
+                        </p>
+                        <br>
+                        <?php
+                        $descricao = "";
+                        if (isset($valueForm['descricao'])) {
+                            $descricao = $valueForm['descricao'];
+                        }
+                        ?>
+                        <textarea placeholder="Descrição" name="descricao" id="editor" value="" required="required" maxlength="512"></textarea>
+                        <br>
 
-                            <input type="hidden" name="idCurso" value="<?= $idCurso ?>">
+                        <input type="hidden" name="idCurso" value="<?= $idCurso ?>">
                     </div>
 
                     <input type="submit" class="submit-btn" name="CadastrarAula" value="Criar Aula"></input>

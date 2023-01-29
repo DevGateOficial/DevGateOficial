@@ -21,9 +21,6 @@ document.getElementById("tipoAtividade").addEventListener("change", function () 
 });
 
 
-
-
-
 // VERIFICAÇÃO DA URL NO CADASTRO DE ATIVIDADE
 
 // Seleciona o input onde será inserida a URL

@@ -16,6 +16,13 @@ if (isset($this->data['viewAula'])) {
             <p class="subtitulo-curso"><?= $aulaInfo['descricao'] ?>
             <p>
             <div class="btns-aula">
+                <div class="btn-aula" title="Editar curso" id="edit-aula">
+                    <span class="material-symbols-sharp"> edit_document </span>
+                    <p>
+                        Editar
+                    </p>
+                </div>
+
                 <div class="btn-aula btn-criar-aula btn-aula-p" title="Criar Atividades">
                     <span class="material-symbols-sharp"> add_circle </span>
                     <p class="btn-criar-aula btn-aula-p">Criar Atividades</p>
@@ -30,7 +37,7 @@ if (isset($this->data['viewAula'])) {
             <?php foreach ($this->data['listAtividades'] as $atividade) : ?>
                 <div class="aula" onclick="viewAtividade(<?= $atividade['idAtividade'] ?>)">
                     <p class="titulo-curso">
-                        <?= $atividade['nomeAtividade']; ?>
+                        <?= $atividade['nomeAula']; ?>
                     </p>
                     <p class="subtitulo-curso">
                         <?= $atividade['descricao']; ?>
@@ -53,6 +60,48 @@ if (isset($this->data['viewAula'])) {
         unset($_SESSION['msg']);
     } ?>
 
+    <!-- MODAL PARA EDIÇÃO DA AULA -->
+    <div id="modal-editAula" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <span class="close-btn" id="close-editAula">&times;</span>
+                <h2 class="titulo-form">Edição da Aula</h2>
+                <div class="cadastro-curso">
+
+                    <div class="gn-form">
+                        <form method="POST" action="<?= URLADM ?>edit-aula/index/<?= $aulaInfo['idAula'] ?>">
+
+                            <div class="inputBox" for="name">
+                                <p class="txt-title">Nome da Aula</p>
+                                <input type="text" placeholder="" name="nomeAula" id="name" value="<?= $aulaInfo['nomeAula'] ?>" required="required" />
+                                <i></i>
+                            </div>
+
+                            <div class="text-editor">
+                                <p class="txt-title">Descrição</p>
+                                <p class="descricao">
+                                    Descrição de como sera desenvolvida as atividades. Assim
+                                    como sobre a dinamica das mesmas
+                                </p>
+                                <br>
+
+                                <textarea placeholder="Descrição" name="descricao" id="editor" value="" required="required" maxlength="512">
+                                        <?= $aulaInfo['descricao'] ?>
+                                </textarea>
+                                <br>
+                            </div>
+
+                            <input type="hidden" placeholder="" name="idAula" id="name" value="<?= $aulaInfo['idAula'] ?>" required="required"/>
+
+                            <input type="submit" class="submit-btn" name="EditAula" value="Editar Aula"></input>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- MODAL DE CRIAÇÂO DE ATIVIDADE -->
     <div id="modal" class="modal">
         <div class="modal-content">
@@ -66,15 +115,15 @@ if (isset($this->data['viewAula'])) {
                         <!-- Formulário de criação de atividades -->
                         <form action="<?= URLADM ?>cadastro-atividade/index/<?= $aulaInfo['idAula'] ?>" method="POST" enctype="multipart/form-data">
                             <?php
-                            $nomeAtividade = "";
-                            if (isset($valueForm['nomeAtividade'])) {
-                                $nomeAtividade = $valueForm['nomeAtividade'];
+                            $nomeAula = "";
+                            if (isset($valueForm['nomeAula'])) {
+                                $nomeAula = $valueForm['nomeAula'];
                             }
                             ?>
                             <div class="inputBox">
                                 <p class="txt-title">Nome da Atividade</p>
 
-                                <input type="text" placeholder="Nome da atividade" name="nomeAtividade" id="name" value="<?php echo $nomeAtividade ?>" required="required" />
+                                <input type="text" placeholder="Nome da atividade" name="nomeAula" id="name" value="<?php echo $nomeAula ?>" required="required" />
 
                                 <i></i>
                             </div>

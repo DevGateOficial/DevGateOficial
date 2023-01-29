@@ -17,6 +17,8 @@ if (!defined('D3V3G4T3')) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <!-- LINK CSS -->
+
+    <!-- CSS para os editores de texto -->
     <link rel="stylesheet" href="<?= URLSRC; ?>assets/dist/ui/trumbowyg.min.css" />
 
     <link rel="stylesheet" href="<?= URLSRC; ?>assets/css/ADMIN/dashboard/dashboard.css" />
@@ -32,15 +34,19 @@ if (!defined('D3V3G4T3')) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- LINK SCRIPT -->
-    <script type="text/javascript" src="<?= URLSRC; ?>assets/js/Admin/cursos-handler.js"></script>
     <script type="text/javascript" src="<?= URLSRC; ?>assets/js/Admin/menu.js" defer></script>
-    <!-- <script type="text/javascript" src="<?= URLSRC; ?>assets/js/drag_and_drop.js" defer></script> -->
+    
     <script type="text/javascript" src="<?= URLSRC; ?>assets/js/Admin/edit-emailServer.js" defer></script>
-    <script type="text/javascript" src="<?= URLSRC; ?>assets/js/Admin/cadastroAula-modal.js" defer></script>
-    <script type="text/javascript" src="<?= URLSRC; ?>assets/js/Admin/cadastroAtividade-modal.js" defer></script>
     <script type="text/javascript" src="<?= URLSRC; ?>assets/js/Admin/solicitacoes-modal.js" defer></script>
-    <script type="text/javascript" src="<?= URLSRC; ?>assets/js/Admin/cadastro-curso.js" defer></script>
 
+    <script type="text/javascript" src="<?= URLSRC; ?>assets/js/Admin/cursos-handler.js"></script>
+    <script type="text/javascript" src="<?= URLSRC; ?>assets/js/Admin/cadastro-curso.js" defer></script>
+    
+    <script type="text/javascript" src="<?= URLSRC; ?>assets/js/Admin/cadastroAula-modal.js" defer></script>
+    <script type="text/javascript" src="<?= URLSRC; ?>assets/js/Admin/edit-aula.js" defer></script>
+    
+    <script type="text/javascript" src="<?= URLSRC; ?>assets/js/Admin/cadastroAtividade-modal.js" defer></script>
+    
     <!-- LINK FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
