@@ -109,7 +109,7 @@ class CarregarPg
         $this->listPgPrivate = [
             "Home", "UpgradeUsuario", "Logout", "AcessoAdm",
             "ListCursos", "ListAulas", "ListAtividades", "MeusCursos",
-            "ViewCurso", "ViewAula", "ViewAtividade", "PerfilUsuario", "EditUsuario", "RegisterCurso"
+            "ViewCurso", "ViewAula", "ViewAtividade", "PerfilUsuario", "EditUsuario", "RegisterCurso", "Sobre"
         ];
 
         if ($this->verifyLogin()) {

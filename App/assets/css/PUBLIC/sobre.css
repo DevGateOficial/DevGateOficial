@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+.container {
+  padding: 5rem;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: rgb(13, 8, 72);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: left;
+  padding-bottom: 3rem;
+}
+.container .introducao {
+  margin-bottom: 3%;
+}
+.container .introducao .titulo-intro {
+  font-size: 3rem;
+  margin-bottom: 1%;
+}
+.container .introducao .text {
+  font-size: 1.8rem;
+  max-width: 102rem;
+  margin-bottom: 0.5%;
+}
+.container .objetivos {
+  font-size: 1.8rem;
+}
+.container .objetivos p {
+  margin-bottom: 2rem;
+}
+.container .objetivos .obj-titulo {
+  font-size: 2.5rem;
+  margin-bottom: 0.8%;
+}
+.container .objetivos .objs-especificos ul {
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+  list-style: circle;
+  margin-left: 3.5%;
+}
+.container .objetivos .objs-especificos ul li {
+  list-style: disc;
+  margin-bottom: 0.8%;
+  max-width: 51rem;
+}
+.container .tec-tools {
+  margin: 3% 0 1.5%;
+}
+.container .tec-tools .tec-titulo {
+  font-size: 2.5rem;
+}
+.container .tec-tools .tec-imgs-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .tec-tools .tec-imgs-wrap .tec-img {
+  margin: 1.8rem;
+  width: 8rem;
+  height: 8rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #181a1e;
+  border-radius: 0.5rem;
+  transition: all 500ms ease;
+}
+.container .tec-tools .tec-imgs-wrap .tec-img:hover {
+  width: 11rem;
+  height: 11rem;
+  margin: 0;
+  cursor: pointer;
+  background: #dce1eb;
+  border-radius: 1.8rem;
+}
+.container .tec-tools .tec-imgs-wrap .tec-img:visited {
+  margin: 2rem;
+  width: 8rem;
+  height: 8rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #181a1e;
+  border-radius: 0.5rem;
+  transition: all 500ms ease;
+}
+.container .tec-tools .tec-imgs-wrap .spec {
+  padding: 0.8rem;
+}
+.container .spacer-fix {
+  margin: 0 0 3% 0;
+}
+.container .dev-titulo {
+  font-size: 2.5rem;
+  margin-bottom: 1.8%;
+}
+.container .desenvolvedores {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+  text-align: center;
+  gap: 2rem;
+}
+.container .desenvolvedores .dev {
+  font-family: Poppins, sans-serif;
+  font-size: 1.2rem;
+}
+.container .desenvolvedores .dev img {
+  border-radius: 0.9rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 25rem;
+  height: 25rem;
+  transition: all 400ms ease;
+}
+.container .desenvolvedores .dev .dev-1:hover {
+  content: url(../../img/sobre/daniel.jpeg);
+  transition: all 400ms ease;
+}
+.container .desenvolvedores .dev .dev-2:hover {
+  content: url(../../img/sobre/felipe.jpeg);
+  transition: all 400ms ease;
+}
+.container .desenvolvedores .dev .dev-3:hover {
+  content: url(../../img/sobre/brambilla.png);
+}
+.container .desenvolvedores .dev h2 {
+  margin-top: 1rem;
+}
+.container .desenvolvedores .dev .git img {
+  transform: translateY(25%);
+  width: 2rem;
+  height: 2rem;
+}
+.container .desenvolvedores .dev a:hover {
+  color: #a3bdcc;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .dev img {
+    border-radius: 0.9rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 20rem;
+    height: 20rem;
+  }
+}
+@media (max-width: 330px) {
+  .container {
+    padding: 2rem;
+  }
+  .container .tec-tools .tec-imgs-wrap .tec-img {
+    margin: 1rem;
+  }
+}/*# sourceMappingURL=sobre.css.map */

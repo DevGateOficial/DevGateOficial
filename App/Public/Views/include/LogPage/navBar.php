@@ -30,6 +30,7 @@
         <ul class="desktop-list">
             <li><a href="<?= URL ?>list-cursos">Novos Cursos</a></li>
             <li><a href="<?= URL ?>meus-cursos">Meus Cursos</a></li>
+            <li><a href="<?= URL ?>sobre">Sobre</a></li>
         </ul>
 
         <div class="login-btn">
@@ -65,6 +66,4 @@
             <span class="material-symbols-sharp " id="menu-btn"> logout </span>
             Logout</a>
     </div>
-
-
 </header>

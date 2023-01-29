@@ -13,6 +13,7 @@ if (!defined('D3V3G4T3')) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="<?= URLSRC; ?>assets/css/PUBLIC/sobre.css" />
     <link rel="stylesheet" href="<?= URLSRC; ?>assets/css/PUBLIC/home/nav_bar.css"/>
     <link rel="stylesheet" href="<?= URLSRC; ?>assets/css/PUBLIC/home/home_logado.css" />
     <link rel="stylesheet" href="<?= URLSRC; ?>assets/css/PUBLIC/home/side_menu.css" />

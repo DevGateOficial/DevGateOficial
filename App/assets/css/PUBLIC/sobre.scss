@@ -1,0 +1,182 @@
+@import '../variable.scss';
+
+.container{
+  padding: 5rem ;
+  width: 100%;
+  height: max-content;
+  background-color: $dark-blue;
+  // display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: left;
+  padding-bottom: 3rem;
+
+  .introducao{
+    margin-bottom: 3%;
+    .titulo-intro{
+      font-size: 3rem;
+      margin-bottom: 1%;
+    }
+    .text{
+      font-size: 1.8rem;
+      max-width: 102rem;
+      margin-bottom: .5%;
+    }
+  }
+
+  .objetivos{
+    font-size: 1.8rem;
+    p{
+      margin-bottom: 2rem;
+    }
+    .obj-titulo{
+      font-size: 2.5rem;
+      margin-bottom: .8%;
+    }
+    .objs-especificos{
+      ul{
+        text-decoration: dotted;
+        list-style: circle;
+        margin-left: 3.5% ;
+        li{
+        list-style: disc;
+        margin-bottom: .8%;
+        max-width: 51rem;
+        }
+      }
+    }
+  }
+
+  .tec-tools{
+    margin: 3% 0 1.5% ;
+    
+    .tec-titulo{
+      font-size: 2.5rem;
+    }
+    .tec-imgs-wrap{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      .tec-img{
+        margin: 1.8rem;
+        width: 8rem;
+        height: 8rem;
+        object-fit: contain;
+        background-color: $background;
+        border-radius: .5rem;
+        transition: all 500ms ease;
+        &:hover{
+          width: 11rem;
+          height: 11rem;
+          margin: 0 ;
+          cursor: pointer;
+          background:$info-light;
+          border-radius: 1.8rem;
+        }
+        &:visited{
+          margin: 2rem;
+        width: 8rem;
+        height: 8rem;
+        object-fit: contain;
+        background-color: $background;
+        border-radius: .5rem;
+        transition: all 500ms ease;
+        }
+      }
+      .spec{
+        padding: .8rem;
+      }
+    }
+  }
+  .spacer-fix{
+    margin: 0 0 3% 0;
+  }
+  .dev-titulo{
+    font-size: 2.5rem;
+    margin-bottom: 1.8%;
+
+  }
+  .desenvolvedores{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 2rem;
+    .dev{
+      font-family: Poppins, sans-serif;
+      font-size: 1.2rem;
+      img{
+        border-radius: .9rem;
+        object-fit: cover;
+        width: 25rem;
+        height: 25rem;
+        transition: all 400ms ease;
+      }
+    
+      .dev-1:hover{
+        content: url(../../img/sobre/daniel.jpeg);
+        transition: all 400ms ease;
+  
+      }
+      .dev-2:hover{
+        content: url(../../img/sobre/felipe.jpeg);
+        transition: all 400ms ease;
+        
+      }
+      .dev-3:hover{
+        content: url(../../img/sobre/brambilla.png);
+        
+      }
+      h2{
+        margin-top: 1rem;
+      }
+     
+      .git{
+        img{
+          transform: translateY(25%);
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+      a:hover{
+        color: $font;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container{
+    flex-direction: column;
+
+    .dev{
+
+      img{
+        border-radius: .9rem;
+        object-fit: cover;
+        width: 20rem;
+        height: 20rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 330px) {
+  .container{
+    padding: 2rem;
+    .tec-tools{
+      .tec-imgs-wrap{
+        .tec-img{
+          margin: 1rem;
+        }
+  
+      }
+    }
+
+  }
+
+}
