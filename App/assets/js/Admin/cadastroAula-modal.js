@@ -13,6 +13,11 @@ const closeBtnConf = document.querySelector('.close-btn2')
 // console.log(closeBtnConf) NULL NULL NULL
 
 const undo = document.querySelector('.undo-conf')
+const closeAtv = document.getElementById('close-atv')
+
+closeAtv.addEventListener('click', function () {
+  modal.style.display = 'none'
+})
 
 closeBtnModal.addEventListener('click', function () {
   // Hide the modal

@@ -91,7 +91,7 @@ if (isset($this->data['viewAula'])) {
                                 <br>
                             </div>
 
-                            <input type="hidden" placeholder="" name="idAula" id="name" value="<?= $aulaInfo['idAula'] ?>" required="required"/>
+                            <input type="hidden" placeholder="" name="idAula" id="name" value="<?= $aulaInfo['idAula'] ?>" required="required" />
 
                             <input type="submit" class="submit-btn" name="EditAula" value="Editar Aula"></input>
                         </form>
@@ -100,13 +100,11 @@ if (isset($this->data['viewAula'])) {
             </div>
         </div>
     </div>
-
-
     <!-- MODAL DE CRIAÇÂO DE ATIVIDADE -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <div class="modal-body">
-                <span class="close-btn">&times;</span>
+                <span class="close-btn" id="close-atv">&times;</span>
                 <h2 class="titulo-form">Criação de Atividade</h2>
                 <div class="cadastro-curso">
 
