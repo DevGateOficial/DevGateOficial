@@ -1,5 +1,3 @@
-console.log('list-aula.js')
-
 let url = 'http://localhost/DevGateOficial/aula-assistida/index/'
 let url_viewAula = 'http://localhost/DevGateOficial/view-aula/viewAulaAJAX/'
 let url_listAtividades =
@@ -10,12 +8,18 @@ function checkAula(idAula) {
   console.log(url + idAula)
 
   fetch(url + idAula)
-    //.then(response => response.json())
+    // .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.log(error))
 }
 
 // Pegar os dados da aula
+window.addEventListener('load', function () {
+  const aula_padrao = document.getElementById('aula-padrao').getAttribute('data-id');
+  console.log(aula_padrao);
+  getAula(aula_padrao);
+  getAtividades(aula_padrao);
+})
 
 //verifica a aula que foi clicada
 const aulas = document.querySelectorAll('#aula-side')
