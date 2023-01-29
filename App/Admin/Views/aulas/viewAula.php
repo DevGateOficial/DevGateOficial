@@ -134,6 +134,7 @@ if (isset($this->data['viewAula'])) {
                                 <input type="text" id="campo-input" name="url" class="url_atividade" value="<?php echo $url ?>" />
                                 <i></i>
                             </div>
+                            <p id="msg-url"></p>
 
                             <?php
                             $idAula = "";

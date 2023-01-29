@@ -22,20 +22,59 @@ document.getElementById("tipoAtividade").addEventListener("change", function () 
 
 
 
-const controller = 'http://localhost/DevGateOficial/admin-cadastro-atividade/verifyUrl/';
+
+
+// VERIFICAÇÃO DA URL NO CADASTRO DE ATIVIDADE
+
+// Seleciona o input onde será inserida a URL
 const url_atividade = document.querySelector('.url_atividade');
-const valor = encodeURIComponent(url_atividade.value);
 
-url_atividade.addEventListener('input', function() {
-  
-
-console.log(encodeURIComponent(url_atividade.value))
-
-  // fetch(controller + encodeURIComponent(url_atividade.value))
-  // .then(response => response.json())
-  // .then(data => {
-  //   console.log(data)
-  // })
+// Adiciona um evento de "input" ao input, ou seja, sempre que o valor do input for alterado, a função será chamada
+url_atividade.addEventListener('input', function () {
+  // Armazena o valor atual do input
+  let link = url_atividade.value
+  // Chama a função que verifica se a URL é válida
+  verifyUrl(link)
 });
+
+// Função que verifica se a URL é válida
+function verifyUrl(link) {
+  console.log(link)
+
+  // Verifica se a URL inclui "youtube.com" ou "youtu.be"
+  if (link.includes("youtube.com") || link.includes("youtu.be")) {
+    // Armazena o ID do vídeo a partir da URL
+    const videoId = link.split("v=")[1];
+    // Verifica se o ID do vídeo existe e tem 11 caracteres
+    if (videoId && videoId.length === 11) {
+      // Chama a função que exibe a mensagem de URL válida
+      alerUrl(true)
+    } else {
+      // Chama a função que exibe a mensagem de URL inválida
+      alerUrl(false)
+    }
+  } else {
+    // Se não for um link do youtube, chama a função que exibe a mensagem de URL inválida
+    alerUrl(false)
+  }
+}
+
+// Função que exibe a mensagem de URL válida ou inválida
+function alerUrl(result) {
+  // Seleciona o elemento onde será exibida a mensagem
+  let msg = document.getElementById('msg-url')
+
+  // Verifica se a URL é válida ou inválida e exibe a mensagem correspondente
+  if (result) {
+    msg.innerHTML = 'Link é válido'
+    msg.style.color = 'limegreen';
+  } else {
+    msg.innerHTML = 'Link não é válido'
+    msg.style.color = 'red';
+  }
+}
+
+
+
 
 
