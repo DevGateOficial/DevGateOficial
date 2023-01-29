@@ -8,8 +8,5 @@ input.addEventListener('change', function (e) {
     let fileName = file.name;
 
     //coloca o nome do arquivo visivel para o usuario
-
     label.innerHTML = fileName;
-    // label.style.display = 'inline-block';
-    // photo.style.display = 'inline-block';
 });

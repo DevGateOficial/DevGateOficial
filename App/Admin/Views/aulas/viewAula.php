@@ -33,11 +33,13 @@ if (isset($this->data['viewAula'])) {
 
     <?php if (isset($this->data['listAtividades'])) { ?>
 
+        
+
         <div class="aulas-wrapper">
             <?php foreach ($this->data['listAtividades'] as $atividade) : ?>
                 <div class="aula" onclick="viewAtividade(<?= $atividade['idAtividade'] ?>)">
                     <p class="titulo-curso">
-                        <?= $atividade['nomeAula']; ?>
+                        <?= $atividade['nomeAtividade']; ?>
                     </p>
                     <p class="subtitulo-curso">
                         <?= $atividade['descricao']; ?>
@@ -113,15 +115,15 @@ if (isset($this->data['viewAula'])) {
                         <!-- Formulário de criação de atividades -->
                         <form action="<?= URLADM ?>cadastro-atividade/index/<?= $aulaInfo['idAula'] ?>" method="POST" enctype="multipart/form-data">
                             <?php
-                            $nomeAula = "";
-                            if (isset($valueForm['nomeAula'])) {
-                                $nomeAula = $valueForm['nomeAula'];
+                            $nomeAtividade = "";
+                            if (isset($valueForm['nomeAtividade'])) {
+                                $nomeAtividade = $valueForm['nomeAtividade'];
                             }
                             ?>
                             <div class="inputBox">
                                 <p class="txt-title">Nome da Atividade</p>
 
-                                <input type="text" placeholder="Nome da atividade" name="nomeAula" id="name" value="<?php echo $nomeAula ?>" required="required" />
+                                <input type="text" placeholder="Nome da atividade" name="nomeAtividade" id="name" value="<?php echo $nomeAtividade ?>" required="required" />
 
                                 <i></i>
                             </div>

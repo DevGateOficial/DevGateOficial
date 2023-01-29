@@ -25,13 +25,25 @@ document.getElementById("tipoAtividade").addEventListener("change", function () 
 
 // Seleciona o input onde será inserida a URL
 const url_atividade = document.querySelector('.url_atividade');
+// Seleciona o elemento onde será exibida a mensagem
+let msg = document.getElementById('msg-url')
 
 // Adiciona um evento de "input" ao input, ou seja, sempre que o valor do input for alterado, a função será chamada
 url_atividade.addEventListener('input', function () {
+
+  // Recebe o tipo da atividade
+  const tipoAtividade = document.getElementById("tipoAtividade").value
+
   // Armazena o valor atual do input
   let link = url_atividade.value
-  // Chama a função que verifica se a URL é válida
-  verifyUrl(link)
+
+  // Caso a atividade seja do tipo `videoAula` -> chama a função que verifica se a URL é válida
+  if (tipoAtividade === 'videoAula') {
+    verifyUrl(link)
+  } else {
+    msg.style.display = 'none'
+  }
+
 });
 
 // Função que verifica se a URL é válida
@@ -58,10 +70,9 @@ function verifyUrl(link) {
 
 // Função que exibe a mensagem de URL válida ou inválida
 function alerUrl(result) {
-  // Seleciona o elemento onde será exibida a mensagem
-  let msg = document.getElementById('msg-url')
-
   // Verifica se a URL é válida ou inválida e exibe a mensagem correspondente
+  msg.style.display = 'block'
+  
   if (result) {
     msg.innerHTML = 'Link é válido'
     msg.style.color = 'limegreen';

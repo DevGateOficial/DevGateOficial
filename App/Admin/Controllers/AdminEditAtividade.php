@@ -2,7 +2,7 @@
 
 namespace Admin\Controllers;
 
-class AdminEditAula
+class AdminEditAtividade
 {
     /** @var array|string|null $data Recebe os dados que devem ser enviados para a VIEW.*/
     private array|string|null $data = [];
@@ -21,11 +21,9 @@ class AdminEditAula
      */
     public function index(int|string|null $id = null): void
     {
-        
         $this->dataForm = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-        var_dump($this->dataForm); 
 
-        if ((!empty($id)) and (empty($this->dataForm['EditAula']))) {
+        if ((!empty($id)) and (empty($this->dataForm['EditAtividade']))) {
             $this->id = (int) $id;
 
             $viewAula = new \Admin\Models\AdminEditAula();
@@ -52,18 +50,24 @@ class AdminEditAula
      */
     private function editAula(): void
     {
-        if (!empty($this->dataForm['EditAula'])) {
-            unset($this->dataForm['EditAula']);
-            $editAula = new \Admin\Models\AdminEditAula();
-            $editAula->update($this->dataForm);
+        if (!empty($this->dataForm['EditAtividade'])) {
+            unset($this->dataForm['EditAtividade']);
 
-            if ($editAula->getResult()) {
-                $urlRedirect = URLADM . "view-aula/index/" . $this->dataForm['idAula'];
-                header("Location: $urlRedirect");
-            } else {
-                $this->data['form'] = $this->dataForm;
-                $this->loadView();
+            if ($this->dataForm['tipoAtividade'] != 'videoAula') {
+                $this->dataForm['url'] = $_FILES['url'] ? $_FILES['url'] : $this->dataForm['url'];
             }
+
+            var_dump($this->dataForm);
+            // $editAula = new \Admin\Models\AdminEditAula();
+            // $editAula->update($this->dataForm);
+
+            // if ($editAula->getResult()) {
+            //     $urlRedirect = URLADM . "view-aula/index/" . $this->dataForm['idAula'];
+            //     header("Location: $urlRedirect");
+            // } else {
+            //     $this->data['form'] = $this->dataForm;
+            //     $this->loadView();
+            // }
         } else {
             $_SESSION['msg'] = "<p style='color: red'>Erro: Curso não encontrado!</p>";
             $urlRedirect = URLADM . "list-cursos/index";
