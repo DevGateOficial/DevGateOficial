@@ -17,27 +17,49 @@ window.addEventListener('resize', () => {
   }
 })
 
-// get currently selected menu item from local storage
-var selectedItem = localStorage.getItem("selectedMenuItem");
 
-// add active class to selected menu item
-if (selectedItem) {
-  var menuItem = document.querySelector(`aside .sidebar a[href="${selectedItem}"]`);
-  if (menuItem) {
-    menuItem.classList.add("active");
+const cadastro_curso = document.getElementById('cadastro_curso')
+window.addEventListener('load', function() {
+
+  if(this.window.location.href == "http://localhost/DevGateOficial/admin-cadastro-curso/index"){
+    cadastro_curso.classList.add("active");
+  } else{
+    cadastro_curso.classList.remove("active");
   }
+  
+})
+
+// Adiciona a classe "ativa" ao item de menu que foi selecionado antes de recarregar a página
+var itemSelecionado = localStorage.getItem("itemMenuSelecionado");
+
+if (itemSelecionado) {
+  // Verifica se o item de menu selecionado é o mesmo que o item na página atual
+  if (itemSelecionado === window.location.href) {
+    var itemMenu = document.querySelector(`aside .sidebar a[href="${itemSelecionado}"]`);
+    if (itemMenu) {
+      itemMenu.classList.add("ativo");
+    }
+  } else {
+    // Se não for o mesmo, remove o item selecionado do armazenamento local
+    localStorage.removeItem("itemMenuSelecionado");
+  }
+} else {
+  // Se não houver item selecionado no armazenamento local, adiciona a classe "ativa" ao item de menu padrão
+  var itemMenuPadrao = document.querySelector("aside .sidebar a[href='/padrao']");
+  itemMenuPadrao.classList.add("ativo");
 }
 
-function toggleActive(el) {
-  // remove active class from all menu items
-  var menuItems = document.querySelectorAll("aside .sidebar a");
-  menuItems.forEach(function (item) {
-    item.classList.remove("active");
+// Função para alternar a classe "ativa" entre os itens de menu
+function alternarAtivo(el) {
+  // Remove a classe "ativa" de todos os itens de menu
+  var itensMenu = document.querySelectorAll("aside .sidebar a");
+  itensMenu.forEach(function (item) {
+    item.classList.remove("ativo");
   });
 
-  // add active class to clicked menu item
-  el.classList.add("active");
+  // Adiciona a classe "ativa" ao item de menu clicado
+  el.classList.add("ativo");
 
-  // store currently selected menu item in local storage
-  localStorage.setItem("selectedMenuItem", el.getAttribute("href"));
+  // Armazena o item de menu selecionado no armazenamento local
+  localStorage.setItem("itemMenuSelecionado", el.getAttribute("href"));
 }

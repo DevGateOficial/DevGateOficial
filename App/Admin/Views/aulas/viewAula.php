@@ -102,6 +102,7 @@ if (isset($this->data['viewAula'])) {
             </div>
         </div>
     </div>
+    
     <!-- MODAL DE CRIAÇÂO DE ATIVIDADE -->
     <div id="modal" class="modal">
         <div class="modal-content">

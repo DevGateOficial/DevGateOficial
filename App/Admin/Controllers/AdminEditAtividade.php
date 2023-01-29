@@ -58,16 +58,17 @@ class AdminEditAtividade
             }
 
             var_dump($this->dataForm);
-            // $editAula = new \Admin\Models\AdminEditAula();
-            // $editAula->update($this->dataForm);
 
-            // if ($editAula->getResult()) {
-            //     $urlRedirect = URLADM . "view-aula/index/" . $this->dataForm['idAula'];
-            //     header("Location: $urlRedirect");
-            // } else {
-            //     $this->data['form'] = $this->dataForm;
-            //     $this->loadView();
-            // }
+            $editAula = new \Admin\Models\AdminEditAtividade();
+            $editAula->update($this->dataForm);
+
+            if ($editAula->getResult()) {
+                $urlRedirect = URLADM . "view-aula/index/" . $this->dataForm['idAula'];
+                header("Location: $urlRedirect");
+            } else {
+                $this->data['form'] = $this->dataForm;
+                $this->loadView();
+            }
         } else {
             $_SESSION['msg'] = "<p style='color: red'>Erro: Curso não encontrado!</p>";
             $urlRedirect = URLADM . "list-cursos/index";

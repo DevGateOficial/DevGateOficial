@@ -92,13 +92,14 @@ if (isset($this->data['viewAtividade'])) {
                                 <i></i>
                             </label>
 
+
+                            <p id="file-label-atividade" style="color: #41f1b6;"> </p>
                             <div class="inputBox" id="inputBox" style="display: none;">
                                 <p class="descricao"></p>
                                 <input type="text" id="campo-input" name="url" class="url_atividade" value="<?= $atividadeInfo['url'] ?>" />
-                                <i></i>
+                                <i> </i>
                             </div>
                             <p id="msg-url"></p>
-                            <p id="file-label-atividade" style="color: #41f1b6;"> </p>
 
                             <input type="hidden" id="idAtividade" name="idAtividade" value="<?= $atividadeInfo['idAtividade'] ?>" />
                             <input type="hidden" name="idAula" value="<?= $atividadeInfo['idAula'] ?>" />
