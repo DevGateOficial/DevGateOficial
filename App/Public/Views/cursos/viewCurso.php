@@ -1,9 +1,9 @@
 <?php
 $aulas = $this->data['listAulas'];
 
-if (isset($this->data['aulasAssistidas']))
+if (isset($this->data['aulasAssistidas'])){
   $aulas_assistidas = $this->data['aulasAssistidas'];
-
+}
 $numeroAula = 1;
 ?>
 
@@ -31,6 +31,9 @@ $numeroAula = 1;
   </section>
 
   <section class="class-list">
+
+    <p id="aula-padrao" data-id="<?=$aulas[0]['idAula']?>"></p>
+
     <section class="video-playlist">
       <h3 class="title">Titulo curso</h3>
       <?php
@@ -62,12 +65,12 @@ $numeroAula = 1;
             <?php if (in_array($aula['idAula'], $aulas_assistidas)) { ?>
 
               <input class="checked custom-checkbox" type="checkbox" id="custom-checkbox" data-id="<?= $aula['idAula'] ?>" checked>
-              <label for="custom-checkbox" onclick="checkAula(<?= $aula['idAula'] ?>)"></label>
+              <label for="custom-checkbox" onclick="checkAula(<?= $aula['idAula'];?>)"></label>
 
             <?php } else { ?>
 
               <input class="checked custom-checkbox" type="checkbox" id="custom-checkbox" data-id="<?= $aula['idAula'] ?>">
-              <label for="custom-checkbox" onclick="checkAula(<?= $aula['idAula'] ?>)"></label>
+              <label for="custom-checkbox" onclick="checkAula(<?= $aula['idAula'];?>)"></label>
 
             <?php } ?>
 

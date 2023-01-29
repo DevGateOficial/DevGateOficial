@@ -28,7 +28,7 @@ class ViewCurso
             $this->data['listAulas'] = $listAulas->getResultBd();
 
             $aulasAssistidas = new \Public\Models\PublicAulaAssistida();
-            $this->data['aulasAssistidas'] = $aulasAssistidas->getAulasAssistidas();
+            $this->data['aulasAssistidas'] = $aulasAssistidas->getAulasAssistidas($id);
 
             $this->viewUser();
 

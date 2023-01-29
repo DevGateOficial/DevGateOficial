@@ -35,12 +35,12 @@ class PublicAulaAssistida
         $update->executeUpdate("usuario_has_curso", ['aulas_assistidas' => serialize($aulasAssistidas)], "WHERE usuario_idUsuario = :idUsuario AND curso_idCurso = :idCurso", "idUsuario={$this->idUsuario}&idCurso={$this->idCurso}");
     }
 
-    public function getAulasAssistidas()
+    public function getAulasAssistidas($idCurso)
     {
         $idUsuario = $_SESSION['user_idUsuario'];
 
         $read = new \Public\Models\helper\crud\PublicRead();
-        $read->executeRead("usuario_has_curso", "WHERE usuario_idUsuario = :idUsuario", "idUsuario={$idUsuario}");
+        $read->executeRead("usuario_has_curso", "WHERE usuario_idUsuario = :idUsuario AND curso_idCurso =:idCurso", "idUsuario={$idUsuario}&idCurso={$idCurso}");
         $data = $read->getResult();
 
         if(!empty($data[0]['aulas_assistidas'])){
