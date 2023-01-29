@@ -12,6 +12,8 @@
         <ul class="nav-list mobile">
             <li><a href="<?= URL ?>list-cursos">Novos Cursos</a></li>
             <li><a href="<?= URL ?>meus-cursos">Meus Cursos</a></li>
+            <li><a href="<?= URL ?>sobre">Sobre</a></li>
+
             <?php
             if ($_SESSION['user_tipoUsuario'] == "aluno" && $_SESSION['user_adms_user_sits'] != 4) {
                 echo "<li><a class='a-center' href=" . URL . "upgrade-usuario class='side-menu--btn'><span class='material-symbols-sharp' id='menu-btn'> add_circle </span>Parceria</a></li>";
