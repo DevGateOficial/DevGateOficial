@@ -443,36 +443,38 @@ label[for="file-input"] {
   }
 }
 
-.file-inpt {
-  input
-  [type="file"] {
-    height: 0;
-    overflow: none;
-    width: 0;
-  }
-} 
+.inputBox{
 
-
-.file-inpt[type="file"] + label {
-  background-color: darken($dark, 20%);
-
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-	font-family: 'Rubik', sans-serif;
-	font-size: inherit;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  outline: none;
-  padding: 1rem 50px;
-  position: relative;
-  transition: all 0.3s;
-  vertical-align: middle;
-  width: 50%;
+  .file-inpt[type="file"] {
+      height: 0;
+      overflow: none;
+      width: 0;
+      display: none;
+  } 
   
-  &:hover {
-    background-color: darken($dark, 10%);
+  
+  #label-file {
+    background-color: darken($dark, 20%);
+  
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Rubik', sans-serif;
+    font-size: inherit;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 1rem 50px;
+    position: relative;
+    transition: all 0.3s;
+    vertical-align: middle;
+    width: 50%;
+    margin: 2rem 0;
+    
+    &:hover {
+      background-color: darken($dark, 10%);
+    }
   }
 }

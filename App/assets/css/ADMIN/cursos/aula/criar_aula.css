@@ -413,13 +413,13 @@ label[for=file-input] {
     justify-content: space-between;
   }
 }
-.file-inpt input [type=file] {
+.inputBox .file-inpt[type=file] {
   height: 0;
   overflow: none;
   width: 0;
+  display: none;
 }
-
-.file-inpt[type=file] + label {
+.inputBox #label-file {
   background-color: #001f99;
   border: none;
   border-radius: 5px;
@@ -436,7 +436,8 @@ label[for=file-input] {
   transition: all 0.3s;
   vertical-align: middle;
   width: 50%;
+  margin: 2rem 0;
 }
-.file-inpt[type=file] + label:hover {
+.inputBox #label-file:hover {
   background-color: #0029cc;
 }/*# sourceMappingURL=criar_aula.css.map */
