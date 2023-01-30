@@ -443,11 +443,15 @@ label[for="file-input"] {
   }
 }
 
-.file-inpt[type="file"] {
-  height: 0;
-  overflow: none;
-  width: 0;
-}
+.file-inpt {
+  input
+  [type="file"] {
+    height: 0;
+    overflow: none;
+    width: 0;
+  }
+} 
+
 
 .file-inpt[type="file"] + label {
   background-color: darken($dark, 20%);

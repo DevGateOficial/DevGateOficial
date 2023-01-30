@@ -413,7 +413,7 @@ label[for=file-input] {
     justify-content: space-between;
   }
 }
-.file-inpt[type=file] {
+.file-inpt input [type=file] {
   height: 0;
   overflow: none;
   width: 0;

@@ -26,62 +26,79 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const label = document.getElementById('file-label-atividade')
   const instruction = document.getElementById('instrucao-input')
+
   console.log(inputUrl.value)
   console.log(instruction)
   label.innerHTML = inputUrl.value
 
-  // Verifica se o tipo de atividade é "videoAula"
-  if (tipoAtividade.value === 'videoAula') {
-    // Exibe a caixa de input
-    inputBox.style.display = 'block'
-    // Altera o tipo de input para "text"
-    inputUrl.type = 'text'
-
-    // instrução pro usuario sobre como fazer o input
-    instruction.innerHTML =
-      'O input Video aula espera um link de video do youtube comum, que pode ser pego atráves da barra de navegação ou barra de endereço'
-  } else if (tipoAtividade.value === 'materialApoio') {
-    // Exibe a caixa de input
-    inputBox.style.display = 'block'
-    // Altera o tipo de input para "file"
-    inputUrl.type = 'file'
-
-    // instrução pro usuario sobre como fazer o input
-    instruction.innerHTML = 'O input material de apoio espera um arquivo pdf'
-  } else {
-    // Exibe a caixa de input
-    inputBox.style.display = 'block'
-    // Altera o tipo de input para "file"
-    inputUrl.type = 'file'
-
-    // instrução pro usuario sobre como fazer o input
-    instruction.innerHTML = 'O input proposta de projeto espera um arquivo pdf'
-  }
-
   // Adiciona um ouvinte de eventos "change" ao tipo de atividade
   tipoAtividade.addEventListener('change', function () {
+
+    const i_tag = document.getElementById('i-tag')
+    const label_input = document.getElementById('label-file')
+
+    console.log(i_tag, label_input)
+
     // Verifica se o valor selecionado é "videoAula"
-    if (this.value === 'videoAula') {
+    // if (this.value === 'videoAula') {
+    //   // Exibe a caixa de input
+    //   inputBox.style.display = 'block'
+    //   // Altera o tipo de input para "text"
+    //   inputUrl.type = 'text'
+
+    //   instruction.innerHTML =
+    //     'O input Video aula espera um link de video do youtube comum, que pode ser pego atráves da barra de navegação ou barra de endereço'
+    // } else if (tipoAtividade.value === 'materialApoio') {
+    //   // Exibe a caixa de input
+    //   inputBox.style.display = 'block'
+    //   // Altera o tipo de input para "file"
+    //   inputUrl.type = 'file'
+    //   instruction.innerHTML = 'O input material de apoio espera um arquivo pdf'
+    // } else {
+    //   // Exibe a caixa de input
+    //   inputBox.style.display = 'block'
+    //   // Altera o tipo de input para "file"
+    //   inputUrl.type = 'file'
+    //   instruction.innerHTML =
+    //     'O input proposta de projeto espera um arquivo pdf'
+    // }
+
+    // Verifica se o tipo de atividade é "videoAula"
+    if (tipoAtividade.value === 'videoAula') {
       // Exibe a caixa de input
       inputBox.style.display = 'block'
       // Altera o tipo de input para "text"
       inputUrl.type = 'text'
+      label_input.style.display = 'none'
+      i_tag.style.display = 'block'
 
+      inputUrl.className = 'url_atividade';
+      // instrução pro usuario sobre como fazer o input
       instruction.innerHTML =
         'O input Video aula espera um link de video do youtube comum, que pode ser pego atráves da barra de navegação ou barra de endereço'
+
     } else if (tipoAtividade.value === 'materialApoio') {
       // Exibe a caixa de input
       inputBox.style.display = 'block'
       // Altera o tipo de input para "file"
       inputUrl.type = 'file'
+      inputUrl.className = 'url_atividade file-inpt';
+      i_tag.style.display = 'none';
+      label_input.style.display = 'block';
+
+      // instrução pro usuario sobre como fazer o input
       instruction.innerHTML = 'O input material de apoio espera um arquivo pdf'
     } else {
       // Exibe a caixa de input
       inputBox.style.display = 'block'
       // Altera o tipo de input para "file"
       inputUrl.type = 'file'
-      instruction.innerHTML =
-        'O input proposta de projeto espera um arquivo pdf'
+      inputUrl.className = 'url_atividade file-inpt';
+      i_tag.style.display = 'none';
+      label_input.style.display = 'block';
+
+      // instrução pro usuario sobre como fazer o input
+      instruction.innerHTML = 'O input proposta de projeto espera um arquivo pdf'
     }
   })
 })
