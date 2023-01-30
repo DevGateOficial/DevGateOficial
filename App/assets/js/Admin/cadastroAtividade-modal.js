@@ -1,34 +1,58 @@
-document
-  .getElementById('tipoAtividade')
-  .addEventListener('change', function () {
-    switch (this.value) {
-      case 'videoAula':
-        document.getElementById('input-1').style = `display: block;`
-        document.getElementById('input-1').placeholder = 'URL do vídeo'
-        document.getElementById('campo-input').type = 'text'
-        document.getElementById('instrucao-input').innerHTML =
-          'O input Video aula espera um link de video do youtube comum, que pode ser pego atráves da barra de navegação ou barra de endereço'
+document.addEventListener('DOMContentLoaded', function () {
+  // Obtém o elemento da caixa de input
+  const inputBox = document.getElementById('inputBox')
+  // Obtém o elemento da URL de input
+  const inputUrl = document.getElementById('campo-input')
+  const i_tag = document.getElementById('i-tag')
+  const label_input = document.getElementById('label-file')
+  console.log(i_tag, label_input)
 
-        break
-      case 'materialApoio':
-        document.getElementById('input-1').style = `display: block;`
-        document.getElementById('input-1').placeholder = 'Selecione o arquivo'
-        document.getElementById('campo-input').type = 'file'
-        document.getElementById('instrucao-input').innerHTML =
-          'O input material de apoio espera um arquivo pdf'
-        break
-      case 'projeto':
-        document.getElementById('input-1').style = `display: block;`
-        document.getElementById('input-1').placeholder =
-          'URL da proposta de projeto'
-        document.getElementById('campo-input').type = 'file'
-        document.getElementById('instrucao-input').innerHTML =
-          'O input proposta de projeto espera um arquivo pdf'
-        break
-      default:
-        break
-    }
-  })
+  document
+    .getElementById('tipoAtividade')
+    .addEventListener('change', function () {
+      switch (this.value) {
+        case 'videoAula':
+          // document.getElementById('input-1').placeholder = 'URL do vídeo'
+          document.getElementById('campo-input').type = 'text'
+          document.getElementById('instrucao-input').innerHTML =
+            'O input Video aula espera um link de video do youtube comum, que pode ser pego atráves da barra de navegação ou barra de endereço'
+          inputBox.style.display = 'block'
+          // Altera o tipo de input para "text"
+          inputUrl.type = 'text'
+          label_input.style.display = 'none'
+          i_tag.style.display = 'block'
+          inputUrl.className = 'url_atividade'
+          break
+        case 'materialApoio':
+          // document.getElementById('input-1').placeholder = 'Selecione o arquivo'
+          document.getElementById('campo-input').type = 'file'
+          document.getElementById('instrucao-input').innerHTML =
+            'O input material de apoio espera um arquivo pdf'
+          inputBox.style.display = 'block'
+          // Altera o tipo de input para "file"
+          inputUrl.type = 'file'
+          inputUrl.className = 'url_atividade file-inpt'
+          i_tag.style.display = 'none'
+          label_input.style.display = 'block'
+          break
+        case 'projeto':
+          // document.getElementById('input-1').placeholder =            'URL da proposta de projeto'
+          document.getElementById('campo-input').type = 'file'
+          document.getElementById('instrucao-input').innerHTML =
+            'O input proposta de projeto espera um arquivo pdf'
+          // Exibe a caixa de input
+          inputBox.style.display = 'block'
+          // Altera o tipo de input para "file"
+          inputUrl.type = 'file'
+          inputUrl.className = 'url_atividade file-inpt'
+          i_tag.style.display = 'none'
+          label_input.style.display = 'block'
+          break
+        default:
+          break
+      }
+    })
+})
 
 // VERIFICAÇÃO DA URL NO CADASTRO DE ATIVIDADE
 

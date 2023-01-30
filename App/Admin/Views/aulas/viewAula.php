@@ -180,11 +180,25 @@ if (isset($this->data['viewAula'])) {
                             ?>
                             <p class="descricao " id="instrucao-input"></p>
 
+                            <!-- Antigo -->
+                            <!-- 
                             <div class="inputBox" id="input-1" style="display: none;">
                                 <p class="descricao"></p>
                                 <input type="text" id="campo-input" name="url" class="url_atividade" value="<?php echo $url ?>" />
                                 <i></i>
+                            </div> 
+                            -->
+
+                            <div class="inputBox" id="inputBox" style="display: none;">
+                                <input type="text" id="campo-input" name="url" class="url_atividade" value="<?php echo $url ?>" />
+                                <!-- i tag display none when is file input -->
+                                <i id="i-tag"> </i>
+                                <!-- label-file class display none when is url input -->
+                                <label for="campo-input" id="label-file" style="display: none;">
+                                    Escolha um pdf
+                                </label>
                             </div>
+
                             <p id="msg-url"></p>
 
                             <?php
