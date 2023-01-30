@@ -412,4 +412,31 @@ label[for=file-input] {
     flex-direction: column;
     justify-content: space-between;
   }
+}
+.file-inpt[type=file] {
+  height: 0;
+  overflow: none;
+  width: 0;
+}
+
+.file-inpt[type=file] + label {
+  background-color: #001f99;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Rubik", sans-serif;
+  font-size: inherit;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 1rem 50px;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+  width: 50%;
+}
+.file-inpt[type=file] + label:hover {
+  background-color: #0029cc;
 }/*# sourceMappingURL=criar_aula.css.map */

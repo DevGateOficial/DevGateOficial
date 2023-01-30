@@ -95,11 +95,32 @@ if (isset($this->data['viewAtividade'])) {
 
                             <p class="descricao " id="instrucao-input"></p>
                             <p id="file-label-atividade" style="color: #41f1b6;"> </p>
+
+
+                            <!-- <input type="text" id="campo-input" name="url" class="url_atividade file-inpt" value="<?= $atividadeInfo['url'] ?>" />
+                            <label for="campo-input" id="label-file">
+                                Escolha um pdf
+                            </label>
+
                             <div class="inputBox" id="inputBox" style="display: none;">
-                                <p class="descricao"></p>
                                 <input type="text" id="campo-input" name="url" class="url_atividade" value="<?= $atividadeInfo['url'] ?>" />
-                                <i> </i>
+                                <i></i>
+                            </div> -->
+
+
+
+                            <div class="inputBox" id="inputBox" style="display: none;">
+                                <input type="text" id="campo-input" name="url" class="url_atividade" value="<?= $atividadeInfo['url'] ?>" />
+                                <!-- i tag display none when is file input -->
+                                <i id="i-tag"></i>
+                                <!-- label-file class display none when is url input -->
+                                <label for="campo-input" id="label-file">
+                                    Escolha um pdf
+                                </label>
                             </div>
+
+
+
                             <p id="msg-url"></p>
 
                             <input type="hidden" id="idAtividade" name="idAtividade" value="<?= $atividadeInfo['idAtividade'] ?>" />
