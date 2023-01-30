@@ -179,6 +179,8 @@ if (isset($this->data['viewAula'])) {
                             }
                             ?>
                             <p class="descricao " id="instrucao-input"></p>
+                            <p id="file-label-atividade" style="color: #41f1b6;"> </p>
+
 
                             <!-- Antigo -->
                             <!-- 
@@ -228,5 +230,4 @@ if (isset($this->data['viewAula'])) {
           </div> -->
     </div>
 
-</div>
 </div>
