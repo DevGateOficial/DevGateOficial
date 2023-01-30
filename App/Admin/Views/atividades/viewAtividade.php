@@ -102,7 +102,7 @@ if (isset($this->data['viewAtividade'])) {
                                 <!-- i tag display none when is file input -->
                                 <i id="i-tag"> </i>
                                 <!-- label-file class display none when is url input -->
-                                <label for="campo-input" id="label-file" style="display: none;">
+                                <label for="campo-input" id="label-file" class="spacer-width" style="display: none;">
                                     Escolha um pdf
                                 </label>
                             </div>

@@ -440,4 +440,8 @@ label[for=file-input] {
 }
 .inputBox #label-file:hover {
   background-color: #0029cc;
+}
+
+.spacer-width {
+  width: 100%;
 }/*# sourceMappingURL=criar_aula.css.map */

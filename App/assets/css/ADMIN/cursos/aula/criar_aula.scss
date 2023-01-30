@@ -470,11 +470,14 @@ label[for="file-input"] {
     position: relative;
     transition: all 0.3s;
     vertical-align: middle;
-    width: 50%;
+     width: 50%;
     margin: 2rem 0;
     
     &:hover {
       background-color: darken($dark, 10%);
     }
   }
+}
+.spacer-width{
+  width: 100%;
 }
