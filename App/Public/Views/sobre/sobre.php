@@ -115,7 +115,7 @@
   <h2 class="dev-titulo">Equipe de desenvolvedores</h2>
   <div class="desenvolvedores">
     <div class="dev">
-      <img class="dev-1" src="<?= URLSRC ?>assets/img/sobre/daniel.jfif" alt="" />
+      <img class="dev-1" src="<?= URLSRC ?>assets/img/sobre/Daniel-profile.jpeg" alt="" />
       <h2>Daniel Chielle</h2>
       <p>Desenvolvedor - Back end</p>
       <div class="git">

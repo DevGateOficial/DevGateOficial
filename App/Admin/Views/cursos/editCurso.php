@@ -102,17 +102,41 @@ if (isset($_SESSION['msg'])) {
                 <br>
             </div>
 
-            <div class="input-file">
+            <!-- Antigo -->
+            <!-- <div class="input-file">
                 <input type="file" name="imagem" id="imagem" required="required">
                 <label for="file_id">Choose a file</label>
-            </div>
+            </div> -->
+
+            <!--Novo -->
+            <label for="file-input">
+                <p class="txt-title">
+                    Imagem
+                </p>
+                <p class='descricao'>Imagem de perfil do curso </p>
+                <br>
+                <div id="file-drop-area">
+                    <h2> Clique para selecionar o arquivo</h2>
+                    <input type="file" name="imagem" id="file-input" required="required" accept="image/*" multiple>
+
+                    <div class="file-info">
+                        <span class="material-symbols-outlined" id="file-icon" style="display: none;">photo</span>
+                        <p id="file-label" style="color: #41f1b6;"></p>
+                    </div>
+
+                </div>
+            </label>
             <br>
 
             <input type="hidden" name="idResponsavel" value="<?= $_SESSION['user_idUsuario'] ?>">
 
             <!-- submit button -->
             <div class="visualizar">
-                <input class="btn" type="submit" value="Editar Curso" name="EditCurso">
+                <!-- Adicionei o "submit-" antes do btn -->
+                <input class="submit-btn" type="submit" value="Editar Curso" name="EditCurso">
+
+                <!-- exemplo -->
+                <!-- <input class="submit-btn" type="submit" value="Registrar Curso" name="Cadastrar"> -->
             </div>
 
         </form>
