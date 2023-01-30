@@ -38,7 +38,7 @@ if (!empty($this->data['viewCurso'])) {
                     </p>
                 </div>
 
-                <div class="btn-aula btn-criar-aula btn-aula-p" title="Criar Aula">
+                <div class="btn-aula btn-criar-aula btn-modal-criar-aula" title="Criar Aula">
                     <span class="material-symbols-sharp"> add_circle </span>
                     <p>Criar Aula</p>
                 </div>
@@ -79,7 +79,7 @@ if (!empty($this->data['viewCurso'])) {
     </div>
 
     <!-- MODAL DE CRIAÇÂO DE AULA -->
-    <div id="modal" class="modal">
+    <div id="modal-criar-aula" class="modal">
         <div class="modal-content">
             <div class="modal-body">
 

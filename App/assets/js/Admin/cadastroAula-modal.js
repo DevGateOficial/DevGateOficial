@@ -1,21 +1,24 @@
+// Botão de abrir alguma modal
 const btn = document.querySelector('.btn-criar-aula')
+// modal geral
 const modal = document.getElementById('modal')
-const btnDeletPop = document.querySelector('.btn-aula-excluir')
-const modalConf = document.getElementById('modal-confirmacao')
 
-// Select the close button
+// Botões de fechar as modais
 const closeBtnModal = document.querySelector('.close-btn')
-// console.log(closeBtnModal)
 const closeBtnAula = document.querySelector('.close-btn1')
-// console.log(closeBtnAula)
-
-const closeBtnConf = document.querySelector('.close-btn2')
-// console.log(closeBtnConf) NULL NULL NULL
-
-const undo = document.querySelector('.undo-conf')
 const closeAtv = document.getElementById('close-atv')
 
+btn.addEventListener('click', function () {
+  // Show the modal
+  modal.style.display = 'block'
+})
+
 closeAtv.addEventListener('click', function () {
+  modal.style.display = 'none'
+})
+
+closeBtnAula.addEventListener('click', function () {
+  // Hide the modal
   modal.style.display = 'none'
 })
 
@@ -24,36 +27,7 @@ closeBtnModal.addEventListener('click', function () {
   modal.style.display = 'none'
 })
 
-// Add a click event listener to the button
-btn.addEventListener('click', function () {
-  // Show the modal
-  modal.style.display = 'block'
-})
-
-btnDeletPop.addEventListener('click', function () {
-  // Show the modal
-  modalConf.style.display = 'block'
-})
-
-// Add a click event listener to the close button
-
-// Add a click event listener to the close button
-closeBtnConf.addEventListener('click', function () {
-  // Hide the modal
-  modalConf.style.display = 'none'
-})
-undo.addEventListener('click', function () {
-  // Hide the modal
-  modalConf.style.display = 'none'
-})
-
-closeBtnAula.addEventListener('click', function () {
-  // Hide the modal
-  modal.style.display = 'none'
-})
-
 var select = document.getElementById('tipoAtividade')
-
 // id = 1 file input
 var input1 = document.getElementById('input-1')
 // id =2 video aula
