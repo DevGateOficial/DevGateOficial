@@ -166,6 +166,12 @@ div::-webkit-scrollbar {
     letter-spacing: 0.05;
     z-index: 10;
   }
+  input[type="file"] {
+    border: none;
+    border-radius: .4rem;
+    box-sizing: border-box;
+  }
+  
 
   span {
     position: absolute;
@@ -407,10 +413,6 @@ label[for="file-input"] {
 }
 
 
-@media screen and (min-width: 950px) {
-
-}
-
 
 @media screen and (max-width: 650px) {
   .modal-body {
@@ -440,3 +442,4 @@ label[for="file-input"] {
 
   }
 }
+

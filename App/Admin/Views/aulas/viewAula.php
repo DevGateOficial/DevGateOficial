@@ -33,7 +33,7 @@ if (isset($this->data['viewAula'])) {
 
     <?php if (isset($this->data['listAtividades'])) { ?>
 
-        
+
 
         <div class="aulas-wrapper">
             <?php foreach ($this->data['listAtividades'] as $atividade) : ?>
@@ -102,7 +102,7 @@ if (isset($this->data['viewAula'])) {
             </div>
         </div>
     </div>
-    
+
     <!-- MODAL DE CRIAÇÂO DE ATIVIDADE -->
     <div id="modal" class="modal">
         <div class="modal-content">
@@ -178,6 +178,7 @@ if (isset($this->data['viewAula'])) {
                                 $url = $valueForm['url'];
                             }
                             ?>
+                            <p class="descricao " id="instrucao-input"></p>
 
                             <div class="inputBox" id="input-1" style="display: none;">
                                 <p class="descricao"></p>

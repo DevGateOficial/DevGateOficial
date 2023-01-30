@@ -46,7 +46,7 @@ if (isset($this->data['viewAtividade'])) {
         unset($_SESSION['msg']);
     }
     ?>
-
+    <!-- Modal edit Atv -->
     <div id="modal-editAtiv" class="modal">
         <div class="modal-content">
             <div class="modal-body">
@@ -93,6 +93,7 @@ if (isset($this->data['viewAtividade'])) {
                             </label>
 
 
+                            <p class="descricao " id="instrucao-input"></p>
                             <p id="file-label-atividade" style="color: #41f1b6;"> </p>
                             <div class="inputBox" id="inputBox" style="display: none;">
                                 <p class="descricao"></p>
