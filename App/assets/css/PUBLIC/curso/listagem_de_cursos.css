@@ -209,8 +209,6 @@ input[type=text]::placeholder {
   height: -moz-fit-content;
   height: fit-content;
   word-wrap: break-word;
-  display: flex;
-  flex-direction: column-reverse;
 }
 .modal .modal-content .modal-body .modal-txt .titulo-atv {
   margin-top: 1rem;
@@ -295,4 +293,8 @@ input[type=text]::placeholder {
   .modal .modal-content {
     max-width: 109rem;
   }
+}
+.txt-inverter {
+  display: flex;
+  flex-direction: column-reverse;
 }/*# sourceMappingURL=listagem_de_cursos.css.map */

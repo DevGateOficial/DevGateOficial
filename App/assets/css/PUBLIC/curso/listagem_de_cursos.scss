@@ -235,8 +235,7 @@ input[type="text"]::placeholder {
         width: 100%;
         height: fit-content;
         word-wrap: break-word;
-        display: flex;
-        flex-direction: column-reverse;
+        
         
         .titulo-atv{
           margin-top: 1rem;
@@ -345,4 +344,9 @@ input[type="text"]::placeholder {
     }
   }
 
+}
+
+.txt-inverter{
+  display: flex;
+  flex-direction: column-reverse;
 }

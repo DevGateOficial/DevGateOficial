@@ -1,7 +1,7 @@
 <?php
 $aulas = $this->data['listAulas'];
 
-if (isset($this->data['aulasAssistidas'])){
+if (isset($this->data['aulasAssistidas'])) {
   $aulas_assistidas = $this->data['aulasAssistidas'];
 }
 $numeroAula = 1;
@@ -32,7 +32,7 @@ $numeroAula = 1;
 
   <section class="class-list">
 
-    <p id="aula-padrao" data-id="<?=$aulas[0]['idAula']?>"></p>
+    <p id="aula-padrao" data-id="<?= $aulas[0]['idAula'] ?>"></p>
 
     <section class="video-playlist">
       <h3 class="title">Titulo curso</h3>
@@ -65,12 +65,12 @@ $numeroAula = 1;
             <?php if (in_array($aula['idAula'], $aulas_assistidas)) { ?>
 
               <input class="checked custom-checkbox" type="checkbox" id="custom-checkbox" data-id="<?= $aula['idAula'] ?>" checked>
-              <label for="custom-checkbox" onclick="checkAula(<?= $aula['idAula'];?>)"></label>
+              <label for="custom-checkbox" onclick="checkAula(<?= $aula['idAula']; ?>)"></label>
 
             <?php } else { ?>
 
               <input class="checked custom-checkbox" type="checkbox" id="custom-checkbox" data-id="<?= $aula['idAula'] ?>">
-              <label for="custom-checkbox" onclick="checkAula(<?= $aula['idAula'];?>)"></label>
+              <label for="custom-checkbox" onclick="checkAula(<?= $aula['idAula']; ?>)"></label>
 
             <?php } ?>
 
@@ -79,13 +79,13 @@ $numeroAula = 1;
         <?php endforeach; ?>
       </div>
 
-      <div id="modal" class="modal" height="300px">
+      <div id="modal" class="modal">
         <div class="modal-content ">
           <div class="modal-body">
 
             <span class="close-button">&times;</span>
 
-            <div class="modal-txt">
+            <div class="modal-txt txt-inverter">
               <!-- deve receber os dados da atividade -->
               <!-- nomeAtividade -->
               <!-- descricao -->
