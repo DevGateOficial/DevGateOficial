@@ -74,9 +74,11 @@ class AdminEditCursos
     {
         $this->data = $data;
 
-        $this->fileInfo = $this->data['imagem'];
-        $slug =  new \Admin\Models\helper\AdminSlug();
-        $this->data['imagem'] = $slug->slug($this->data['imagem']['name']);
+        if(isset($this->data['imagem'])){
+            $this->fileInfo = $this->data['imagem'];
+            $slug =  new \Admin\Models\helper\AdminSlug();
+            $this->data['imagem'] = $slug->slug($this->data['imagem']['name']);
+        }
 
         $valEmptyField = new \Admin\Models\helper\AdminValEmptyField();
         $valEmptyField->valField($this->data);
@@ -96,9 +98,8 @@ class AdminEditCursos
      */
     private function valInput(): void
     {
-        var_dump($this->data);
         $valCurso = new \Admin\Models\helper\AdminValCurso();
-        $valCurso->validadeCurso($this->data['nomeCurso'] . true, $this->data['idCurso']);
+        $valCurso->validadeCurso($this->data['nomeCurso'], true, $this->data['idCurso']);
 
         if ($valCurso->getResult()) {
             $this->edit();
@@ -114,7 +115,13 @@ class AdminEditCursos
 
         if ($updateCurso->getResult()) {
             $_SESSION['msg'] = "<p style='color: green;'> Curso atualizado com sucesso! </p>";
-            $this->uploadFile();
+
+            if(isset($this->data['imagem'])){
+                $this->uploadFile();
+            } else {
+                $this->result = true;
+            }
+            
         } else {
             $_SESSION['msg'] = "<p style='color: red;'> Erro: Não foi possível atualizar o curso!</p>";
             $this->result = false;
@@ -134,8 +141,6 @@ class AdminEditCursos
         $this->fileName = $this->data['imagem'];
         $this->tmpName = $this->fileInfo['tmp_name'];
         $this->directory = 'app/assets/data/cursos/' . $this->data['idCurso'] . '/';
-
-        var_dump($this->directory);
 
         $uploadFile = new \Admin\Models\helper\AdminUpload();
         $uploadFile->upload($this->directory, $this->tmpName, $this->fileName);

@@ -55,7 +55,13 @@ class AdminEditCurso
     {
         if (!empty($this->dataForm['EditCurso'])) {
             unset($this->dataForm['EditCurso']);
+
             $this->dataForm['imagem'] = $_FILES['imagem'] ? $_FILES['imagem'] : null;
+
+            if($this->dataForm['imagem']['name'] == ''){
+                unset($this->dataForm['imagem']);
+            }
+
             $editUser = new \Admin\Models\AdminEditCursos();
             $editUser->update($this->dataForm);
 

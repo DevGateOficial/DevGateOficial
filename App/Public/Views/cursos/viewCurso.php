@@ -36,12 +36,6 @@ $numeroAula = 1;
 
     <section class="video-playlist">
       <h3 class="title">Titulo curso</h3>
-      <?php
-      if (isset($_SESSION['msg'])) {
-        echo $_SESSION['msg'];
-        unset($_SESSION['msg']);
-      }
-      ?>
       <div class="videos">
         <!-- Deve rodar um loop externo de todas as aulas do curso -->
         <!-- ao entrar na aula, roda outro loop de todas as atividades dessa aula -->
@@ -65,12 +59,12 @@ $numeroAula = 1;
             <?php if (in_array($aula['idAula'], $aulas_assistidas)) { ?>
 
               <input class="checked custom-checkbox" type="checkbox" id="custom-checkbox" data-id="<?= $aula['idAula'] ?>" checked>
-              <label for="custom-checkbox" onclick="checkAula(<?= $aula['idAula']; ?>)"></label>
+              <label for="custom-checkbox" id="label_check" onclick="checkAula(<?= $aula['idAula']; ?>)"></label>
 
             <?php } else { ?>
 
-              <input class="checked custom-checkbox" type="checkbox" id="custom-checkbox" data-id="<?= $aula['idAula'] ?>">
-              <label for="custom-checkbox" onclick="checkAula(<?= $aula['idAula']; ?>)"></label>
+              <input class="custom-checkbox" type="checkbox" id="custom-checkbox" data-id="<?= $aula['idAula'] ?>">
+              <label for="custom-checkbox" id="label_check" onclick="checkAula(<?= $aula['idAula']; ?>)"></label>
 
             <?php } ?>
 

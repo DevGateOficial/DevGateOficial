@@ -192,7 +192,7 @@ if (isset($this->data['viewAula'])) {
                             -->
 
                             <div class="inputBox" id="inputBox" style="display: none;">
-                                <input type="text" id="campo-input" name="url" class="url_atividade" value="<?php echo $url ?>" />
+                                <input type="text" id="campo-input" name="url" class="url_atividade" accept="application/pdf" value="<?php echo $url ?>" />
                                 <!-- i tag display none when is file input -->
                                 <i id="i-tag"> </i>
                                 <!-- label-file class display none when is url input -->

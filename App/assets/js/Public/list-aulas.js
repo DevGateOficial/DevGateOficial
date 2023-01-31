@@ -5,18 +5,19 @@ let url_listAtividades =
 let url_files = 'http://localhost/DevGateOficial/app/assets/data/atividades/'
 
 function checkAula(idAula) {
-  console.log(url + idAula)
 
   fetch(url + idAula)
     // .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.log(error))
+
+  const checkbox = document.querySelector(`input[data-id="${idAula}"]`);
+  checkbox.classList.add('checked', 'custom-checkbox');
 }
 
 // Pegar os dados da aula
 window.addEventListener('load', function () {
   const aula_padrao = document.getElementById('aula-padrao').getAttribute('data-id');
-  console.log(aula_padrao);
   getAula(aula_padrao);
   getAtividades(aula_padrao);
 })

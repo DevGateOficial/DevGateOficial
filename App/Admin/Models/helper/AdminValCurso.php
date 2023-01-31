@@ -53,13 +53,13 @@ class AdminValCurso
 
         $valCursoSingle = new \Admin\Models\helper\crud\AdminRead();
         if (($this->edit == true) and (!empty($this->idCurso))) {
-            $valCursoSingle->fullRead(
-                "SELECT idCurso FROM curso WHERE nomeCurso =:nomeCurso LIMIT :limit",
-                "nomeCurso={$this->nomeCurso}&limit=1");
+            $valCursoSingle->fullRead("SELECT idCurso FROM curso WHERE nomeCurso =:nomeCurso AND idCurso !=:idCurso LIMIT :limit",
+                                       "nomeCurso={$this->nomeCurso}&idCurso={$this->idCurso}&limit=1");
         } else {
-            $valCursoSingle->fullRead("SELECT idCurso FROM curso WHERE nomeCurso =:nomeCurso AND idCurso<>:idCurso LIMIT :limit", 
-                                            "nomeCurso={$this->nomeCurso}&idCurso={$this->idCurso}&limit=1");
+            $valCursoSingle->fullRead("SELECT idCurso FROM curso WHERE nomeCurso =:nomeCurso LIMIT :limit",
+                                       "nomeCurso={$this->nomeCurso}&limit=1");
         }
+        
 
         $this->resultBd = $valCursoSingle->getResult();
 

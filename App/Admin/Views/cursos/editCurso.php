@@ -1,6 +1,8 @@
 <?php
-if (isset($this->data['form'])) {
+if (isset($this->data['form'][0])) {
     $valueForm = $this->data['form'][0];
+} else {
+    $valueForm = $this->data['form'];
 }
 
 if (isset($_SESSION['msg'])) {
@@ -13,7 +15,6 @@ if (isset($_SESSION['msg'])) {
 
     <div class="titulo">
         <h1> Edição de Curso </h1>
-        <!-- <p>Edição de cursos</p> -->
     </div>
 
     <div class="cadastro-curso">
@@ -24,7 +25,7 @@ if (isset($_SESSION['msg'])) {
                 $idCurso = $valueForm['idCurso'];
             }
             ?>
-            <input type="hidden" placeholder="" name="idCurso" id="name" value="<?= $idCurso ?>" required="required">
+            <input type="hidden" class="idCurso" placeholder="" name="idCurso" id="name" value="<?= $idCurso ?>" required="required">
 
             <?php
             $nomeCurso = "";
@@ -102,12 +103,6 @@ if (isset($_SESSION['msg'])) {
                 <br>
             </div>
 
-            <!-- Antigo -->
-            <!-- <div class="input-file">
-                <input type="file" name="imagem" id="imagem" required="required">
-                <label for="file_id">Choose a file</label>
-            </div> -->
-
             <!--Novo -->
             <label for="file-input">
                 <p class="txt-title">
@@ -117,7 +112,13 @@ if (isset($_SESSION['msg'])) {
                 <br>
                 <div id="file-drop-area">
                     <h2> Clique para selecionar o arquivo</h2>
-                    <input type="file" name="imagem" id="file-input" required="required" accept="image/*" multiple>
+                    <?php
+                    $imagem = "";
+                    if (isset($valueForm['imagem'])) {
+                        $imagem = $valueForm['imagem'];
+                    }
+                    ?>
+                    <input type="file" name="imagem" id="file-input" accept="image/*" multiple>
 
                     <div class="file-info">
                         <span class="material-symbols-outlined" id="file-icon" style="display: none;">photo</span>
@@ -134,9 +135,6 @@ if (isset($_SESSION['msg'])) {
             <div class="visualizar">
                 <!-- Adicionei o "submit-" antes do btn -->
                 <input class="submit-btn" type="submit" value="Editar Curso" name="EditCurso">
-
-                <!-- exemplo -->
-                <!-- <input class="submit-btn" type="submit" value="Registrar Curso" name="Cadastrar"> -->
             </div>
 
         </form>
