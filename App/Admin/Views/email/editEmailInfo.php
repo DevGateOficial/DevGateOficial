@@ -20,9 +20,7 @@
                         <h3 class="port"><?= $server['port'] ?></h3>
                     </div>
                 </div>
-                <div class="edit-email">
-                    <button class="edit-server-button" data-server-id="<?= $server['idEmail'] ?>">Editar</button>
-                </div>
+
             </div>
         <?php endforeach; ?>
     </div>

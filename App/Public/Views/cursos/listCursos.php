@@ -6,7 +6,7 @@ if (isset($this->data['form'])) {
 ?>
 <main class="main-list-curso">
 
-    <h2> Listagem de Cursos </h2>
+    <h2> Cursos Disponiveis </h2>
 
     <!-- Search bar -->
     <form class="search" method="POST" action="">

@@ -32,9 +32,9 @@
         </a>
 
         <!-- Seção ADM -->
-        
+
         <?php if ($_SESSION['user_tipoUsuario'] == 'administrador') { ?>
-            <a href="<?= URLADM; ?>list-usuarios/"onclick="toggleActive(this)">
+            <a href="<?= URLADM; ?>list-usuarios/" onclick="toggleActive(this)">
                 <span class="material-symbols-sharp "> group </span>
                 <h3>Listar Usuários</h3>
             </a>
@@ -44,7 +44,7 @@
             </a>
             <a href="<?= URLADM; ?>edit-email-info/" onclick="toggleActive(this)">
                 <span class="material-symbols-sharp"> email </span>
-                <h3>Editar Email</h3>
+                <h3>Informações Servidor PHPMailer </h3>
             </a>
         <?php } ?>
 

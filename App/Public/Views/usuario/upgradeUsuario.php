@@ -66,7 +66,7 @@ if (isset($_SESSION['msg'])) {
                     $complemento = $valueForm['complemento'];
                 }
                 ?>
-                <input type="text" name="complemento" placeholder="Complemento" value=" <?php echo $complemento ?>">
+                <input type="text" name="complemento" placeholder="Complemento" value="" <?php echo $complemento ?>">
 
                 <?php
                 $cep = "";
@@ -115,9 +115,8 @@ if (isset($_SESSION['msg'])) {
 </main>
 
 <script>
-  $("#continuar").click(function() {
-    $("#usuarioInfo").hide();
-    $("#enderecoInfo").show();
-  });
+    $("#continuar").click(function() {
+        $("#usuarioInfo").hide();
+        $("#enderecoInfo").show();
+    });
 </script>
-

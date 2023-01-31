@@ -33,7 +33,7 @@
                 <img src="<?= URLSRC; ?>assets/data/cursos/<?= $curso['idCurso'] . '/' . $curso['imagem']; ?>">
                 <p style="display: none;" class='sub-titulo-list'></p>
                 <h2> <?= $curso['nomeCurso'] ?></h2>
-                <p class='sub-titulo-list'><?= $curso['subtituloCurso'] ?> (qnt aula) </p>
+                <p class='sub-titulo-list'><?= $curso['subtituloCurso'] ?> </p>
             </div>
         <?php endforeach; ?>
     </div>
