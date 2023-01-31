@@ -92,32 +92,7 @@ class AdminCadastroAtividade
     public function create(array $data = null): void
     {
         $this->data = $data;
-
-        // $valEmptyField = new \Admin\Models\helper\AdminValEmptyField();
-        // $valEmptyField->valField($this->data);
-
-        if (true) {
-            $this->validateInput();
-        } else {
-            $this->result = false;
-        }
-    }
-
-    /**
-     * Instancia os Models responsáveis em verificar o nomeCurso e idResponsável do curso a ser cadastrado.
-     *
-     * @return void
-     */
-    private function validateInput(): void
-    {
-        $validadeCurso = new \Admin\Models\helper\AdminValCurso();
-        $validadeCurso->validadeCurso($this->data['nomeAtividade']);
-
-        if ($validadeCurso->getResult()) {
-            $this->verifyType();
-        } else {
-            $this->result = false;
-        }
+        $this->verifyType();
     }
 
     /**
@@ -168,7 +143,6 @@ class AdminCadastroAtividade
     private function add(): void
     {
         if ($this->data['tipoAtividade'] != 'videoAula') {
-            var_dump($this->data);
             $this->fileInfo = $this->data['url'];
             $slug =  new \Admin\Models\helper\AdminSlug();
             $this->data['url'] = $slug->slug($this->data['url']['name']);
@@ -181,7 +155,6 @@ class AdminCadastroAtividade
         if ($this->data['tipoAtividade'] != 'videoAula') {
             if ($cadastrarAtividade->getResult()) {
                 $this->idAtividade = $cadastrarAtividade->getResult();
-                echo "daniel";
                 $this->uploadFile();
             } else {
                 $_SESSION['msg'] = "<p style='color: #f00;'>Erro: Atividade não cadastrada!</p>";
@@ -208,21 +181,12 @@ class AdminCadastroAtividade
      */
     private function uploadFile(): void
     {
-        var_dump($this->fileInfo);
         $this->fileName = $this->data['url'];
         $this->tmpName = $this->fileInfo['tmp_name'];
         $this->directory = "app/assets/data/atividades/" . $this->idAtividade . "/";
 
-        echo "upload file";
-
-        var_dump($this->directory);
-        var_dump($this->tmpName);
-        var_dump($this->fileName);
-
         $uploadFile = new \Admin\Models\helper\AdminUpload();
         $uploadFile->upload($this->directory, $this->tmpName, $this->fileName);
-
-        var_dump($uploadFile->getResult());
 
         if ($uploadFile->getResult()) {
             $_SESSION['msg'] = "<p style='color: #green;'>Curso cadastrado com sucesso!</p>";

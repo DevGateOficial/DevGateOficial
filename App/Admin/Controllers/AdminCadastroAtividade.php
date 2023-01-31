@@ -58,8 +58,6 @@ class AdminCadastroAtividade
             $createAtividade = new \Admin\Models\AdminCadastroAtividade();
             $createAtividade->create($this->dataForm);
 
-            var_dump($createAtividade->getResult());
-
             if ($createAtividade->getResult()) {
                 $urlRedirect = URLADM . "view-aula/index/" . $this->dataForm['idAula'];
                 header("Location: $urlRedirect");
@@ -71,19 +69,5 @@ class AdminCadastroAtividade
             $urlRedirect = URLADM . "list-aulas/index";
             header("Location: $urlRedirect");
         }
-    }
-
-    // documentar
-
-    public function verifyUrl($url): void
-    {
-        $pattern = '/^(https?:\/\/)?(www\.)?(youtube\.com\/watch\?v=\w+|youtu\.be\/\w+)$/';
-
-        if (preg_match($pattern, $url) == 1) {
-            echo json_encode(array("status" => true));
-        } else {
-            echo json_encode(array("status" => false));
-        }
-        exit;
     }
 }
