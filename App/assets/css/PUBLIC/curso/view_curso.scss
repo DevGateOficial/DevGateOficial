@@ -289,7 +289,8 @@ input[type="checkbox"].custom-checkbox + label::before {
   vertical-align: middle;
 }
 
-input[type="checkbox"]:checked.custom-checkbox + label::before {
+// Quando o input ter a classe .checked ele vai estar marcado como concluido
+input[type="checkbox"].checked.custom-checkbox + label::before {
   content: "";
   font-size: 2rem;
   text-align: center;
@@ -299,11 +300,14 @@ input[type="checkbox"]:checked.custom-checkbox + label::before {
   background: $light-blue;
 }
 
-
-input[type="checkbox"].checked {
+// Quando a LABEL  estiver com a classe .checked ele vai estar marcado como concluido
+input[type="checkbox"].custom-checkbox + label::before.checked {
+  content: "";
   font-size: 2rem;
   text-align: center;
+  transition: all 300ms ease;
   transform: rotate(45deg);
   border-radius: 100%;
   background: $light-blue;
 }
+

@@ -149,6 +149,9 @@ main{
           height: 7rem;
           width: 100%;
           width: 95%;
+          &.holder{
+            height: 4rem;
+          }
           &::placeholder{
             font-size: 1.5rem;
             display: flex;

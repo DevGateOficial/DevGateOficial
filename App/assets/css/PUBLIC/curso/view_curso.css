@@ -240,7 +240,7 @@ input[type=checkbox].custom-checkbox + label::before {
   vertical-align: middle;
 }
 
-input[type=checkbox]:checked.custom-checkbox + label::before {
+input[type=checkbox].checked.custom-checkbox + label::before {
   content: "";
   font-size: 2rem;
   text-align: center;
@@ -250,9 +250,11 @@ input[type=checkbox]:checked.custom-checkbox + label::before {
   background: rgb(19, 131, 200);
 }
 
-input[type=checkbox].checked {
+input[type=checkbox].custom-checkbox + label::before.checked {
+  content: "";
   font-size: 2rem;
   text-align: center;
+  transition: all 300ms ease;
   transform: rotate(45deg);
   border-radius: 100%;
   background: rgb(19, 131, 200);

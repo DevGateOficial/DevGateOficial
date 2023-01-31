@@ -50,7 +50,7 @@ if (isset($_SESSION['msg'])) {
                     $nomeLogradouro = $valueForm['nomeLogradouro'];
                 }
                 ?>
-                <input type="text" name="nomeLogradouro" placeholder="Logradouro" value="<?php echo $nomeLogradouro ?>" required="required">
+                <input class="holder" type="text" name="nomeLogradouro" placeholder="Logradouro" value="<?php echo $nomeLogradouro ?>" required="required">
 
                 <?php
                 $numero = "";
@@ -58,7 +58,7 @@ if (isset($_SESSION['msg'])) {
                     $numero = $valueForm['numero'];
                 }
                 ?>
-                <input type="text" name="numero" placeholder="Numero" value="<?php echo $numero ?>" required="required">
+                <input class="holder" type="text" name="numero" placeholder="Numero" value="<?php echo $numero ?>" required="required">
 
                 <?php
                 $complemento = "";
@@ -66,7 +66,7 @@ if (isset($_SESSION['msg'])) {
                     $complemento = $valueForm['complemento'];
                 }
                 ?>
-                <input type="text" name="complemento" placeholder="Complemento" value="" <?php echo $complemento ?>">
+                <input class="holder" type="text" name="complemento" placeholder="Complemento" value="" <?php echo $complemento ?>">
 
                 <?php
                 $cep = "";
@@ -74,7 +74,7 @@ if (isset($_SESSION['msg'])) {
                     $cep = $valueForm['cep'];
                 }
                 ?>
-                <input type="text" name="cep" id="name" placeholder="CEP" value="<?php echo $cep ?>" required="required">
+                <input class="holder" type="text" name="cep" id="name" placeholder="CEP" value="<?php echo $cep ?>" required="required">
 
                 <?php
                 $bairro = "";
@@ -82,7 +82,7 @@ if (isset($_SESSION['msg'])) {
                     $bairro = $valueForm['bairro'];
                 }
                 ?>
-                <input type="text" name="bairro" id="name" placeholder="Bairro" value="<?php echo $bairro ?>" required="required">
+                <input class="holder" type="text" name="bairro" id="name" placeholder="Bairro" value="<?php echo $bairro ?>" required="required">
 
                 <?php
                 $cidade = "";
@@ -90,7 +90,7 @@ if (isset($_SESSION['msg'])) {
                     $cidade = $valueForm['cidade'];
                 }
                 ?>
-                <input type="text" name="cidade" id="name" placeholder="Cidade" value="<?php echo $cidade ?>" required="required">
+                <input class="holder" type="text" name="cidade" id="name" placeholder="Cidade" value="<?php echo $cidade ?>" required="required">
 
                 <?php
                 $estado = "";
@@ -98,7 +98,7 @@ if (isset($_SESSION['msg'])) {
                     $estado = $valueForm['estado'];
                 }
                 ?>
-                <input type="text" name="estado" id="name" placeholder="Estado" value="<?php echo $estado ?>" required="required">
+                <input class="holder" type="text" name="estado" id="name" placeholder="Estado" value="<?php echo $estado ?>" required="required">
 
                 <?php
                 $pais = "";
@@ -106,7 +106,7 @@ if (isset($_SESSION['msg'])) {
                     $pais = $valueForm['pais'];
                 }
                 ?>
-                <input type="text" name="pais" id="name" placeholder="País" value="<?php echo $pais ?>" required="required">
+                <input class="holder" type="text" name="pais" id="name" placeholder="País" value="<?php echo $pais ?>" required="required">
 
                 <input class="btn" type="submit" name="UpgradeUsuario" value="Enviar">
             </div>

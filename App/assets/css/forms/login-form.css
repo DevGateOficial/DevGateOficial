@@ -154,6 +154,9 @@ main .login-form form a:hover {
     width: 100%;
     width: 95%;
   }
+  main .login-form form input.holder {
+    height: 4rem;
+  }
   main .login-form form input::-moz-placeholder {
     font-size: 1.5rem;
     display: flex;
