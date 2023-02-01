@@ -9,16 +9,16 @@ class AdminDeleteUsuario
 {
     public function index(string|int|null $idUsuario): void
     {
-        $deleteUser = new \Admin\Models\helper\crud\AdminDelete();
-        $deleteUser->executeDelete("usuario", $idUsuario);
+        $deleteUser = new \Admin\Models\AdminDeleteUsuario();
+        $deleteUser->deleteUsuario($idUsuario);
 
-        if ($deleteUser->getResult()) {
-            $urlRedirect = URLADM . "list-usuarios/index";
-            header("Location: $urlRedirect");
-        } else {
-            $_SESSION['msg'] = "<p style='color: red'>Erro: Usuario não deletada!</p>";
-            $urlRedirect = URLADM . "view-usuario/index/{$idUsuario}";
-            header("Location: $urlRedirect");
-        }
+        // if ($deleteUser->getResult()) {
+        //     $urlRedirect = URLADM . "list-usuarios/index";
+        //     header("Location: $urlRedirect");
+        // } else {
+        //     $_SESSION['msg'] = "<p style='color: red'>Erro: Usuarie não deletade!</p>";
+        //     $urlRedirect = URLADM . "list-usuarios/index";
+        //     header("Location: $urlRedirect");
+        // }
     }
 }

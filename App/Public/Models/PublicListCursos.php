@@ -51,11 +51,12 @@ class PublicListCursos
     {
         $pesquisa = $key;
         $listCurso = new \Public\Models\helper\crud\PublicRead();
-        $listCurso->fullRead("SELECT * FROM curso WHERE nomeCurso LIKE '%{$key}%'
-                                                        or subtituloCurso LIKE '%{$key}%' 
-                                                        or descricao LIKE '%{$key}%'
-                                                        or objetivos LIKE '%{$key}%'
-                                                        or requisitos LIKE '%{$key}%'");
+        $listCurso->fullRead("SELECT curso.* FROM curso
+                                LEFT JOIN usuario_has_curso AS reg ON curso.idCurso = reg.curso_idCurso
+                                AND reg.usuario_idUsuario = :idUsuario
+                                WHERE reg.curso_idCurso IS NULL AND 
+                                (nomeCurso LIKE '%{$key}%'
+                                or subtituloCurso LIKE '%{$key}%')", "idUsuario={$_SESSION['user_idUsuario']}");
         $this->resultBd = $listCurso->getResult();
 
         if ($this->resultBd) {

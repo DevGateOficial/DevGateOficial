@@ -13,25 +13,25 @@ if (isset($_SESSION['msg'])) {
 
 <main class="main-cadastro">
     <div class="texto">
-        <form method="POST" action="" class="form-cadastro">
-            <h2>Nova senha</h2>
+        <h2>Nova senha</h2>
+        <div class="login-form pass-wrap">
+            <form method="POST" action="">
+                <div class="inputBox-cadastro">
+                    <?php
+                    $senha = "";
+                    if (isset($valueForm['senha'])) {
+                        $senha = $valueForm['senha'];
+                    }
 
-            <div class="inputBox-cadastro">
-                <?php
-                $senha = "";
-                if (isset($valueForm['senha'])) {
-                    $senha = $valueForm['senha'];
-                }
-                ?>
-                <input type="text" name="senha" id="senha" value="<?php echo $senha ?>" required="required">
-                <span>Nova senha</span>
-                <i></i>
-            </div>
-
-            <div class="links-cadastro">
-                <input type="submit" name="UpdatePass" value="Enviar">
-                <a href="<?php echo URL; ?>login/index"> Sign in </a>
-            </div>
-        </form>
-    </div>
+                    if (isset($_SESSION['msg'])) {
+                        echo $_SESSION['msg'];
+                        unset($_SESSION['msg']);
+                    }
+                    ?>
+                    <input type="text" name="senha" placeholder="nova senha" id="senha" value="<?php echo $senha ?>" required="required">
+                    <input class = "btn" type="submit" name="UpdatePass" value="Enviar">
+        
+                </div>
+            </form>
+        </div>
 </main>

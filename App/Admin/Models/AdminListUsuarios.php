@@ -46,7 +46,7 @@ class AdminListUsuarios
     {
         $pesquisa = $key;
         $listUsers = new \Admin\Models\helper\crud\AdminRead();
-        $listUsers->fullRead("SELECT idUsuario, nomeUsuario, email FROM usuario WHERE nomeCompleto LIKE '%{$key}%'
+        $listUsers->fullRead("SELECT * FROM usuario WHERE nomeCompleto LIKE '%{$key}%'
                                                         or email LIKE '%{$key}%' 
                                                         or nomeUsuario LIKE '%{$key}%'");
         $this->resultBd = $listUsers->getResult();

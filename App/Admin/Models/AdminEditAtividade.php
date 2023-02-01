@@ -93,7 +93,7 @@ class AdminEditAtividade
 
         if ($updateCurso->getResult()) {
             $_SESSION['msg'] = "<p style='color: green;'> Atividade atualizada com sucesso! </p>";
-            $this->data != 'videoAula' ? $this->uploadFile() : $this->result = true;
+            $this->data['tipoAtividade'] != 'videoAula' ? $this->uploadFile() : $this->result = true;
         } else {
             $_SESSION['msg'] = "<p style='color: red;'> Erro: Não foi possível atualizar a atividade!</p>";
             $this->result = false;
@@ -113,8 +113,6 @@ class AdminEditAtividade
         $this->fileName = $this->data['url'];
         $this->tmpName = $this->fileInfo['tmp_name'];
         $this->directory = 'app/assets/data/atividades/' . $this->data['idAtividade'] . '/';
-
-        var_dump($this->directory);
 
         $uploadFile = new \Admin\Models\helper\AdminUpload();
         $uploadFile->upload($this->directory, $this->tmpName, $this->fileName);
