@@ -46,6 +46,10 @@
                     <p><?= $usuario['email'] ?></p>
                 </div>
 
+                <div class="tipoUsuario">
+                    <p><?= ucfirst($usuario['tipoUsuario']) ?></p>
+                </div>
+
                 <?php
                 $situations = [
                     1 => "active",
