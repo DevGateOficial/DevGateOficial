@@ -39,12 +39,34 @@
                     <div class="detalhes">
                         <h2 class="nome"><?= $usuario['nomeCompleto'] ?></h2>
                         <h3 class="username"><?= $usuario['nomeUsuario'] ?></h3>
+
+                        <p><?= ucfirst($usuario['tipoUsuario']) ?>
+                            <?php
+                            if ($usuario['tipoUsuario'] == 'professor') {
+                            ?>
+                                <span class="material-symbols-outlined">
+                                    admin_panel_settings
+                                </span>
+                            <?php
+                            } else {
+                            ?>
+                                <span class="material-symbols-outlined">
+                                    person_filled
+                                </span>
+                            <?php
+                            }
+                            ?>
+                        </p>
                     </div>
                 </div>
 
                 <div class="email">
                     <p><?= $usuario['email'] ?></p>
                 </div>
+
+                <!-- <div class="tipoUsuario">
+                    <p><?= ucfirst($usuario['tipoUsuario']) ?></p>
+                </div> -->
 
                 <?php
                 $situations = [

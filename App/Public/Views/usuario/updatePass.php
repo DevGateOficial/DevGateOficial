@@ -24,9 +24,9 @@ if (isset($this->data['form'])) {
                         unset($_SESSION['msg']);
                     }
                     ?>
-                    <input type="text" name="senha" placeholder="nova senha" id="senha" value="<?php echo $senha ?>" required="required">
-                    <input class = "btn" type="submit" name="UpdatePass" value="Enviar">
-        
+                    <input type="password" name="senha" placeholder="nova senha" id="senha" value="<?php echo $senha ?>" required="required">
+                    <input class="btn" type="submit" name="UpdatePass" value="Enviar">
+
                 </div>
             </form>
         </div>
