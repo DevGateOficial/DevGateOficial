@@ -12,13 +12,13 @@ class AdminDeleteUsuario
         $deleteUser = new \Admin\Models\AdminDeleteUsuario();
         $deleteUser->deleteUsuario($idUsuario);
 
-        // if ($deleteUser->getResult()) {
-        //     $urlRedirect = URLADM . "list-usuarios/index";
-        //     header("Location: $urlRedirect");
-        // } else {
-        //     $_SESSION['msg'] = "<p style='color: red'>Erro: Usuarie não deletade!</p>";
-        //     $urlRedirect = URLADM . "list-usuarios/index";
-        //     header("Location: $urlRedirect");
-        // }
+        if ($deleteUser->getResult()) {
+            $urlRedirect = URLADM . "list-usuarios/index";
+            header("Location: $urlRedirect");
+        } else {
+            $_SESSION['msg'] = "<p style='color: red'>Erro: Usuarie não deletade!</p>";
+            $urlRedirect = URLADM . "list-usuarios/index";
+            header("Location: $urlRedirect");
+        }
     }
 }

@@ -5,10 +5,6 @@ if (isset($this->data['form'])) {
     //var_dump($valueForm);
 }
 
-if (isset($_SESSION['msg'])) {
-    echo $_SESSION['msg'];
-    unset($_SESSION['msg']);
-}
 ?>
 
 <main class="main-cadastro">
